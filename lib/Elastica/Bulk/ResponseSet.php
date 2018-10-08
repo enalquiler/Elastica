@@ -1,7 +1,7 @@
 <?php
-namespace Elastica\Bulk;
+namespace Enalquiler\Elastica\Bulk;
 
-use Elastica\Response as BaseResponse;
+use Enalquiler\Elastica\Response as BaseResponse;
 
 class ResponseSet extends BaseResponse implements \Iterator, \Countable
 {
@@ -16,8 +16,8 @@ class ResponseSet extends BaseResponse implements \Iterator, \Countable
     protected $_position = 0;
 
     /**
-     * @param \Elastica\Response        $response
-     * @param \Elastica\Bulk\Response[] $bulkResponses
+     * @param \Enalquiler\Elastica\Response        $response
+     * @param \Enalquiler\Elastica\Bulk\Response[] $bulkResponses
      */
     public function __construct(BaseResponse $response, array $bulkResponses)
     {
@@ -27,7 +27,7 @@ class ResponseSet extends BaseResponse implements \Iterator, \Countable
     }
 
     /**
-     * @return \Elastica\Bulk\Response[]
+     * @return \Enalquiler\Elastica\Bulk\Response[]
      */
     public function getBulkResponses()
     {

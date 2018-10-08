@@ -1,11 +1,11 @@
 <?php
-namespace Elastica\Test;
+namespace Enalquiler\Elastica\Test;
 
-use Elastica\Document;
-use Elastica\Query;
-use Elastica\Script\Script;
-use Elastica\Script\ScriptFields;
-use Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Query;
+use Enalquiler\Elastica\Script\Script;
+use Enalquiler\Elastica\Script\ScriptFields;
+use Enalquiler\Elastica\Test\Base as BaseTest;
 
 class ScriptFieldsTest extends BaseTest
 {
@@ -57,7 +57,7 @@ class ScriptFieldsTest extends BaseTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testNameException()
     {

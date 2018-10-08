@@ -1,12 +1,12 @@
 <?php
-namespace Elastica\Test\Filter;
+namespace Enalquiler\Elastica\Test\Filter;
 
-use Elastica\Document;
-use Elastica\Filter\AbstractGeoShape;
-use Elastica\Filter\GeoShapeProvided;
-use Elastica\Query\BoolQuery;
-use Elastica\Test\DeprecatedClassBase as BaseTest;
-use Elastica\Type\Mapping;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Filter\AbstractGeoShape;
+use Enalquiler\Elastica\Filter\GeoShapeProvided;
+use Enalquiler\Elastica\Query\BoolQuery;
+use Enalquiler\Elastica\Test\DeprecatedClassBase as BaseTest;
+use Enalquiler\Elastica\Type\Mapping;
 
 class GeoShapeProvidedTest extends BaseTest
 {
@@ -107,6 +107,6 @@ class GeoShapeProvidedTest extends BaseTest
         $gsp = new GeoShapeProvided('location', [[25.0, 75.0], [75.0, 25.0]]);
         $gsp->setRelation(AbstractGeoShape::RELATION_INTERSECT);
         $this->assertEquals(AbstractGeoShape::RELATION_INTERSECT, $gsp->getRelation());
-        $this->assertInstanceOf('Elastica\Filter\GeoShapeProvided', $gsp->setRelation(AbstractGeoShape::RELATION_INTERSECT));
+        $this->assertInstanceOf('Enalquiler\Elastica\Filter\GeoShapeProvided', $gsp->setRelation(AbstractGeoShape::RELATION_INTERSECT));
     }
 }

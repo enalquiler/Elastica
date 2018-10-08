@@ -1,11 +1,11 @@
 <?php
-namespace Elastica\Test\Query;
+namespace Enalquiler\Elastica\Test\Query;
 
-use Elastica\Document;
-use Elastica\Query\DisMax;
-use Elastica\Query\Ids;
-use Elastica\Query\QueryString;
-use Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Query\DisMax;
+use Enalquiler\Elastica\Query\Ids;
+use Enalquiler\Elastica\Query\QueryString;
+use Enalquiler\Elastica\Test\Base as BaseTest;
 
 class DisMaxTest extends BaseTest
 {

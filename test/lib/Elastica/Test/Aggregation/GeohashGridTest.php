@@ -1,10 +1,10 @@
 <?php
-namespace Elastica\Test\Aggregation;
+namespace Enalquiler\Elastica\Test\Aggregation;
 
-use Elastica\Aggregation\GeohashGrid;
-use Elastica\Document;
-use Elastica\Query;
-use Elastica\Type\Mapping;
+use Enalquiler\Elastica\Aggregation\GeohashGrid;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Query;
+use Enalquiler\Elastica\Type\Mapping;
 
 class GeohashGridTest extends BaseAggregationTest
 {

@@ -1,10 +1,10 @@
 <?php
-namespace Elastica\Test\Filter;
+namespace Enalquiler\Elastica\Test\Filter;
 
-use Elastica\Filter\AbstractGeoShape;
-use Elastica\Filter\GeoShapePreIndexed;
-use Elastica\Query\BoolQuery;
-use Elastica\Test\DeprecatedClassBase as BaseTest;
+use Enalquiler\Elastica\Filter\AbstractGeoShape;
+use Enalquiler\Elastica\Filter\GeoShapePreIndexed;
+use Enalquiler\Elastica\Query\BoolQuery;
+use Enalquiler\Elastica\Test\DeprecatedClassBase as BaseTest;
 
 class GeoShapePreIndexedTest extends BaseTest
 {
@@ -28,7 +28,7 @@ class GeoShapePreIndexedTest extends BaseTest
         $otherType = $index->getType('other_type');
 
         // create mapping
-        $mapping = new \Elastica\Type\Mapping($type, [
+        $mapping = new \Enalquiler\Elastica\Type\Mapping($type, [
             'location' => [
                 'type' => 'geo_shape',
             ],
@@ -36,7 +36,7 @@ class GeoShapePreIndexedTest extends BaseTest
         $type->setMapping($mapping);
 
         // create other type mapping
-        $otherMapping = new \Elastica\Type\Mapping($type, [
+        $otherMapping = new \Enalquiler\Elastica\Type\Mapping($type, [
             'location' => [
                 'type' => 'geo_shape',
             ],
@@ -44,7 +44,7 @@ class GeoShapePreIndexedTest extends BaseTest
         $otherType->setMapping($otherMapping);
 
         // add type docs
-        $type->addDocument(new \Elastica\Document('1', [
+        $type->addDocument(new \Enalquiler\Elastica\Document('1', [
             'location' => [
                 'type' => 'envelope',
                 'coordinates' => [
@@ -55,7 +55,7 @@ class GeoShapePreIndexedTest extends BaseTest
         ]));
 
         // add other type docs
-        $otherType->addDocument(new \Elastica\Document('2', [
+        $otherType->addDocument(new \Enalquiler\Elastica\Document('2', [
             'location' => [
                 'type' => 'envelope',
                 'coordinates' => [
@@ -106,6 +106,6 @@ class GeoShapePreIndexedTest extends BaseTest
         $gsp = new GeoShapePreIndexed('location', '1', 'type', 'indexName', 'location');
         $gsp->setRelation(AbstractGeoShape::RELATION_INTERSECT);
         $this->assertEquals(AbstractGeoShape::RELATION_INTERSECT, $gsp->getRelation());
-        $this->assertInstanceOf('Elastica\Filter\GeoShapePreIndexed', $gsp->setRelation(AbstractGeoShape::RELATION_INTERSECT));
+        $this->assertInstanceOf('Enalquiler\Elastica\Filter\GeoShapePreIndexed', $gsp->setRelation(AbstractGeoShape::RELATION_INTERSECT));
     }
 }

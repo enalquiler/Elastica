@@ -1,7 +1,7 @@
 <?php
-namespace Elastica\Query;
+namespace Enalquiler\Elastica\Query;
 
-use Elastica\Exception\InvalidException;
+use Enalquiler\Elastica\Exception\InvalidException;
 
 /**
  * Terms query.
@@ -85,7 +85,7 @@ class Terms extends AbstractQuery
      *
      * @see \Elastica\Query\AbstractQuery::toArray()
      *
-     * @throws \Elastica\Exception\InvalidException If term key is empty
+     * @throws \Enalquiler\Elastica\Exception\InvalidException If term key is empty
      *
      * @return array Query array
      */

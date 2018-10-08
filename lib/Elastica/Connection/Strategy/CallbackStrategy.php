@@ -1,7 +1,7 @@
 <?php
-namespace Elastica\Connection\Strategy;
+namespace Enalquiler\Elastica\Connection\Strategy;
 
-use Elastica\Exception\InvalidException;
+use Enalquiler\Elastica\Exception\InvalidException;
 
 /**
  * Description of CallbackStrategy.
@@ -18,7 +18,7 @@ class CallbackStrategy implements StrategyInterface
     /**
      * @param callable $callback
      *
-     * @throws \Elastica\Exception\InvalidException
+     * @throws \Enalquiler\Elastica\Exception\InvalidException
      */
     public function __construct($callback)
     {
@@ -32,7 +32,7 @@ class CallbackStrategy implements StrategyInterface
     /**
      * @param array|\Elastica\Connection[] $connections
      *
-     * @return \Elastica\Connection
+     * @return \Enalquiler\Elastica\Connection
      */
     public function getConnection($connections)
     {

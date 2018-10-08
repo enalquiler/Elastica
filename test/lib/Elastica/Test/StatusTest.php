@@ -1,9 +1,9 @@
 <?php
-namespace Elastica\Test;
+namespace Enalquiler\Elastica\Test;
 
-use Elastica\Exception\ResponseException;
-use Elastica\Status;
-use Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Exception\ResponseException;
+use Enalquiler\Elastica\Status;
+use Enalquiler\Elastica\Test\Base as BaseTest;
 
 class StatusTest extends BaseTest
 {
@@ -14,7 +14,7 @@ class StatusTest extends BaseTest
     {
         $index = $this->_createIndex();
         $status = new Status($index->getClient());
-        $this->assertInstanceOf('Elastica\Response', $status->getResponse());
+        $this->assertInstanceOf('Enalquiler\Elastica\Response', $status->getResponse());
     }
 
     /**

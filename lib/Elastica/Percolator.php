@@ -1,5 +1,5 @@
 <?php
-namespace Elastica;
+namespace Enalquiler\Elastica;
 
 /**
  * Percolator class.
@@ -38,7 +38,7 @@ class Percolator
     /**
      * Construct new percolator.
      *
-     * @param \Elastica\Index $index
+     * @param \Enalquiler\Elastica\Index $index
      */
     public function __construct(Index $index)
     {
@@ -53,7 +53,7 @@ class Percolator
      * @param array                                                $fields Extra fields to include in the registered query
      *                                                                     and can be used to filter executed queries.
      *
-     * @return \Elastica\Response
+     * @return \Enalquiler\Elastica\Response
      */
     public function registerQuery($name, $query, $fields = [])
     {
@@ -70,7 +70,7 @@ class Percolator
      *
      * @param string $name query name
      *
-     * @return \Elastica\Response
+     * @return \Enalquiler\Elastica\Response
      */
     public function unregisterQuery($name)
     {
@@ -82,7 +82,7 @@ class Percolator
     /**
      * Match a document to percolator queries.
      *
-     * @param \Elastica\Document                                   $doc
+     * @param \Enalquiler\Elastica\Document                                   $doc
      * @param string|\Elastica\Query|\Elastica\Query\AbstractQuery $query  Query to filter the percolator queries which
      *                                                                     are executed.
      * @param string                                               $type
@@ -181,7 +181,7 @@ class Percolator
     /**
      * Return index object.
      *
-     * @return \Elastica\Index
+     * @return \Enalquiler\Elastica\Index
      */
     public function getIndex()
     {

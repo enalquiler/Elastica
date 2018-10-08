@@ -1,7 +1,7 @@
 <?php
-namespace Elastica\Rescore;
+namespace Enalquiler\Elastica\Rescore;
 
-use Elastica\Param;
+use Enalquiler\Elastica\Param;
 
 /**
  * Abstract rescore object. Should be extended by all rescorers.

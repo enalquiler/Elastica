@@ -1,10 +1,10 @@
 <?php
-namespace Elastica\Test\Aggregation;
+namespace Enalquiler\Elastica\Test\Aggregation;
 
-use Elastica\Aggregation\ScriptedMetric;
-use Elastica\Document;
-use Elastica\Query;
-use Elastica\Type\Mapping;
+use Enalquiler\Elastica\Aggregation\ScriptedMetric;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Query;
+use Enalquiler\Elastica\Type\Mapping;
 
 class ScriptedMetricTest extends BaseAggregationTest
 {

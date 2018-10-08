@@ -1,7 +1,7 @@
 <?php
-namespace Elastica\Query;
+namespace Enalquiler\Elastica\Query;
 
-use Elastica\Exception\InvalidException;
+use Enalquiler\Elastica\Exception\InvalidException;
 
 /**
  * DisMax query.
@@ -15,9 +15,9 @@ class DisMax extends AbstractQuery
     /**
      * Adds a query to the current object.
      *
-     * @param \Elastica\Query\AbstractQuery|array $args Query
+     * @param \Enalquiler\Elastica\Query\AbstractQuery|array $args Query
      *
-     * @throws \Elastica\Exception\InvalidException If not valid query
+     * @throws \Enalquiler\Elastica\Exception\InvalidException If not valid query
      *
      * @return $this
      */

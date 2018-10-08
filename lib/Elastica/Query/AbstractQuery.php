@@ -1,7 +1,7 @@
 <?php
-namespace Elastica\Query;
+namespace Enalquiler\Elastica\Query;
 
-use Elastica\Param;
+use Enalquiler\Elastica\Param;
 
 /**
  * Abstract query object. Should be extended by all query types.

@@ -1,15 +1,15 @@
 <?php
-namespace Elastica\Test\Query;
+namespace Enalquiler\Elastica\Test\Query;
 
-use Elastica\Document;
-use Elastica\Filter\BoolFilter;
-use Elastica\Filter\Term;
-use Elastica\Index;
-use Elastica\Query;
-use Elastica\Query\MoreLikeThis;
-use Elastica\Test\Base as BaseTest;
-use Elastica\Type;
-use Elastica\Type\Mapping;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Filter\BoolFilter;
+use Enalquiler\Elastica\Filter\Term;
+use Enalquiler\Elastica\Index;
+use Enalquiler\Elastica\Query;
+use Enalquiler\Elastica\Query\MoreLikeThis;
+use Enalquiler\Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Type;
+use Enalquiler\Elastica\Type\Mapping;
 
 class MoreLikeThisTest extends BaseTest
 {
@@ -170,7 +170,7 @@ class MoreLikeThisTest extends BaseTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\DeprecatedException
+     * @expectedException \Enalquiler\Elastica\Exception\DeprecatedException
      */
     public function testSetIds()
     {
@@ -193,7 +193,7 @@ class MoreLikeThisTest extends BaseTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\DeprecatedException
+     * @expectedException \Enalquiler\Elastica\Exception\DeprecatedException
      */
     public function testSetLikeText()
     {
@@ -229,7 +229,7 @@ class MoreLikeThisTest extends BaseTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\DeprecatedException
+     * @expectedException \Enalquiler\Elastica\Exception\DeprecatedException
      */
     public function testSetPercentTermsToMatch()
     {

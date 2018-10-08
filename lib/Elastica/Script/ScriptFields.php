@@ -1,8 +1,8 @@
 <?php
-namespace Elastica\Script;
+namespace Enalquiler\Elastica\Script;
 
-use Elastica\Exception\InvalidException;
-use Elastica\Param;
+use Enalquiler\Elastica\Exception\InvalidException;
+use Enalquiler\Elastica\Param;
 
 /**
  * Container for scripts as fields.
@@ -14,7 +14,7 @@ use Elastica\Param;
 class ScriptFields extends Param
 {
     /**
-     * @param \Elastica\Script\Script[]|array $scripts OPTIONAL
+     * @param \Enalquiler\Elastica\Script\Script[]|array $scripts OPTIONAL
      */
     public function __construct(array $scripts = [])
     {
@@ -25,9 +25,9 @@ class ScriptFields extends Param
 
     /**
      * @param string                          $name   Name of the Script field
-     * @param \Elastica\Script\AbstractScript $script
+     * @param \Enalquiler\Elastica\Script\AbstractScript $script
      *
-     * @throws \Elastica\Exception\InvalidException
+     * @throws \Enalquiler\Elastica\Exception\InvalidException
      *
      * @return $this
      */
@@ -42,7 +42,7 @@ class ScriptFields extends Param
     }
 
     /**
-     * @param \Elastica\Script\Script[]|array $scripts Associative array of string => Elastica\Script\Script
+     * @param \Enalquiler\Elastica\Script\Script[]|array $scripts Associative array of string => Elastica\Script\Script
      *
      * @return $this
      */

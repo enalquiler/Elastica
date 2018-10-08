@@ -1,10 +1,10 @@
 <?php
-namespace Elastica\Bulk\Action;
+namespace Enalquiler\Elastica\Bulk\Action;
 
-use Elastica\AbstractUpdateAction;
-use Elastica\Bulk\Action;
-use Elastica\Document;
-use Elastica\Script\AbstractScript;
+use Enalquiler\Elastica\AbstractUpdateAction;
+use Enalquiler\Elastica\Bulk\Action;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Script\AbstractScript;
 
 abstract class AbstractDocument extends Action
 {
@@ -14,7 +14,7 @@ abstract class AbstractDocument extends Action
     protected $_data;
 
     /**
-     * @param \Elastica\Document|\Elastica\Script\AbstractScript $document
+     * @param \Enalquiler\Elastica\Document|\Elastica\Script\AbstractScript $document
      */
     public function __construct($document)
     {
@@ -22,7 +22,7 @@ abstract class AbstractDocument extends Action
     }
 
     /**
-     * @param \Elastica\Document $document
+     * @param \Enalquiler\Elastica\Document $document
      *
      * @return $this
      */
@@ -38,7 +38,7 @@ abstract class AbstractDocument extends Action
     }
 
     /**
-     * @param \Elastica\Script\AbstractScript $script
+     * @param \Enalquiler\Elastica\Script\AbstractScript $script
      *
      * @return $this
      */
@@ -57,7 +57,7 @@ abstract class AbstractDocument extends Action
     }
 
     /**
-     * @param \Elastica\Script\AbstractScript|\Elastica\Document $data
+     * @param \Enalquiler\Elastica\Script\AbstractScript|\Elastica\Document $data
      *
      * @throws \InvalidArgumentException
      *
@@ -79,7 +79,7 @@ abstract class AbstractDocument extends Action
     /**
      * Note: This is for backwards compatibility.
      *
-     * @return \Elastica\Document|null
+     * @return \Enalquiler\Elastica\Document|null
      */
     public function getDocument()
     {
@@ -93,7 +93,7 @@ abstract class AbstractDocument extends Action
     /**
      * Note: This is for backwards compatibility.
      *
-     * @return \Elastica\Script\AbstractScript|null
+     * @return \Enalquiler\Elastica\Script\AbstractScript|null
      */
     public function getScript()
     {
@@ -105,7 +105,7 @@ abstract class AbstractDocument extends Action
     }
 
     /**
-     * @return \Elastica\Document|\Elastica\Script\AbstractScript
+     * @return \Enalquiler\Elastica\Document|\Elastica\Script\AbstractScript
      */
     public function getData()
     {
@@ -113,14 +113,14 @@ abstract class AbstractDocument extends Action
     }
 
     /**
-     * @param \Elastica\AbstractUpdateAction $source
+     * @param \Enalquiler\Elastica\AbstractUpdateAction $source
      *
      * @return array
      */
     abstract protected function _getMetadata(AbstractUpdateAction $source);
 
     /**
-     * @param \Elastica\Document|\Elastica\Script\AbstractScript $data
+     * @param \Enalquiler\Elastica\Document|\Elastica\Script\AbstractScript $data
      * @param string                                             $opType
      *
      * @return static

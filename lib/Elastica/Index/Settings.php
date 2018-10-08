@@ -1,10 +1,10 @@
 <?php
-namespace Elastica\Index;
+namespace Enalquiler\Elastica\Index;
 
-use Elastica\Exception\NotFoundException;
-use Elastica\Exception\ResponseException;
-use Elastica\Index as BaseIndex;
-use Elastica\Request;
+use Enalquiler\Elastica\Exception\NotFoundException;
+use Enalquiler\Elastica\Exception\ResponseException;
+use Enalquiler\Elastica\Index as BaseIndex;
+use Enalquiler\Elastica\Request;
 
 /**
  * Elastica index settings object.
@@ -46,7 +46,7 @@ class Settings
     /**
      * Construct.
      *
-     * @param \Elastica\Index $index Index object
+     * @param \Enalquiler\Elastica\Index $index Index object
      */
     public function __construct(BaseIndex $index)
     {
@@ -107,7 +107,7 @@ class Settings
      *
      * @param int $replicas Number of replicas
      *
-     * @return \Elastica\Response Response object
+     * @return \Enalquiler\Elastica\Response Response object
      */
     public function setNumberOfReplicas($replicas)
     {
@@ -123,7 +123,7 @@ class Settings
      *
      * @param bool $readOnly (default = true)
      *
-     * @return \Elastica\Response
+     * @return \Enalquiler\Elastica\Response
      */
     public function setReadOnly($readOnly = true)
     {
@@ -151,7 +151,7 @@ class Settings
     /**
      * @param bool $state OPTIONAL (default = true)
      *
-     * @return \Elastica\Response
+     * @return \Enalquiler\Elastica\Response
      */
     public function setBlocksRead($state = true)
     {
@@ -171,7 +171,7 @@ class Settings
     /**
      * @param bool $state OPTIONAL (default = true)
      *
-     * @return \Elastica\Response
+     * @return \Enalquiler\Elastica\Response
      */
     public function setBlocksWrite($state = true)
     {
@@ -202,7 +202,7 @@ class Settings
     /**
      * @param bool $state OPTIONAL (default = true)
      *
-     * @return \Elastica\Response
+     * @return \Enalquiler\Elastica\Response
      */
     public function setBlocksMetadata($state = true)
     {
@@ -219,7 +219,7 @@ class Settings
      *
      * @param int $interval Number of milliseconds
      *
-     * @return \Elastica\Response Response object
+     * @return \Enalquiler\Elastica\Response Response object
      */
     public function setRefreshInterval($interval)
     {
@@ -259,7 +259,7 @@ class Settings
      *
      * @param string $type Merge policy type
      *
-     * @return \Elastica\Response Response object
+     * @return \Enalquiler\Elastica\Response Response object
      *
      * @link https://www.elastic.co/guide/en/elasticsearch/reference/current/index-modules-merge.html
      */
@@ -280,7 +280,7 @@ class Settings
      * @param string $key   Merge policy key (for ex. expunge_deletes_allowed)
      * @param string $value
      *
-     * @return \Elastica\Response
+     * @return \Enalquiler\Elastica\Response
      *
      * @link https://www.elastic.co/guide/en/elasticsearch/reference/current/index-modules-merge.html
      */
@@ -317,7 +317,7 @@ class Settings
      *
      * @param array $data Arguments
      *
-     * @return \Elastica\Response Response object
+     * @return \Enalquiler\Elastica\Response Response object
      */
     public function set(array $data)
     {
@@ -327,7 +327,7 @@ class Settings
     /**
      * Returns the index object.
      *
-     * @return \Elastica\Index Index object
+     * @return \Enalquiler\Elastica\Index Index object
      */
     public function getIndex()
     {
@@ -350,7 +350,7 @@ class Settings
      * @param array  $data   OPTIONAL Data array
      * @param string $method OPTIONAL Transfer method (default = \Elastica\Request::GET)
      *
-     * @return \Elastica\Response Response object
+     * @return \Enalquiler\Elastica\Response Response object
      */
     public function request(array $data = [], $method = Request::GET)
     {

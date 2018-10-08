@@ -1,13 +1,13 @@
 <?php
-namespace Elastica\Test\Filter;
+namespace Enalquiler\Elastica\Test\Filter;
 
-use Elastica\Document;
-use Elastica\Filter\BoolFilter;
-use Elastica\Filter\Ids;
-use Elastica\Filter\Term;
-use Elastica\Filter\Terms;
-use Elastica\Query;
-use Elastica\Test\DeprecatedClassBase as BaseTest;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Filter\BoolFilter;
+use Enalquiler\Elastica\Filter\Ids;
+use Enalquiler\Elastica\Filter\Term;
+use Enalquiler\Elastica\Filter\Terms;
+use Enalquiler\Elastica\Query;
+use Enalquiler\Elastica\Test\DeprecatedClassBase as BaseTest;
 
 class BoolFilterTest extends BaseTest
 {
@@ -168,7 +168,7 @@ class BoolFilterTest extends BaseTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testAddMustInvalidException()
     {
@@ -178,7 +178,7 @@ class BoolFilterTest extends BaseTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testAddMustNotInvalidException()
     {
@@ -188,7 +188,7 @@ class BoolFilterTest extends BaseTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testAddShouldInvalidException()
     {
@@ -200,7 +200,7 @@ class BoolFilterTest extends BaseTest
      * Small unit test to check if also the old object name works.
      *
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testOldObject()
     {
@@ -208,7 +208,7 @@ class BoolFilterTest extends BaseTest
             self::markTestSkipped('These objects are not supported in PHP 7');
         }
 
-        $filter = new \Elastica\Filter\Bool();
+        $filter = new \Enalquiler\Elastica\Filter\Bool();
 
         $filter->addShould('fail!');
     }
@@ -222,7 +222,7 @@ class BoolFilterTest extends BaseTest
             self::markTestSkipped('These objects are not supported in PHP 7');
         }
 
-        $reflection = new \ReflectionClass(new \Elastica\Filter\Bool());
+        $reflection = new \ReflectionClass(new \Enalquiler\Elastica\Filter\Bool());
         $this->assertFileDeprecated($reflection->getFileName(), 'Deprecated: Filters are deprecated. Use queries in filter context. See https://www.elastic.co/guide/en/elasticsearch/reference/2.0/query-dsl-filters.html');
     }
 }

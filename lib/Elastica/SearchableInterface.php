@@ -1,5 +1,5 @@
 <?php
-namespace Elastica;
+namespace Enalquiler\Elastica;
 
 /**
  * Elastica searchable interface.
@@ -28,7 +28,7 @@ interface SearchableInterface
      * @param string|array|\Elastica\Query $query   Array with all query data inside or a Elastica\Query object
      * @param null                         $options
      *
-     * @return \Elastica\ResultSet with all results inside
+     * @return \Enalquiler\Elastica\ResultSet with all results inside
      */
     public function search($query = '', $options = null);
 
@@ -44,10 +44,10 @@ interface SearchableInterface
     public function count($query = '');
 
     /**
-     * @param \Elastica\Query|string $query
+     * @param \Enalquiler\Elastica\Query|string $query
      * @param array                  $options
      *
-     * @return \Elastica\Search
+     * @return \Enalquiler\Elastica\Search
      */
     public function createSearch($query = '', $options = null);
 }

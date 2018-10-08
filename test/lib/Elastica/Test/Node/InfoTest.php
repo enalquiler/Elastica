@@ -1,9 +1,9 @@
 <?php
-namespace Elastica\Test\Node;
+namespace Enalquiler\Elastica\Test\Node;
 
-use Elastica\Node;
-use Elastica\Node\Info as NodeInfo;
-use Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Node;
+use Enalquiler\Elastica\Node\Info as NodeInfo;
+use Enalquiler\Elastica\Test\Base as BaseTest;
 
 class InfoTest extends BaseTest
 {

@@ -1,5 +1,5 @@
 <?php
-namespace Elastica\Test;
+namespace Enalquiler\Elastica\Test;
 
 /**
  * Errors collector for testing.

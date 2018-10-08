@@ -1,13 +1,13 @@
 <?php
-namespace Elastica\Test;
+namespace Enalquiler\Elastica\Test;
 
-use Elastica\Document;
-use Elastica\Query;
-use Elastica\Query\MatchAll;
-use Elastica\Request;
-use Elastica\Response;
-use Elastica\Test\Base as BaseTest;
-use Elastica\Type\Mapping;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Query;
+use Enalquiler\Elastica\Query\MatchAll;
+use Enalquiler\Elastica\Request;
+use Enalquiler\Elastica\Response;
+use Enalquiler\Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Type\Mapping;
 
 class ResponseTest extends BaseTest
 {

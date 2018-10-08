@@ -1,7 +1,7 @@
 <?php
-namespace Elastica\Query;
+namespace Enalquiler\Elastica\Query;
 
-use Elastica\Exception\InvalidException;
+use Enalquiler\Elastica\Exception\InvalidException;
 
 /**
  * Geo bounding box query.
@@ -29,7 +29,7 @@ class GeoBoundingBox extends AbstractQuery
      * @param string $key         Key
      * @param array  $coordinates Array with top left coordinate as first and bottom right coordinate as second element
      *
-     * @throws \Elastica\Exception\InvalidException If $coordinates doesn't have two elements
+     * @throws \Enalquiler\Elastica\Exception\InvalidException If $coordinates doesn't have two elements
      *
      * @return $this
      */

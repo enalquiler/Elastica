@@ -1,10 +1,10 @@
 <?php
-namespace Elastica\Test\QueryBuilder\DSL;
+namespace Enalquiler\Elastica\Test\QueryBuilder\DSL;
 
-use Elastica\Filter\Exists;
-use Elastica\Query\Match;
-use Elastica\Query\Term;
-use Elastica\QueryBuilder\DSL;
+use Enalquiler\Elastica\Filter\Exists;
+use Enalquiler\Elastica\Query\Match;
+use Enalquiler\Elastica\Query\Term;
+use Enalquiler\Elastica\QueryBuilder\DSL;
 
 class QueryTest extends AbstractDSLTest
 {
@@ -15,7 +15,7 @@ class QueryTest extends AbstractDSLTest
     {
         $queryDSL = new DSL\Query();
 
-        $this->assertInstanceOf('Elastica\QueryBuilder\DSL', $queryDSL);
+        $this->assertInstanceOf('Enalquiler\Elastica\QueryBuilder\DSL', $queryDSL);
         $this->assertEquals(DSL::TYPE_QUERY, $queryDSL->getType());
     }
 
@@ -28,12 +28,12 @@ class QueryTest extends AbstractDSLTest
 
         $match = $queryDSL->match('field', 'match');
         $this->assertEquals('match', $match->getParam('field'));
-        $this->assertInstanceOf('Elastica\Query\Match', $match);
+        $this->assertInstanceOf('Enalquiler\Elastica\Query\Match', $match);
     }
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testConstantScoreFilterInvalid()
     {
@@ -91,40 +91,40 @@ class QueryTest extends AbstractDSLTest
     {
         $queryDSL = new DSL\Query();
 
-        $this->_assertImplemented($queryDSL, 'bool', 'Elastica\Query\BoolQuery', []);
-        $this->_assertImplemented($queryDSL, 'boosting', 'Elastica\Query\Boosting', []);
-        $this->_assertImplemented($queryDSL, 'common_terms', 'Elastica\Query\Common', ['field', 'query', 0.001]);
-        $this->_assertImplemented($queryDSL, 'constant_score', 'Elastica\Query\ConstantScore', [new Match()]);
-        $this->_assertImplemented($queryDSL, 'dis_max', 'Elastica\Query\DisMax', []);
+        $this->_assertImplemented($queryDSL, 'bool', 'Enalquiler\Elastica\Query\BoolQuery', []);
+        $this->_assertImplemented($queryDSL, 'boosting', 'Enalquiler\Elastica\Query\Boosting', []);
+        $this->_assertImplemented($queryDSL, 'common_terms', 'Enalquiler\Elastica\Query\Common', ['field', 'query', 0.001]);
+        $this->_assertImplemented($queryDSL, 'constant_score', 'Enalquiler\Elastica\Query\ConstantScore', [new Match()]);
+        $this->_assertImplemented($queryDSL, 'dis_max', 'Enalquiler\Elastica\Query\DisMax', []);
 
         $this->hideDeprecated();
-        $this->_assertImplemented($queryDSL, 'filtered', 'Elastica\Query\Filtered', [new Match(), new Exists('field')]);
-        $this->_assertImplemented($queryDSL, 'filtered', 'Elastica\Query\Filtered', [new Match(), new Term()]);
+        $this->_assertImplemented($queryDSL, 'filtered', 'Enalquiler\Elastica\Query\Filtered', [new Match(), new Exists('field')]);
+        $this->_assertImplemented($queryDSL, 'filtered', 'Enalquiler\Elastica\Query\Filtered', [new Match(), new Term()]);
         $this->showDeprecated();
 
-        $this->_assertImplemented($queryDSL, 'function_score', 'Elastica\Query\FunctionScore', []);
-        $this->_assertImplemented($queryDSL, 'fuzzy', 'Elastica\Query\Fuzzy', ['field', 'type']);
-        $this->_assertImplemented($queryDSL, 'has_child', 'Elastica\Query\HasChild', [new Match()]);
-        $this->_assertImplemented($queryDSL, 'has_parent', 'Elastica\Query\HasParent', [new Match(), 'type']);
-        $this->_assertImplemented($queryDSL, 'ids', 'Elastica\Query\Ids', ['type', []]);
-        $this->_assertImplemented($queryDSL, 'match', 'Elastica\Query\Match', ['field', 'values']);
-        $this->_assertImplemented($queryDSL, 'match_all', 'Elastica\Query\MatchAll', []);
-        $this->_assertImplemented($queryDSL, 'more_like_this', 'Elastica\Query\MoreLikeThis', []);
-        $this->_assertImplemented($queryDSL, 'multi_match', 'Elastica\Query\MultiMatch', []);
-        $this->_assertImplemented($queryDSL, 'nested', 'Elastica\Query\Nested', []);
-        $this->_assertImplemented($queryDSL, 'prefix', 'Elastica\Query\Prefix', []);
-        $this->_assertImplemented($queryDSL, 'query_string', 'Elastica\Query\QueryString', []);
-        $this->_assertImplemented($queryDSL, 'range', 'Elastica\Query\Range', ['field', []]);
-        $this->_assertImplemented($queryDSL, 'regexp', 'Elastica\Query\Regexp', ['field', 'value', 1.0]);
-        $this->_assertImplemented($queryDSL, 'simple_query_string', 'Elastica\Query\SimpleQueryString', ['query']);
-        $this->_assertImplemented($queryDSL, 'term', 'Elastica\Query\Term', []);
-        $this->_assertImplemented($queryDSL, 'terms', 'Elastica\Query\Terms', ['field', []]);
-        $this->_assertImplemented($queryDSL, 'top_children', 'Elastica\Query\TopChildren', [new Match(), 'type']);
-        $this->_assertImplemented($queryDSL, 'wildcard', 'Elastica\Query\Wildcard', []);
+        $this->_assertImplemented($queryDSL, 'function_score', 'Enalquiler\Elastica\Query\FunctionScore', []);
+        $this->_assertImplemented($queryDSL, 'fuzzy', 'Enalquiler\Elastica\Query\Fuzzy', ['field', 'type']);
+        $this->_assertImplemented($queryDSL, 'has_child', 'Enalquiler\Elastica\Query\HasChild', [new Match()]);
+        $this->_assertImplemented($queryDSL, 'has_parent', 'Enalquiler\Elastica\Query\HasParent', [new Match(), 'type']);
+        $this->_assertImplemented($queryDSL, 'ids', 'Enalquiler\Elastica\Query\Ids', ['type', []]);
+        $this->_assertImplemented($queryDSL, 'match', 'Enalquiler\Elastica\Query\Match', ['field', 'values']);
+        $this->_assertImplemented($queryDSL, 'match_all', 'Enalquiler\Elastica\Query\MatchAll', []);
+        $this->_assertImplemented($queryDSL, 'more_like_this', 'Enalquiler\Elastica\Query\MoreLikeThis', []);
+        $this->_assertImplemented($queryDSL, 'multi_match', 'Enalquiler\Elastica\Query\MultiMatch', []);
+        $this->_assertImplemented($queryDSL, 'nested', 'Enalquiler\Elastica\Query\Nested', []);
+        $this->_assertImplemented($queryDSL, 'prefix', 'Enalquiler\Elastica\Query\Prefix', []);
+        $this->_assertImplemented($queryDSL, 'query_string', 'Enalquiler\Elastica\Query\QueryString', []);
+        $this->_assertImplemented($queryDSL, 'range', 'Enalquiler\Elastica\Query\Range', ['field', []]);
+        $this->_assertImplemented($queryDSL, 'regexp', 'Enalquiler\Elastica\Query\Regexp', ['field', 'value', 1.0]);
+        $this->_assertImplemented($queryDSL, 'simple_query_string', 'Enalquiler\Elastica\Query\SimpleQueryString', ['query']);
+        $this->_assertImplemented($queryDSL, 'term', 'Enalquiler\Elastica\Query\Term', []);
+        $this->_assertImplemented($queryDSL, 'terms', 'Enalquiler\Elastica\Query\Terms', ['field', []]);
+        $this->_assertImplemented($queryDSL, 'top_children', 'Enalquiler\Elastica\Query\TopChildren', [new Match(), 'type']);
+        $this->_assertImplemented($queryDSL, 'wildcard', 'Enalquiler\Elastica\Query\Wildcard', []);
         $this->_assertImplemented(
             $queryDSL,
             'geo_distance',
-            'Elastica\Query\GeoDistance',
+            'Enalquiler\Elastica\Query\GeoDistance',
             ['key', ['lat' => 1, 'lon' => 0], 'distance']
         );
 

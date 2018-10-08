@@ -1,13 +1,13 @@
 <?php
-namespace Elastica\Transport;
+namespace Enalquiler\Elastica\Transport;
 
-use Elastica\Connection;
-use Elastica\Exception\Connection\GuzzleException;
-use Elastica\Exception\PartialShardFailureException;
-use Elastica\Exception\ResponseException;
-use Elastica\JSON;
-use Elastica\Request;
-use Elastica\Response;
+use Enalquiler\Elastica\Connection;
+use Enalquiler\Elastica\Exception\Connection\GuzzleException;
+use Enalquiler\Elastica\Exception\PartialShardFailureException;
+use Enalquiler\Elastica\Exception\ResponseException;
+use Enalquiler\Elastica\JSON;
+use Enalquiler\Elastica\Request;
+use Enalquiler\Elastica\Response;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\TransferException;
 use GuzzleHttp\Psr7;
@@ -39,14 +39,14 @@ class Guzzle extends AbstractTransport
      *
      * All calls that are made to the server are done through this function
      *
-     * @param \Elastica\Request $request
+     * @param \Enalquiler\Elastica\Request $request
      * @param array             $params  Host, Port, ...
      *
-     * @throws \Elastica\Exception\ConnectionException
-     * @throws \Elastica\Exception\ResponseException
-     * @throws \Elastica\Exception\Connection\HttpException
+     * @throws \Enalquiler\Elastica\Exception\ConnectionException
+     * @throws \Enalquiler\Elastica\Exception\ResponseException
+     * @throws \Enalquiler\Elastica\Exception\Connection\HttpException
      *
-     * @return \Elastica\Response Response object
+     * @return \Enalquiler\Elastica\Response Response object
      */
     public function exec(Request $request, array $params)
     {
@@ -164,7 +164,7 @@ class Guzzle extends AbstractTransport
     /**
      * Builds the base url for the guzzle connection.
      *
-     * @param \Elastica\Connection $connection
+     * @param \Enalquiler\Elastica\Connection $connection
      *
      * @return string
      */
@@ -190,7 +190,7 @@ class Guzzle extends AbstractTransport
     /**
      * Builds the action path url for each request.
      *
-     * @param \Elastica\Request $request
+     * @param \Enalquiler\Elastica\Request $request
      *
      * @return string
      */

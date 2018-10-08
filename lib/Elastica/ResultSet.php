@@ -1,7 +1,7 @@
 <?php
-namespace Elastica;
+namespace Enalquiler\Elastica;
 
-use Elastica\Exception\InvalidException;
+use Enalquiler\Elastica\Exception\InvalidException;
 
 /**
  * Elastica result set.
@@ -270,7 +270,7 @@ class ResultSet implements \Iterator, \Countable, \ArrayAccess
     /**
      * Returns the current object of the set.
      *
-     * @return \Elastica\Result|bool Set object or false if not valid (no more entries)
+     * @return \Enalquiler\Elastica\Result|bool Set object or false if not valid (no more entries)
      */
     public function current()
     {

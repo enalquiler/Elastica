@@ -1,8 +1,8 @@
 <?php
-namespace Elastica\Multi;
+namespace Enalquiler\Elastica\Multi;
 
-use Elastica\Response;
-use Elastica\Search as BaseSearch;
+use Enalquiler\Elastica\Response;
+use Enalquiler\Elastica\Search as BaseSearch;
 
 interface MultiBuilderInterface
 {

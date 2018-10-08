@@ -1,10 +1,10 @@
 <?php
-namespace Elastica\Transport;
+namespace Enalquiler\Elastica\Transport;
 
-use Elastica\Connection;
-use Elastica\Exception\InvalidException;
-use Elastica\Param;
-use Elastica\Request;
+use Enalquiler\Elastica\Connection;
+use Enalquiler\Elastica\Exception\InvalidException;
+use Enalquiler\Elastica\Param;
+use Enalquiler\Elastica\Request;
 
 /**
  * Elastica Abstract Transport object.
@@ -21,7 +21,7 @@ abstract class AbstractTransport extends Param
     /**
      * Construct transport.
      *
-     * @param \Elastica\Connection $connection Connection object
+     * @param \Enalquiler\Elastica\Connection $connection Connection object
      */
     public function __construct(Connection $connection = null)
     {
@@ -31,7 +31,7 @@ abstract class AbstractTransport extends Param
     }
 
     /**
-     * @return \Elastica\Connection Connection object
+     * @return \Enalquiler\Elastica\Connection Connection object
      */
     public function getConnection()
     {
@@ -39,7 +39,7 @@ abstract class AbstractTransport extends Param
     }
 
     /**
-     * @param \Elastica\Connection $connection Connection object
+     * @param \Enalquiler\Elastica\Connection $connection Connection object
      *
      * @return $this
      */
@@ -53,10 +53,10 @@ abstract class AbstractTransport extends Param
     /**
      * Executes the transport request.
      *
-     * @param \Elastica\Request $request Request object
+     * @param \Enalquiler\Elastica\Request $request Request object
      * @param array             $params  Hostname, port, path, ...
      *
-     * @return \Elastica\Response Response object
+     * @return \Enalquiler\Elastica\Response Response object
      */
     abstract public function exec(Request $request, array $params);
 
@@ -71,10 +71,10 @@ abstract class AbstractTransport extends Param
      *          keys in the array will be set as parameters in the transport instance
      *
      * @param mixed                $transport  A transport definition
-     * @param \Elastica\Connection $connection A connection instance
+     * @param \Enalquiler\Elastica\Connection $connection A connection instance
      * @param array                $params     Parameters for the transport class
      *
-     * @throws \Elastica\Exception\InvalidException
+     * @throws \Enalquiler\Elastica\Exception\InvalidException
      *
      * @return AbstractTransport
      */
@@ -99,7 +99,7 @@ abstract class AbstractTransport extends Param
             } else {
                 $transport = ucfirst($transport);
             }
-            $classNames = ["Elastica\\Transport\\$transport", $transport];
+            $classNames = ["Enalquiler\\Elastica\\Transport\\$transport", $transport];
             foreach ($classNames as $className) {
                 if (class_exists($className)) {
                     $transport = new $className();

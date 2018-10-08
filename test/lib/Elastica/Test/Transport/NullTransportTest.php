@@ -1,11 +1,11 @@
 <?php
-namespace Elastica\Test\Transport;
+namespace Enalquiler\Elastica\Test\Transport;
 
-use Elastica\Connection;
-use Elastica\Query;
-use Elastica\Request;
-use Elastica\Test\Base as BaseTest;
-use Elastica\Transport\NullTransport;
+use Enalquiler\Elastica\Connection;
+use Enalquiler\Elastica\Query;
+use Enalquiler\Elastica\Request;
+use Enalquiler\Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Transport\NullTransport;
 
 /**
  * Elastica Null Transport Test.
@@ -68,7 +68,7 @@ class NullTransportTest extends BaseTest
         $transport = new NullTransport();
         $response = $transport->exec($request, $params);
 
-        $this->assertInstanceOf('\Elastica\Response', $response);
+        $this->assertInstanceOf('\Enalquiler\Elastica\Response', $response);
 
         $data = $response->getData();
         $this->assertEquals($params, $data['params']);
@@ -85,7 +85,7 @@ class NullTransportTest extends BaseTest
 
         $request = new Request('/test');
         $params = ['name' => 'ruflin'];
-        $transport = new \Elastica\Transport\Null();
+        $transport = new \Enalquiler\Elastica\Transport\Null();
         $response = $transport->exec($request, $params);
 
         $this->assertInstanceOf('\Elastica\Response', $response);

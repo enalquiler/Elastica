@@ -1,7 +1,7 @@
 <?php
-namespace Elastica;
+namespace Enalquiler\Elastica;
 
-use Elastica\Exception\DeprecatedException;
+use Enalquiler\Elastica\Exception\DeprecatedException;
 
 /**
  * Base class for things that can be sent to the update api (Document and
@@ -94,7 +94,7 @@ class AbstractUpdateAction extends Param
     /**
      * Return document type name.
      *
-     * @throws \Elastica\Exception\InvalidException
+     * @throws \Enalquiler\Elastica\Exception\InvalidException
      *
      * @return string Document type name
      */
@@ -122,7 +122,7 @@ class AbstractUpdateAction extends Param
     /**
      * Get the document index name.
      *
-     * @throws \Elastica\Exception\InvalidException
+     * @throws \Enalquiler\Elastica\Exception\InvalidException
      *
      * @return string Index name
      */
@@ -517,7 +517,7 @@ class AbstractUpdateAction extends Param
     }
 
     /**
-     * @param \Elastica\Document|array $data
+     * @param \Enalquiler\Elastica\Document|array $data
      *
      * @return $this
      */
@@ -530,7 +530,7 @@ class AbstractUpdateAction extends Param
     }
 
     /**
-     * @return \Elastica\Document
+     * @return \Enalquiler\Elastica\Document
      */
     public function getUpsert()
     {

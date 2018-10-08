@@ -1,11 +1,11 @@
 <?php
-namespace Elastica\Test\ResultSet;
+namespace Enalquiler\Elastica\Test\ResultSet;
 
-use Elastica\Query;
-use Elastica\Response;
-use Elastica\ResultSet;
-use Elastica\ResultSet\BuilderInterface;
-use Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Query;
+use Enalquiler\Elastica\Response;
+use Enalquiler\Elastica\ResultSet;
+use Enalquiler\Elastica\ResultSet\BuilderInterface;
+use Enalquiler\Elastica\Test\Base as BaseTest;
 
 /**
  * @group unit
@@ -31,8 +31,8 @@ class ProcessingBuilderTest extends BaseTest
     {
         parent::setUp();
 
-        $this->innerBuilder = $this->getMock('Elastica\\ResultSet\\BuilderInterface');
-        $this->processor = $this->getMock('Elastica\\ResultSet\\ProcessorInterface');
+        $this->innerBuilder = $this->getMock('Enalquiler\\Elastica\\ResultSet\\BuilderInterface');
+        $this->processor = $this->getMock('Enalquiler\\Elastica\\ResultSet\\ProcessorInterface');
 
         $this->builder = new ResultSet\ProcessingBuilder($this->innerBuilder, $this->processor);
     }

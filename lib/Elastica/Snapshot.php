@@ -1,8 +1,8 @@
 <?php
-namespace Elastica;
+namespace Enalquiler\Elastica;
 
-use Elastica\Exception\NotFoundException;
-use Elastica\Exception\ResponseException;
+use Enalquiler\Elastica\Exception\NotFoundException;
+use Enalquiler\Elastica\Exception\ResponseException;
 
 /**
  * Class Snapshot.

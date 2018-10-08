@@ -1,9 +1,9 @@
 <?php
-namespace Elastica\Test\Query;
+namespace Enalquiler\Elastica\Test\Query;
 
-use Elastica\Document;
-use Elastica\Query\QueryString;
-use Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Query\QueryString;
+use Enalquiler\Elastica\Test\Base as BaseTest;
 
 class QueryStringTest extends BaseTest
 {
@@ -125,7 +125,7 @@ class QueryStringTest extends BaseTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testSetQueryInvalid()
     {
@@ -152,7 +152,7 @@ class QueryStringTest extends BaseTest
         ];
 
         $this->assertEquals($expected, $query->toArray());
-        $this->assertInstanceOf('Elastica\Query\QueryString', $query->setTimezone($timezone));
+        $this->assertInstanceOf('Enalquiler\Elastica\Query\QueryString', $query->setTimezone($timezone));
     }
 
     /**

@@ -1,13 +1,13 @@
 <?php
-namespace Elastica;
+namespace Enalquiler\Elastica;
 
-use Elastica\Bulk\Action;
-use Elastica\Bulk\Action\AbstractDocument as AbstractDocumentAction;
-use Elastica\Bulk\Response as BulkResponse;
-use Elastica\Bulk\ResponseSet;
-use Elastica\Exception\Bulk\ResponseException as BulkResponseException;
-use Elastica\Exception\InvalidException;
-use Elastica\Script\AbstractScript;
+use Enalquiler\Elastica\Bulk\Action;
+use Enalquiler\Elastica\Bulk\Action\AbstractDocument as AbstractDocumentAction;
+use Enalquiler\Elastica\Bulk\Response as BulkResponse;
+use Enalquiler\Elastica\Bulk\ResponseSet;
+use Enalquiler\Elastica\Exception\Bulk\ResponseException as BulkResponseException;
+use Enalquiler\Elastica\Exception\InvalidException;
+use Enalquiler\Elastica\Script\AbstractScript;
 
 class Bulk
 {
@@ -39,7 +39,7 @@ class Bulk
     protected $_requestParams = [];
 
     /**
-     * @param \Elastica\Client $client
+     * @param \Enalquiler\Elastica\Client $client
      */
     public function __construct(Client $client)
     {
@@ -129,7 +129,7 @@ class Bulk
     }
 
     /**
-     * @param \Elastica\Bulk\Action $action
+     * @param \Enalquiler\Elastica\Bulk\Action $action
      *
      * @return $this
      */
@@ -141,7 +141,7 @@ class Bulk
     }
 
     /**
-     * @param \Elastica\Bulk\Action[] $actions
+     * @param \Enalquiler\Elastica\Bulk\Action[] $actions
      *
      * @return $this
      */
@@ -155,7 +155,7 @@ class Bulk
     }
 
     /**
-     * @return \Elastica\Bulk\Action[]
+     * @return \Enalquiler\Elastica\Bulk\Action[]
      */
     public function getActions()
     {
@@ -163,7 +163,7 @@ class Bulk
     }
 
     /**
-     * @param \Elastica\Document $document
+     * @param \Enalquiler\Elastica\Document $document
      * @param string             $opType
      *
      * @return $this
@@ -176,7 +176,7 @@ class Bulk
     }
 
     /**
-     * @param \Elastica\Document[] $documents
+     * @param \Enalquiler\Elastica\Document[] $documents
      * @param string               $opType
      *
      * @return $this
@@ -191,7 +191,7 @@ class Bulk
     }
 
     /**
-     * @param \Elastica\Script\AbstractScript $script
+     * @param \Enalquiler\Elastica\Script\AbstractScript $script
      * @param string                          $opType
      *
      * @return $this
@@ -204,7 +204,7 @@ class Bulk
     }
 
     /**
-     * @param \Elastica\Document[] $scripts
+     * @param \Enalquiler\Elastica\Document[] $scripts
      * @param string               $opType
      *
      * @return $this
@@ -219,7 +219,7 @@ class Bulk
     }
 
     /**
-     * @param \Elastica\Script\AbstractScript|\Elastica\Document|array $data
+     * @param \Enalquiler\Elastica\Script\AbstractScript|\Elastica\Document|array $data
      * @param string                                                   $opType
      *
      * @return $this
@@ -246,7 +246,7 @@ class Bulk
     /**
      * @param array $data
      *
-     * @throws \Elastica\Exception\InvalidException
+     * @throws \Enalquiler\Elastica\Exception\InvalidException
      *
      * @return $this
      */
@@ -347,7 +347,7 @@ class Bulk
     }
 
     /**
-     * @return \Elastica\Bulk\ResponseSet
+     * @return \Enalquiler\Elastica\Bulk\ResponseSet
      */
     public function send()
     {
@@ -360,12 +360,12 @@ class Bulk
     }
 
     /**
-     * @param \Elastica\Response $response
+     * @param \Enalquiler\Elastica\Response $response
      *
-     * @throws \Elastica\Exception\Bulk\ResponseException
-     * @throws \Elastica\Exception\InvalidException
+     * @throws \Enalquiler\Elastica\Exception\Bulk\ResponseException
+     * @throws \Enalquiler\Elastica\Exception\InvalidException
      *
-     * @return \Elastica\Bulk\ResponseSet
+     * @return \Enalquiler\Elastica\Bulk\ResponseSet
      */
     protected function _processResponse(Response $response)
     {

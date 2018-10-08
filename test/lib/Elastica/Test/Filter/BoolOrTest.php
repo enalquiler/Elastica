@@ -1,10 +1,10 @@
 <?php
-namespace Elastica\Test\Filter;
+namespace Enalquiler\Elastica\Test\Filter;
 
-use Elastica\Document;
-use Elastica\Filter\BoolOr;
-use Elastica\Filter\Ids;
-use Elastica\Test\DeprecatedClassBase as BaseTest;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Filter\BoolOr;
+use Enalquiler\Elastica\Filter\Ids;
+use Enalquiler\Elastica\Test\DeprecatedClassBase as BaseTest;
 
 class BoolOrTest extends BaseTest
 {
@@ -22,10 +22,10 @@ class BoolOrTest extends BaseTest
      */
     public function testAddFilter()
     {
-        $filter = $this->getMockForAbstractClass('Elastica\Filter\AbstractFilter');
+        $filter = $this->getMockForAbstractClass('Enalquiler\Elastica\Filter\AbstractFilter');
         $orFilter = new BoolOr();
         $returnValue = $orFilter->addFilter($filter);
-        $this->assertInstanceOf('Elastica\Filter\BoolOr', $returnValue);
+        $this->assertInstanceOf('Enalquiler\Elastica\Filter\BoolOr', $returnValue);
     }
 
     /**
@@ -89,9 +89,9 @@ class BoolOrTest extends BaseTest
 
         $index->refresh();
 
-        $boolOr = new \Elastica\Filter\BoolOr();
-        $boolOr->addFilter(new \Elastica\Filter\Term(['categoryId' => '1']));
-        $boolOr->addFilter(new \Elastica\Filter\Term(['categoryId' => '2']));
+        $boolOr = new \Enalquiler\Elastica\Filter\BoolOr();
+        $boolOr->addFilter(new \Enalquiler\Elastica\Filter\Term(['categoryId' => '1']));
+        $boolOr->addFilter(new \Enalquiler\Elastica\Filter\Term(['categoryId' => '2']));
 
         $resultSet = $type->search($boolOr);
         $this->assertEquals(2, $resultSet->count());

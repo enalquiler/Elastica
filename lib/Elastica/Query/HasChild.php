@@ -1,7 +1,7 @@
 <?php
-namespace Elastica\Query;
+namespace Enalquiler\Elastica\Query;
 
-use Elastica\Query as BaseQuery;
+use Enalquiler\Elastica\Query as BaseQuery;
 
 /**
  * Returns parent documents having child docs matching the query.

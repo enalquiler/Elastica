@@ -1,8 +1,8 @@
 <?php
-namespace Elastica;
+namespace Enalquiler\Elastica;
 
-use Elastica\Exception\InvalidException;
-use Elastica\Transport\AbstractTransport;
+use Enalquiler\Elastica\Exception\InvalidException;
+use Enalquiler\Elastica\Transport\AbstractTransport;
 
 /**
  * Elastica connection instance to an elasticasearch node.
@@ -243,9 +243,9 @@ class Connection extends Param
     /**
      * Returns an instance of the transport type.
      *
-     * @throws \Elastica\Exception\InvalidException If invalid transport type
+     * @throws \Enalquiler\Elastica\Exception\InvalidException If invalid transport type
      *
-     * @return \Elastica\Transport\AbstractTransport Transport object
+     * @return \Enalquiler\Elastica\Transport\AbstractTransport Transport object
      */
     public function getTransportObject()
     {
@@ -303,7 +303,7 @@ class Connection extends Param
      *
      * @param string $key Config key
      *
-     * @throws \Elastica\Exception\InvalidException
+     * @throws \Enalquiler\Elastica\Exception\InvalidException
      *
      * @return array|string Config value
      */
@@ -322,7 +322,7 @@ class Connection extends Param
     }
 
     /**
-     * @param \Elastica\Connection|array $params Params to create a connection
+     * @param \Enalquiler\Elastica\Connection|array $params Params to create a connection
      *
      * @throws Exception\InvalidException
      *

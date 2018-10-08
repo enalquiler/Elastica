@@ -1,12 +1,12 @@
 <?php
-namespace Elastica\Tool;
+namespace Enalquiler\Elastica\Tool;
 
-use Elastica\Bulk;
-use Elastica\Index;
-use Elastica\Query\MatchAll;
-use Elastica\ScanAndScroll;
-use Elastica\Search;
-use Elastica\Type;
+use Enalquiler\Elastica\Bulk;
+use Enalquiler\Elastica\Index;
+use Enalquiler\Elastica\Query\MatchAll;
+use Enalquiler\Elastica\ScanAndScroll;
+use Enalquiler\Elastica\Search;
+use Enalquiler\Elastica\Type;
 
 /**
  * Functions to move documents and types between indices.
@@ -52,11 +52,11 @@ class CrossIndex
      *
      * @link https://www.elastic.co/guide/en/elasticsearch/guide/master/reindex.html
      *
-     * @param \Elastica\Index $oldIndex
-     * @param \Elastica\Index $newIndex
+     * @param \Enalquiler\Elastica\Index $oldIndex
+     * @param \Enalquiler\Elastica\Index $newIndex
      * @param array           $options  keys: CrossIndex::OPTION_* constants
      *
-     * @return \Elastica\Index The new index object
+     * @return \Enalquiler\Elastica\Index The new index object
      */
     public static function reindex(
         Index $oldIndex,
@@ -114,11 +114,11 @@ class CrossIndex
      *
      * @see \Elastica\Tool\CrossIndex::reindex()
      *
-     * @param \Elastica\Index $oldIndex
-     * @param \Elastica\Index $newIndex
+     * @param \Enalquiler\Elastica\Index $oldIndex
+     * @param \Enalquiler\Elastica\Index $newIndex
      * @param array           $options  keys: CrossIndex::OPTION_* constants
      *
-     * @return \Elastica\Index The new index object
+     * @return \Enalquiler\Elastica\Index The new index object
      */
     public static function copy(
         Index $oldIndex,

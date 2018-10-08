@@ -1,5 +1,5 @@
 <?php
-namespace Elastica\Filter;
+namespace Enalquiler\Elastica\Filter;
 
 trigger_error('Deprecated: Filters are deprecated. Use queries in filter context. See https://www.elastic.co/guide/en/elasticsearch/reference/2.0/query-dsl-filters.html', E_USER_DEPRECATED);
 
@@ -41,7 +41,7 @@ class Regexp extends AbstractFilter
      * @param string $regexp  Regular expression
      * @param array  $options Regular expression options
      *
-     * @throws \Elastica\Exception\InvalidException
+     * @throws \Enalquiler\Elastica\Exception\InvalidException
      */
     public function __construct($field = '', $regexp = '', $options = [])
     {

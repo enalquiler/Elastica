@@ -1,7 +1,7 @@
 <?php
-namespace Elastica\Script;
+namespace Enalquiler\Elastica\Script;
 
-use Elastica\AbstractUpdateAction;
+use Enalquiler\Elastica\AbstractUpdateAction;
 
 /**
  * Base class for Script object.

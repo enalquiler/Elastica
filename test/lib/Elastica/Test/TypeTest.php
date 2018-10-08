@@ -1,18 +1,18 @@
 <?php
-namespace Elastica\Test;
+namespace Enalquiler\Elastica\Test;
 
-use Elastica\Document;
-use Elastica\Exception\NotFoundException;
-use Elastica\Exception\ResponseException;
-use Elastica\Index;
-use Elastica\Query;
-use Elastica\Query\MatchAll;
-use Elastica\Query\SimpleQueryString;
-use Elastica\Script\Script;
-use Elastica\Search;
-use Elastica\Test\Base as BaseTest;
-use Elastica\Type;
-use Elastica\Type\Mapping;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Exception\NotFoundException;
+use Enalquiler\Elastica\Exception\ResponseException;
+use Enalquiler\Elastica\Index;
+use Enalquiler\Elastica\Query;
+use Enalquiler\Elastica\Query\MatchAll;
+use Enalquiler\Elastica\Query\SimpleQueryString;
+use Enalquiler\Elastica\Script\Script;
+use Enalquiler\Elastica\Search;
+use Enalquiler\Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Type;
+use Enalquiler\Elastica\Type\Mapping;
 
 class TypeTest extends BaseTest
 {
@@ -330,7 +330,7 @@ class TypeTest extends BaseTest
 
     /**
      * @group functional
-     * @expectedException \Elastica\Exception\NotFoundException
+     * @expectedException \Enalquiler\Elastica\Exception\NotFoundException
      */
     public function testGetDocumentNotExist()
     {
@@ -346,7 +346,7 @@ class TypeTest extends BaseTest
 
     /**
      * @group functional
-     * @expectedException \Elastica\Exception\ResponseException
+     * @expectedException \Enalquiler\Elastica\Exception\ResponseException
      */
     public function testGetDocumentNotExistingIndex()
     {
@@ -569,12 +569,12 @@ class TypeTest extends BaseTest
      * Test that Delete of index type throw deprecated exception.
      *
      * @group unit
-     * @expectedException \Elastica\Exception\DeprecatedException
+     * @expectedException \Enalquiler\Elastica\Exception\DeprecatedException
      */
     public function testDeleteType()
     {
         $type = new Type(
-            $this->getMockBuilder('Elastica\Index')->disableOriginalConstructor()->getMock(),
+            $this->getMockBuilder('Enalquiler\Elastica\Index')->disableOriginalConstructor()->getMock(),
             'test'
         );
 
@@ -730,7 +730,7 @@ class TypeTest extends BaseTest
 
     /**
      * @group functional
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testUpdateDocumentWithoutId()
     {
@@ -841,7 +841,7 @@ class TypeTest extends BaseTest
         $this->assertTrue($document->hasId());
 
         $foundDoc = $type->getDocument($document->getId());
-        $this->assertInstanceOf('Elastica\Document', $foundDoc);
+        $this->assertInstanceOf('Enalquiler\Elastica\Document', $foundDoc);
         $this->assertEquals($document->getId(), $foundDoc->getId());
         $data = $foundDoc->getData();
         $this->assertArrayHasKey('name', $data);
@@ -850,7 +850,7 @@ class TypeTest extends BaseTest
 
     /**
      * @group functional
-     * @expectedException \Elastica\Exception\RuntimeException
+     * @expectedException \Enalquiler\Elastica\Exception\RuntimeException
      */
     public function testAddDocumentWithoutSerializer()
     {
@@ -897,7 +897,7 @@ class TypeTest extends BaseTest
         $index = $this->_getClient()->getIndex('foo');
         $type = $index->getType('user');
         $ret = $type->setSerializer('get_object_vars');
-        $this->assertInstanceOf('Elastica\Type', $ret);
+        $this->assertInstanceOf('Enalquiler\Elastica\Type', $ret);
     }
 
     /**

@@ -1,7 +1,7 @@
 <?php
-namespace Elastica\QueryBuilder;
+namespace Enalquiler\Elastica\QueryBuilder;
 
-use Elastica\Exception\QueryBuilderException;
+use Enalquiler\Elastica\Exception\QueryBuilderException;
 
 /**
  * Facade for a specific DSL object.

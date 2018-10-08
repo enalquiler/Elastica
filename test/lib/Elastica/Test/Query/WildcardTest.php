@@ -1,10 +1,10 @@
 <?php
-namespace Elastica\Test\Query;
+namespace Enalquiler\Elastica\Test\Query;
 
-use Elastica\Document;
-use Elastica\Query\Wildcard;
-use Elastica\Test\Base as BaseTest;
-use Elastica\Type\Mapping;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Query\Wildcard;
+use Enalquiler\Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Type\Mapping;
 
 class WildcardTest extends BaseTest
 {

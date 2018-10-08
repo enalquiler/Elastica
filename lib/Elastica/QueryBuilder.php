@@ -1,10 +1,10 @@
 <?php
-namespace Elastica;
+namespace Enalquiler\Elastica;
 
-use Elastica\Exception\QueryBuilderException;
-use Elastica\QueryBuilder\DSL;
-use Elastica\QueryBuilder\Facade;
-use Elastica\QueryBuilder\Version;
+use Enalquiler\Elastica\Exception\QueryBuilderException;
+use Enalquiler\Elastica\QueryBuilder\DSL;
+use Enalquiler\Elastica\QueryBuilder\Facade;
+use Enalquiler\Elastica\QueryBuilder\Version;
 
 /**
  * Query Builder.

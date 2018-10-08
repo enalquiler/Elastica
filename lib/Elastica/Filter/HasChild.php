@@ -1,5 +1,5 @@
 <?php
-namespace Elastica\Filter;
+namespace Enalquiler\Elastica\Filter;
 
 trigger_error('Deprecated: Filters are deprecated. Use queries in filter context. See https://www.elastic.co/guide/en/elasticsearch/reference/2.0/query-dsl-filters.html', E_USER_DEPRECATED);
 
@@ -38,13 +38,13 @@ class HasChild extends AbstractFilter
      */
     public function setQuery($query)
     {
-        return $this->setParam('query', \Elastica\Query::create($query));
+        return $this->setParam('query', \Enalquiler\Elastica\Query::create($query));
     }
 
     /**
      * Sets the filter object.
      *
-     * @param \Elastica\Filter\AbstractFilter $filter
+     * @param \Enalquiler\Elastica\Filter\AbstractFilter $filter
      *
      * @return $this
      */
@@ -62,7 +62,7 @@ class HasChild extends AbstractFilter
      */
     public function setType($type)
     {
-        if ($type instanceof \Elastica\Type) {
+        if ($type instanceof \Enalquiler\Elastica\Type) {
             $type = $type->getName();
         }
 

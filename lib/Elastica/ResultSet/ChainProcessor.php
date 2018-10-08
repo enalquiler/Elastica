@@ -1,7 +1,7 @@
 <?php
-namespace Elastica\ResultSet;
+namespace Enalquiler\Elastica\ResultSet;
 
-use Elastica\ResultSet;
+use Enalquiler\Elastica\ResultSet;
 
 /**
  * Allows multiple ProcessorInterface instances to operate on the same

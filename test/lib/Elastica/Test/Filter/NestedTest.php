@@ -1,12 +1,12 @@
 <?php
-namespace Elastica\Test\Filter;
+namespace Enalquiler\Elastica\Test\Filter;
 
-use Elastica\Document;
-use Elastica\Filter\Nested;
-use Elastica\Query\Terms;
-use Elastica\Search;
-use Elastica\Test\DeprecatedClassBase as BaseTest;
-use Elastica\Type\Mapping;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Filter\Nested;
+use Enalquiler\Elastica\Query\Terms;
+use Enalquiler\Elastica\Search;
+use Enalquiler\Elastica\Test\DeprecatedClassBase as BaseTest;
+use Enalquiler\Elastica\Type\Mapping;
 
 class NestedTest extends BaseTest
 {
@@ -132,6 +132,6 @@ class NestedTest extends BaseTest
         $this->assertFalse($filter->setJoin(false)->getParam('join'));
 
         $returnValue = $filter->setJoin(true);
-        $this->assertInstanceOf('Elastica\Filter\Nested', $returnValue);
+        $this->assertInstanceOf('Enalquiler\Elastica\Filter\Nested', $returnValue);
     }
 }

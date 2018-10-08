@@ -1,8 +1,8 @@
 <?php
-namespace Elastica\Query;
+namespace Enalquiler\Elastica\Query;
 
-use Elastica\Script\AbstractScript;
-use Elastica\Script\ScriptFields;
+use Enalquiler\Elastica\Script\AbstractScript;
+use Enalquiler\Elastica\Script\ScriptFields;
 
 /**
  * Nested query.
@@ -117,7 +117,7 @@ class InnerHits extends AbstractQuery
     /**
      * Set script fields.
      *
-     * @param \Elastica\Script\ScriptFields $scriptFields
+     * @param \Enalquiler\Elastica\Script\ScriptFields $scriptFields
      *
      * @return $this
      */
@@ -130,7 +130,7 @@ class InnerHits extends AbstractQuery
      * Adds a Script to the aggregation.
      *
      * @param string                          $name
-     * @param \Elastica\Script\AbstractScript $script
+     * @param \Enalquiler\Elastica\Script\AbstractScript $script
      *
      * @return $this
      */

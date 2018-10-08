@@ -1,12 +1,12 @@
 <?php
-namespace Elastica\Test\Suggest;
+namespace Enalquiler\Elastica\Test\Suggest;
 
-use Elastica\Document;
-use Elastica\Index;
-use Elastica\Suggest;
-use Elastica\Suggest\CandidateGenerator\DirectGenerator;
-use Elastica\Suggest\Phrase;
-use Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Index;
+use Enalquiler\Elastica\Suggest;
+use Enalquiler\Elastica\Suggest\CandidateGenerator\DirectGenerator;
+use Enalquiler\Elastica\Suggest\Phrase;
+use Enalquiler\Elastica\Test\Base as BaseTest;
 
 class PhraseTest extends BaseTest
 {

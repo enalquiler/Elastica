@@ -1,13 +1,13 @@
 <?php
-namespace Elastica;
+namespace Enalquiler\Elastica;
 
-use Elastica\Exception\InvalidException;
+use Enalquiler\Elastica\Exception\InvalidException;
 
 /**
  * Elastica index template object.
  *
  * @author Dmitry Balabka <dmitry.balabka@gmail.com>
- * 
+ *
  * @link https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-templates.html
  */
 class IndexTemplate
@@ -29,10 +29,10 @@ class IndexTemplate
     /**
      * Creates a new index template object.
      *
-     * @param \Elastica\Client $client Client object
+     * @param \Enalquiler\Elastica\Client $client Client object
      * @param string           $name   Index template name
      *
-     * @throws \Elastica\Exception\InvalidException
+     * @throws \Enalquiler\Elastica\Exception\InvalidException
      */
     public function __construct(Client $client, $name)
     {
@@ -47,7 +47,7 @@ class IndexTemplate
     /**
      * Deletes the index template.
      *
-     * @return \Elastica\Response Response object
+     * @return \Enalquiler\Elastica\Response Response object
      */
     public function delete()
     {
@@ -63,7 +63,7 @@ class IndexTemplate
      *
      * @param array $args OPTIONAL Arguments to use
      *
-     * @return \Elastica\Response
+     * @return \Enalquiler\Elastica\Response
      */
     public function create(array $args = [])
     {
@@ -96,7 +96,7 @@ class IndexTemplate
     /**
      * Returns index template client.
      *
-     * @return \Elastica\Client Index client object
+     * @return \Enalquiler\Elastica\Client Index client object
      */
     public function getClient()
     {
@@ -109,7 +109,7 @@ class IndexTemplate
      * @param string $method Rest method to use (GET, POST, DELETE, PUT)
      * @param array  $data   OPTIONAL Arguments as array
      *
-     * @return \Elastica\Response Response object
+     * @return \Enalquiler\Elastica\Response Response object
      */
     public function request($method, $data = [])
     {

@@ -1,5 +1,5 @@
 <?php
-namespace Elastica\Suggest\CandidateGenerator;
+namespace Enalquiler\Elastica\Suggest\CandidateGenerator;
 
 /**
  * Class DirectGenerator.

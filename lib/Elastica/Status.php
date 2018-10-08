@@ -1,7 +1,7 @@
 <?php
-namespace Elastica;
+namespace Enalquiler\Elastica;
 
-use Elastica\Exception\ResponseException;
+use Enalquiler\Elastica\Exception\ResponseException;
 
 /**
  * Elastica general status.
@@ -36,7 +36,7 @@ class Status
     /**
      * Constructs Status object.
      *
-     * @param \Elastica\Client $client Client object
+     * @param \Enalquiler\Elastica\Client $client Client object
      */
     public function __construct(Client $client)
     {
@@ -125,7 +125,7 @@ class Status
     /**
      * Returns response object.
      *
-     * @return \Elastica\Response Response object
+     * @return \Enalquiler\Elastica\Response Response object
      */
     public function getResponse()
     {

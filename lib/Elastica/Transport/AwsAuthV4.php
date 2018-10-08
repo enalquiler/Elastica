@@ -1,10 +1,10 @@
 <?php
-namespace Elastica\Transport;
+namespace Enalquiler\Elastica\Transport;
 
 use Aws\Credentials\CredentialProvider;
 use Aws\Credentials\Credentials;
 use Aws\Signature\SignatureV4;
-use Elastica\Connection;
+use Enalquiler\Elastica\Connection;
 use GuzzleHttp;
 use GuzzleHttp\Client;
 use GuzzleHttp\HandlerStack;

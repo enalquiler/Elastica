@@ -1,7 +1,7 @@
 <?php
-namespace Elastica\Query;
+namespace Enalquiler\Elastica\Query;
 
-use Elastica\Exception\InvalidException;
+use Enalquiler\Elastica\Exception\InvalidException;
 
 /**
  * QueryString query.
@@ -34,7 +34,7 @@ class QueryString extends AbstractQuery
      *
      * @param string $query Query string
      *
-     * @throws \Elastica\Exception\InvalidException If given parameter is not a string
+     * @throws \Enalquiler\Elastica\Exception\InvalidException If given parameter is not a string
      *
      * @return $this
      */
@@ -205,7 +205,7 @@ class QueryString extends AbstractQuery
      *
      * @param array $fields Fields
      *
-     * @throws \Elastica\Exception\InvalidException If given parameter is not an array
+     * @throws \Enalquiler\Elastica\Exception\InvalidException If given parameter is not an array
      *
      * @return $this
      */

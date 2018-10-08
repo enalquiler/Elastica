@@ -1,8 +1,8 @@
 <?php
-namespace Elastica\Index;
+namespace Enalquiler\Elastica\Index;
 
-use Elastica\Index as BaseIndex;
-use Elastica\Request;
+use Enalquiler\Elastica\Index as BaseIndex;
+use Enalquiler\Elastica\Request;
 
 /**
  * Elastica index stats object.
@@ -37,7 +37,7 @@ class Stats
     /**
      * Construct.
      *
-     * @param \Elastica\Index $index Index object
+     * @param \Enalquiler\Elastica\Index $index Index object
      */
     public function __construct(BaseIndex $index)
     {
@@ -79,7 +79,7 @@ class Stats
     /**
      * Returns the index object.
      *
-     * @return \Elastica\Index Index object
+     * @return \Enalquiler\Elastica\Index Index object
      */
     public function getIndex()
     {
@@ -89,7 +89,7 @@ class Stats
     /**
      * Returns response object.
      *
-     * @return \Elastica\Response Response object
+     * @return \Enalquiler\Elastica\Response Response object
      */
     public function getResponse()
     {

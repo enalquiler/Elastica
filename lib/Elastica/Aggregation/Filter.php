@@ -1,9 +1,9 @@
 <?php
-namespace Elastica\Aggregation;
+namespace Enalquiler\Elastica\Aggregation;
 
-use Elastica\Exception\InvalidException;
-use Elastica\Filter\AbstractFilter;
-use Elastica\Query\AbstractQuery;
+use Enalquiler\Elastica\Exception\InvalidException;
+use Enalquiler\Elastica\Filter\AbstractFilter;
+use Enalquiler\Elastica\Query\AbstractQuery;
 
 /**
  * Class Filter.
@@ -50,7 +50,7 @@ class Filter extends AbstractAggregation
     }
 
     /**
-     * @throws \Elastica\Exception\InvalidException If filter is not set
+     * @throws \Enalquiler\Elastica\Exception\InvalidException If filter is not set
      *
      * @return array
      */

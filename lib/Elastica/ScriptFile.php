@@ -1,7 +1,7 @@
 <?php
-namespace Elastica;
+namespace Enalquiler\Elastica;
 
-use Elastica\Script\ScriptFile as BaseScriptFile;
+use Enalquiler\Elastica\Script\ScriptFile as BaseScriptFile;
 
 /**
  * Kept for BC reasons.

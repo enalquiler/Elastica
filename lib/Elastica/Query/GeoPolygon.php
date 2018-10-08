@@ -1,5 +1,5 @@
 <?php
-namespace Elastica\Query;
+namespace Enalquiler\Elastica\Query;
 
 /**
  * Geo polygon query.

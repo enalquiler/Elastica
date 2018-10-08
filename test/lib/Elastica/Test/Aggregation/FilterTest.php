@@ -1,15 +1,15 @@
 <?php
-namespace Elastica\Test\Aggregation;
+namespace Enalquiler\Elastica\Test\Aggregation;
 
-use Elastica\Aggregation\Avg;
-use Elastica\Aggregation\Filter;
-use Elastica\Document;
-use Elastica\Filter\Exists;
-use Elastica\Filter\Range;
-use Elastica\Filter\Term;
-use Elastica\Query;
-use Elastica\Query\Range as RangeQuery;
-use Elastica\Query\Term as TermQuery;
+use Enalquiler\Elastica\Aggregation\Avg;
+use Enalquiler\Elastica\Aggregation\Filter;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Filter\Exists;
+use Enalquiler\Elastica\Filter\Range;
+use Enalquiler\Elastica\Filter\Term;
+use Enalquiler\Elastica\Query;
+use Enalquiler\Elastica\Query\Range as RangeQuery;
+use Enalquiler\Elastica\Query\Term as TermQuery;
 
 class FilterTest extends BaseAggregationTest
 {
@@ -31,7 +31,7 @@ class FilterTest extends BaseAggregationTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testConstructorFilterInvalid()
     {
@@ -61,7 +61,7 @@ class FilterTest extends BaseAggregationTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testSetFilterInvalid()
     {

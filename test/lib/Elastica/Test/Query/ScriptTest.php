@@ -1,9 +1,9 @@
 <?php
-namespace Elastica\Test\Query;
+namespace Enalquiler\Elastica\Test\Query;
 
-use Elastica\Query\Script as ScriptQuery;
-use Elastica\Script\Script;
-use Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Query\Script as ScriptQuery;
+use Enalquiler\Elastica\Script\Script;
+use Enalquiler\Elastica\Test\Base as BaseTest;
 
 class ScriptTest extends BaseTest
 {

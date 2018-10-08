@@ -1,12 +1,12 @@
 <?php
-namespace Elastica\Test\Query;
+namespace Enalquiler\Elastica\Test\Query;
 
-use Elastica\Document;
-use Elastica\Query\AbstractGeoShape;
-use Elastica\Query\BoolQuery;
-use Elastica\Query\GeoShapeProvided;
-use Elastica\Test\Base as BaseTest;
-use Elastica\Type\Mapping;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Query\AbstractGeoShape;
+use Enalquiler\Elastica\Query\BoolQuery;
+use Enalquiler\Elastica\Query\GeoShapeProvided;
+use Enalquiler\Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Type\Mapping;
 
 class GeoShapeProvidedTest extends BaseTest
 {
@@ -98,6 +98,6 @@ class GeoShapeProvidedTest extends BaseTest
         $gsp = new GeoShapeProvided('location', [[25.0, 75.0], [75.0, 25.0]]);
         $gsp->setRelation(AbstractGeoShape::RELATION_INTERSECT);
         $this->assertEquals(AbstractGeoShape::RELATION_INTERSECT, $gsp->getRelation());
-        $this->assertInstanceOf('Elastica\Query\GeoShapeProvided', $gsp->setRelation(AbstractGeoShape::RELATION_INTERSECT));
+        $this->assertInstanceOf('Enalquiler\Elastica\Query\GeoShapeProvided', $gsp->setRelation(AbstractGeoShape::RELATION_INTERSECT));
     }
 }

@@ -1,8 +1,8 @@
 <?php
-namespace Elastica\Test\Filter;
+namespace Enalquiler\Elastica\Test\Filter;
 
-use Elastica\Filter\Limit;
-use Elastica\Test\DeprecatedClassBase as BaseTest;
+use Enalquiler\Elastica\Filter\Limit;
+use Enalquiler\Elastica\Test\DeprecatedClassBase as BaseTest;
 
 class LimitTest extends BaseTest
 {
@@ -23,7 +23,7 @@ class LimitTest extends BaseTest
         $filter = new Limit(10);
         $this->assertEquals(10, $filter->getParam('value'));
 
-        $this->assertInstanceOf('Elastica\Filter\Limit', $filter->setLimit(20));
+        $this->assertInstanceOf('Enalquiler\Elastica\Filter\Limit', $filter->setLimit(20));
         $this->assertEquals(20, $filter->getParam('value'));
     }
 

@@ -1,8 +1,8 @@
 <?php
 namespace lib\Elastica\Test;
 
-use Elastica\ScriptFields as LegacyScriptFields;
-use Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\ScriptFields as LegacyScriptFields;
+use Enalquiler\Elastica\Test\Base as BaseTest;
 
 class LegacyScriptFieldsTest extends BaseTest
 {
@@ -11,6 +11,6 @@ class LegacyScriptFieldsTest extends BaseTest
      */
     public function testParent()
     {
-        $this->assertInstanceOf('Elastica\Script\ScriptFields', new LegacyScriptFields([]));
+        $this->assertInstanceOf('Enalquiler\Elastica\Script\ScriptFields', new LegacyScriptFields([]));
     }
 }

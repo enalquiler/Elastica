@@ -1,10 +1,10 @@
 <?php
-namespace Elastica;
+namespace Enalquiler\Elastica;
 
-use Elastica\Exception\InvalidException;
-use Elastica\Filter\AbstractFilter;
-use Elastica\ResultSet\BuilderInterface;
-use Elastica\ResultSet\DefaultBuilder;
+use Enalquiler\Elastica\Exception\InvalidException;
+use Enalquiler\Elastica\Filter\AbstractFilter;
+use Enalquiler\Elastica\ResultSet\BuilderInterface;
+use Enalquiler\Elastica\ResultSet\DefaultBuilder;
 
 /**
  * Elastica search object.
@@ -80,7 +80,7 @@ class Search
     /**
      * Constructs search object.
      *
-     * @param \Elastica\Client $client  Client object
+     * @param \Enalquiler\Elastica\Client $client  Client object
      * @param BuilderInterface $builder
      */
     public function __construct(Client $client, BuilderInterface $builder = null)
@@ -92,9 +92,9 @@ class Search
     /**
      * Adds a index to the list.
      *
-     * @param \Elastica\Index|string $index Index object or string
+     * @param \Enalquiler\Elastica\Index|string $index Index object or string
      *
-     * @throws \Elastica\Exception\InvalidException
+     * @throws \Enalquiler\Elastica\Exception\InvalidException
      *
      * @return $this
      */
@@ -132,9 +132,9 @@ class Search
     /**
      * Adds a type to the current search.
      *
-     * @param \Elastica\Type|string $type Type name or object
+     * @param \Enalquiler\Elastica\Type|string $type Type name or object
      *
-     * @throws \Elastica\Exception\InvalidException
+     * @throws \Enalquiler\Elastica\Exception\InvalidException
      *
      * @return $this
      */
@@ -170,7 +170,7 @@ class Search
     }
 
     /**
-     * @param string|array|\Elastica\Query|\Elastica\Suggest|\Elastica\Query\AbstractQuery $query
+     * @param string|array|\Enalquiler\Elastica\Query|\Enalquiler\Elastica\Suggest|\Enalquiler\Elastica\Query\AbstractQuery $query
      *
      * @return $this
      */
@@ -254,7 +254,7 @@ class Search
     /**
      * @param string $key
      *
-     * @throws \Elastica\Exception\InvalidException
+     * @throws \Enalquiler\Elastica\Exception\InvalidException
      *
      * @return mixed
      */
@@ -278,7 +278,7 @@ class Search
     /**
      * @param string $key
      *
-     * @throws \Elastica\Exception\InvalidException
+     * @throws \Enalquiler\Elastica\Exception\InvalidException
      *
      * @return bool
      */
@@ -307,7 +307,7 @@ class Search
     /**
      * Return client object.
      *
-     * @return \Elastica\Client Client object
+     * @return \Enalquiler\Elastica\Client Client object
      */
     public function getClient()
     {
@@ -365,7 +365,7 @@ class Search
     }
 
     /**
-     * @param \Elastica\Type|string $type
+     * @param \Enalquiler\Elastica\Type|string $type
      *
      * @return bool
      */
@@ -379,7 +379,7 @@ class Search
     }
 
     /**
-     * @return \Elastica\Query
+     * @return \Enalquiler\Elastica\Query
      */
     public function getQuery()
     {
@@ -393,7 +393,7 @@ class Search
     /**
      * Creates new search object.
      *
-     * @param \Elastica\SearchableInterface $searchObject
+     * @param \Enalquiler\Elastica\SearchableInterface $searchObject
      *
      * @return Search
      */
@@ -440,9 +440,9 @@ class Search
      * @param mixed     $query
      * @param int|array $options OPTIONAL Limit or associative array of options (option=>value)
      *
-     * @throws \Elastica\Exception\InvalidException
+     * @throws \Enalquiler\Elastica\Exception\InvalidException
      *
-     * @return \Elastica\ResultSet
+     * @return \Enalquiler\Elastica\ResultSet
      */
     public function search($query = '', $options = null)
     {

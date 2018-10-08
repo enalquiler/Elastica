@@ -1,18 +1,18 @@
 <?php
-namespace Elastica\Test;
+namespace Enalquiler\Elastica\Test;
 
-use Elastica\Document;
-use Elastica\Exception\ResponseException;
-use Elastica\Filter\Exists;
-use Elastica\Index;
-use Elastica\Query;
-use Elastica\Query\FunctionScore;
-use Elastica\Query\MatchAll;
-use Elastica\Query\QueryString;
-use Elastica\Script\Script;
-use Elastica\Search;
-use Elastica\Test\Base as BaseTest;
-use Elastica\Type;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Exception\ResponseException;
+use Enalquiler\Elastica\Filter\Exists;
+use Enalquiler\Elastica\Index;
+use Enalquiler\Elastica\Query;
+use Enalquiler\Elastica\Query\FunctionScore;
+use Enalquiler\Elastica\Query\MatchAll;
+use Enalquiler\Elastica\Query\QueryString;
+use Enalquiler\Elastica\Script\Script;
+use Enalquiler\Elastica\Search;
+use Enalquiler\Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Type;
 
 class SearchTest extends BaseTest
 {
@@ -49,7 +49,7 @@ class SearchTest extends BaseTest
         $client = $this->_getClient();
         $search = new Search($client);
 
-        $this->assertInstanceOf('Elastica\Search', $search);
+        $this->assertInstanceOf('Enalquiler\Elastica\Search', $search);
         $this->assertSame($client, $search->getClient());
     }
 
@@ -159,7 +159,7 @@ class SearchTest extends BaseTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testAddTypeInvalid()
     {
@@ -171,7 +171,7 @@ class SearchTest extends BaseTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testAddIndexInvalid()
     {
@@ -426,8 +426,8 @@ class SearchTest extends BaseTest
         $this->assertTrue(($resultSet->count() === 0) && $resultSet->getTotalHits() === 11);
 
         //Timeout - this one is a bit more tricky to test
-        $mockResponse = new \Elastica\Response(json_encode(['timed_out' => true]));
-        $client = $this->getMockBuilder('Elastica\\Client')
+        $mockResponse = new \Enalquiler\Elastica\Response(json_encode(['timed_out' => true]));
+        $client = $this->getMockBuilder('Enalquiler\\Elastica\\Client')
             ->disableOriginalConstructor()
             ->getMock();
         $client->method('request')
@@ -442,7 +442,7 @@ class SearchTest extends BaseTest
 
     /**
      * @group functional
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testInvalidConfigSearch()
     {
@@ -549,7 +549,7 @@ class SearchTest extends BaseTest
 
         $search->addIndex($index)->addType($type);
         $resultSet = $search->search();
-        $this->assertInstanceOf('Elastica\ResultSet', $resultSet);
+        $this->assertInstanceOf('Enalquiler\Elastica\ResultSet', $resultSet);
         $this->assertCount(10, $resultSet);
         $this->assertEquals(11, $resultSet->getTotalHits());
 
@@ -581,11 +581,11 @@ class SearchTest extends BaseTest
         $search->addIndex($index);
         $search->addType($type);
 
-        $result1 = $search->count(new \Elastica\Query\MatchAll());
+        $result1 = $search->count(new \Enalquiler\Elastica\Query\MatchAll());
         $this->assertEquals(1, $result1);
 
-        $result2 = $search->count(new \Elastica\Query\MatchAll(), true);
-        $this->assertInstanceOf('\Elastica\ResultSet', $result2);
+        $result2 = $search->count(new \Enalquiler\Elastica\Query\MatchAll(), true);
+        $this->assertInstanceOf('\Enalquiler\Elastica\ResultSet', $result2);
         $this->assertEquals(1, $result2->getTotalHits());
     }
 
@@ -595,7 +595,7 @@ class SearchTest extends BaseTest
     public function testScanAndScroll()
     {
         $search = new Search($this->_getClient());
-        $this->assertInstanceOf('Elastica\ScanAndScroll', $search->scanAndScroll());
+        $this->assertInstanceOf('Enalquiler\Elastica\ScanAndScroll', $search->scanAndScroll());
     }
 
     /**
@@ -620,6 +620,6 @@ class SearchTest extends BaseTest
         $this->assertEquals('index_not_found_exception', $error['type']);
 
         $results = $search->search($query, [Search::OPTION_SEARCH_IGNORE_UNAVAILABLE => true]);
-        $this->assertInstanceOf('\Elastica\ResultSet', $results);
+        $this->assertInstanceOf('\Enalquiler\Elastica\ResultSet', $results);
     }
 }

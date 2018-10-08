@@ -1,7 +1,7 @@
 <?php
-namespace Elastica\Aggregation;
+namespace Enalquiler\Elastica\Aggregation;
 
-use Elastica\Exception\InvalidException;
+use Enalquiler\Elastica\Exception\InvalidException;
 
 abstract class AbstractSimpleAggregation extends AbstractAggregation
 {

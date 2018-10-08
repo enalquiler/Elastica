@@ -1,8 +1,8 @@
 <?php
-namespace Elastica\Node;
+namespace Enalquiler\Elastica\Node;
 
-use Elastica\Node as BaseNode;
-use Elastica\Request;
+use Enalquiler\Elastica\Node as BaseNode;
+use Enalquiler\Elastica\Request;
 
 /**
  * Elastica cluster node object.
@@ -51,7 +51,7 @@ class Info
     /**
      * Create new info object for node.
      *
-     * @param \Elastica\Node $node   Node object
+     * @param \Enalquiler\Elastica\Node $node   Node object
      * @param array          $params List of params to return. Can be: settings, os, process, jvm, thread_pool, network, transport, http
      */
     public function __construct(BaseNode $node, array $params = [])
@@ -164,7 +164,7 @@ class Info
     /**
      * Return node object.
      *
-     * @return \Elastica\Node Node object
+     * @return \Enalquiler\Elastica\Node Node object
      */
     public function getNode()
     {
@@ -190,7 +190,7 @@ class Info
     /**
      * Returns response object.
      *
-     * @return \Elastica\Response Response object
+     * @return \Enalquiler\Elastica\Response Response object
      */
     public function getResponse()
     {
@@ -202,7 +202,7 @@ class Info
      *
      * @param array $params Params to return (default none). Possible options: settings, os, process, jvm, thread_pool, network, transport, http, plugin
      *
-     * @return \Elastica\Response Response object
+     * @return \Enalquiler\Elastica\Response Response object
      */
     public function refresh(array $params = [])
     {

@@ -1,11 +1,11 @@
 <?php
-namespace Elastica\Test\Filter;
+namespace Enalquiler\Elastica\Test\Filter;
 
-use Elastica\Document;
-use Elastica\Filter\GeoDistanceRange;
-use Elastica\Query;
-use Elastica\Query\MatchAll;
-use Elastica\Test\DeprecatedClassBase as BaseTest;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Filter\GeoDistanceRange;
+use Enalquiler\Elastica\Query;
+use Enalquiler\Elastica\Query\MatchAll;
+use Enalquiler\Elastica\Test\DeprecatedClassBase as BaseTest;
 
 class GeoDistanceRangeTest extends BaseTest
 {
@@ -80,7 +80,7 @@ class GeoDistanceRangeTest extends BaseTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testInvalidRange()
     {
@@ -94,7 +94,7 @@ class GeoDistanceRangeTest extends BaseTest
     /**
      * @group unit
      * @dataProvider invalidLocationDataProvider
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testInvalidLocation($location)
     {

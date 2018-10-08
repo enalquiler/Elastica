@@ -1,9 +1,9 @@
 <?php
-namespace Elastica\Exception\Bulk;
+namespace Enalquiler\Elastica\Exception\Bulk;
 
-use Elastica\Bulk\ResponseSet;
-use Elastica\Exception\Bulk\Response\ActionException;
-use Elastica\Exception\BulkException;
+use Enalquiler\Elastica\Bulk\ResponseSet;
+use Enalquiler\Elastica\Exception\Bulk\Response\ActionException;
+use Enalquiler\Elastica\Exception\BulkException;
 
 /**
  * Bulk Response exception.
@@ -23,7 +23,7 @@ class ResponseException extends BulkException
     /**
      * Construct Exception.
      *
-     * @param \Elastica\Bulk\ResponseSet $responseSet
+     * @param \Enalquiler\Elastica\Bulk\ResponseSet $responseSet
      */
     public function __construct(ResponseSet $responseSet)
     {
@@ -36,7 +36,7 @@ class ResponseException extends BulkException
     }
 
     /**
-     * @param \Elastica\Bulk\ResponseSet $responseSet
+     * @param \Enalquiler\Elastica\Bulk\ResponseSet $responseSet
      */
     protected function _init(ResponseSet $responseSet)
     {
@@ -52,7 +52,7 @@ class ResponseException extends BulkException
     /**
      * Returns bulk response set object.
      *
-     * @return \Elastica\Bulk\ResponseSet
+     * @return \Enalquiler\Elastica\Bulk\ResponseSet
      */
     public function getResponseSet()
     {
@@ -76,7 +76,7 @@ class ResponseException extends BulkException
     }
 
     /**
-     * @return \Elastica\Exception\Bulk\Response\ActionException[]
+     * @return \Enalquiler\Elastica\Exception\Bulk\Response\ActionException[]
      */
     public function getActionExceptions()
     {

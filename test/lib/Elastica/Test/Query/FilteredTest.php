@@ -1,12 +1,12 @@
 <?php
-namespace Elastica\Test\Query;
+namespace Enalquiler\Elastica\Test\Query;
 
-use Elastica\Document;
-use Elastica\Filter\Exists;
-use Elastica\Filter\Term;
-use Elastica\Query\Filtered;
-use Elastica\Query\QueryString;
-use Elastica\Test\DeprecatedClassBase as BaseTest;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Filter\Exists;
+use Enalquiler\Elastica\Filter\Term;
+use Enalquiler\Elastica\Query\Filtered;
+use Enalquiler\Elastica\Query\QueryString;
+use Enalquiler\Elastica\Test\DeprecatedClassBase as BaseTest;
 
 class FilteredTest extends BaseTest
 {
@@ -25,7 +25,7 @@ class FilteredTest extends BaseTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testConstructInvalid()
     {
@@ -55,7 +55,7 @@ class FilteredTest extends BaseTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testSetFilterInvalid()
     {
@@ -145,7 +145,7 @@ class FilteredTest extends BaseTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testFilteredWithoutArgumentsShouldRaiseException()
     {

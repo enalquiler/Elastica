@@ -1,9 +1,9 @@
 <?php
-namespace Elastica\Test\Aggregation;
+namespace Enalquiler\Elastica\Test\Aggregation;
 
-use Elastica\Aggregation\Sum;
-use Elastica\Document;
-use Elastica\Query;
+use Enalquiler\Elastica\Aggregation\Sum;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Query;
 
 class SumTest extends BaseAggregationTest
 {

@@ -1,5 +1,5 @@
 <?php
-namespace Elastica;
+namespace Enalquiler\Elastica;
 
 /**
  * Interface for named objects.

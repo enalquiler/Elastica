@@ -1,8 +1,8 @@
 <?php
-namespace Elastica;
+namespace Enalquiler\Elastica;
 
-use Elastica\Exception\NotImplementedException;
-use Elastica\Suggest\AbstractSuggest;
+use Enalquiler\Elastica\Exception\NotImplementedException;
+use Enalquiler\Elastica\Suggest\AbstractSuggest;
 
 /**
  * Class Suggest.

@@ -1,8 +1,8 @@
 <?php
-namespace Elastica\Test\Filter;
+namespace Enalquiler\Elastica\Test\Filter;
 
-use Elastica\Filter\Range;
-use Elastica\Test\DeprecatedClassBase as BaseTest;
+use Enalquiler\Elastica\Filter\Range;
+use Enalquiler\Elastica\Test\DeprecatedClassBase as BaseTest;
 
 class RangeTest extends BaseTest
 {
@@ -22,7 +22,7 @@ class RangeTest extends BaseTest
     {
         $rangeFilter = new Range();
         $returnValue = $rangeFilter->addField('fieldName', ['to' => 'value']);
-        $this->assertInstanceOf('Elastica\Filter\Range', $returnValue);
+        $this->assertInstanceOf('Enalquiler\Elastica\Filter\Range', $returnValue);
     }
 
     /**
@@ -52,7 +52,7 @@ class RangeTest extends BaseTest
         $this->assertEquals('fielddata', $filter->getParam('execution'));
 
         $returnValue = $filter->setExecution('index');
-        $this->assertInstanceOf('Elastica\Filter\Range', $returnValue);
+        $this->assertInstanceOf('Enalquiler\Elastica\Filter\Range', $returnValue);
     }
 
     /**

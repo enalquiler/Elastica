@@ -1,7 +1,7 @@
 <?php
-namespace Elastica\Test\Exception\Connection;
+namespace Enalquiler\Elastica\Test\Exception\Connection;
 
-use Elastica\Test\Exception\AbstractExceptionTest;
+use Enalquiler\Elastica\Test\Exception\AbstractExceptionTest;
 
 class HttpExceptionTest extends AbstractExceptionTest
 {

@@ -1,9 +1,9 @@
 <?php
-namespace Elastica\Test;
+namespace Enalquiler\Elastica\Test;
 
-use Elastica\Document;
-use Elastica\Index;
-use Elastica\Snapshot;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Index;
+use Enalquiler\Elastica\Snapshot;
 
 class SnapshotTest extends Base
 {
@@ -55,7 +55,7 @@ class SnapshotTest extends Base
         $this->assertEquals($location, $response['settings']['location']);
 
         // attempt to retrieve a repository which does not exist
-        $this->setExpectedException('Elastica\Exception\NotFoundException');
+        $this->setExpectedException('Enalquiler\Elastica\Exception\NotFoundException');
         $this->_snapshot->getRepository('foobar');
     }
 
@@ -106,7 +106,7 @@ class SnapshotTest extends Base
         $this->assertTrue($response->isOk());
 
         // ensure that the snapshot has been deleted
-        $this->setExpectedException('Elastica\Exception\NotFoundException');
+        $this->setExpectedException('Enalquiler\Elastica\Exception\NotFoundException');
         $this->_snapshot->getSnapshot($repositoryName, $snapshotName);
     }
 }

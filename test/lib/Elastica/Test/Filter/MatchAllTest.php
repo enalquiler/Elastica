@@ -1,8 +1,8 @@
 <?php
-namespace Elastica\Test\Filter;
+namespace Enalquiler\Elastica\Test\Filter;
 
-use Elastica\Filter\MatchAll;
-use Elastica\Test\DeprecatedClassBase as BaseTest;
+use Enalquiler\Elastica\Filter\MatchAll;
+use Enalquiler\Elastica\Test\DeprecatedClassBase as BaseTest;
 
 class MatchAllTest extends BaseTest
 {

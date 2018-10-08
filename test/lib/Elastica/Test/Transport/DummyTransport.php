@@ -1,8 +1,8 @@
 <?php
-namespace Elastica\Test\Transport;
+namespace Enalquiler\Elastica\Test\Transport;
 
-use Elastica\Request;
-use Elastica\Transport\AbstractTransport;
+use Enalquiler\Elastica\Request;
+use Enalquiler\Elastica\Transport\AbstractTransport;
 
 class DummyTransport extends AbstractTransport
 {

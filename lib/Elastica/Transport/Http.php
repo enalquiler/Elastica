@@ -1,12 +1,12 @@
 <?php
-namespace Elastica\Transport;
+namespace Enalquiler\Elastica\Transport;
 
-use Elastica\Exception\Connection\HttpException;
-use Elastica\Exception\PartialShardFailureException;
-use Elastica\Exception\ResponseException;
-use Elastica\JSON;
-use Elastica\Request;
-use Elastica\Response;
+use Enalquiler\Elastica\Exception\Connection\HttpException;
+use Enalquiler\Elastica\Exception\PartialShardFailureException;
+use Enalquiler\Elastica\Exception\ResponseException;
+use Enalquiler\Elastica\JSON;
+use Enalquiler\Elastica\Request;
+use Enalquiler\Elastica\Response;
 
 /**
  * Elastica Http Transport object.
@@ -34,14 +34,14 @@ class Http extends AbstractTransport
      *
      * All calls that are made to the server are done through this function
      *
-     * @param \Elastica\Request $request
+     * @param \Enalquiler\Elastica\Request $request
      * @param array             $params  Host, Port, ...
      *
-     * @throws \Elastica\Exception\ConnectionException
-     * @throws \Elastica\Exception\ResponseException
-     * @throws \Elastica\Exception\Connection\HttpException
+     * @throws \Enalquiler\Elastica\Exception\ConnectionException
+     * @throws \Enalquiler\Elastica\Exception\ResponseException
+     * @throws \Enalquiler\Elastica\Exception\Connection\HttpException
      *
-     * @return \Elastica\Response Response object
+     * @return \Enalquiler\Elastica\Response Response object
      */
     public function exec(Request $request, array $params)
     {

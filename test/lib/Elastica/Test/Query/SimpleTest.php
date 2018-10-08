@@ -1,8 +1,8 @@
 <?php
-namespace Elastica\Test\Query;
+namespace Enalquiler\Elastica\Test\Query;
 
-use Elastica\Query\Simple;
-use Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Query\Simple;
+use Enalquiler\Elastica\Test\Base as BaseTest;
 
 class SimpleTest extends BaseTest
 {

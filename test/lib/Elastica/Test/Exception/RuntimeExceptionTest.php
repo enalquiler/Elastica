@@ -1,5 +1,5 @@
 <?php
-namespace Elastica\Test\Exception;
+namespace Enalquiler\Elastica\Test\Exception;
 
 class RuntimeExceptionTest extends AbstractExceptionTest
 {

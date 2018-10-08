@@ -1,9 +1,9 @@
 <?php
-namespace Elastica\Test;
+namespace Enalquiler\Elastica\Test;
 
-use Elastica\Client;
-use Elastica\Connection;
-use Elastica\Index;
+use Enalquiler\Elastica\Client;
+use Enalquiler\Elastica\Connection;
+use Enalquiler\Elastica\Index;
 use Psr\Log\LoggerInterface;
 
 class Base extends \PHPUnit_Framework_TestCase
@@ -113,7 +113,7 @@ class Base extends \PHPUnit_Framework_TestCase
      * @param bool   $delete Delete index if it exists
      * @param int    $shards Number of shards to create
      *
-     * @return \Elastica\Index
+     * @return \Enalquiler\Elastica\Index
      */
     protected function _createIndex($name = null, $delete = true, $shards = 1)
     {

@@ -1,11 +1,11 @@
 <?php
-namespace Elastica\Test\Aggregation;
+namespace Enalquiler\Elastica\Test\Aggregation;
 
-use Elastica\Aggregation\BucketScript;
-use Elastica\Aggregation\Histogram;
-use Elastica\Aggregation\Max;
-use Elastica\Document;
-use Elastica\Query;
+use Enalquiler\Elastica\Aggregation\BucketScript;
+use Enalquiler\Elastica\Aggregation\Histogram;
+use Enalquiler\Elastica\Aggregation\Max;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Query;
 
 class BucketScriptTest extends BaseAggregationTest
 {
@@ -91,7 +91,7 @@ class BucketScriptTest extends BaseAggregationTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testToArrayInvalidBucketsPath()
     {
@@ -101,7 +101,7 @@ class BucketScriptTest extends BaseAggregationTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testToArrayInvalidScript()
     {

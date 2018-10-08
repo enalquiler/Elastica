@@ -1,9 +1,9 @@
 <?php
-namespace Elastica\Test\Filter;
+namespace Enalquiler\Elastica\Test\Filter;
 
-use Elastica\Filter\Query;
-use Elastica\Query\QueryString;
-use Elastica\Test\DeprecatedClassBase as BaseTest;
+use Enalquiler\Elastica\Filter\Query;
+use Enalquiler\Elastica\Query\QueryString;
+use Enalquiler\Elastica\Test\DeprecatedClassBase as BaseTest;
 
 class QueryTest extends BaseTest
 {

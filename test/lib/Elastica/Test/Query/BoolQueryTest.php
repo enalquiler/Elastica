@@ -1,22 +1,22 @@
 <?php
-namespace Elastica\Test\Query;
+namespace Enalquiler\Elastica\Test\Query;
 
-use Elastica\Document;
-use Elastica\Filter\Exists;
-use Elastica\Filter\Term as TermFilter;
-use Elastica\Index;
-use Elastica\Query\BoolQuery;
-use Elastica\Query\Ids;
-use Elastica\Query\Term;
-use Elastica\Query\Term as TermQuery;
-use Elastica\Test\Base as BaseTest;
-use Elastica\Type;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Filter\Exists;
+use Enalquiler\Elastica\Filter\Term as TermFilter;
+use Enalquiler\Elastica\Index;
+use Enalquiler\Elastica\Query\BoolQuery;
+use Enalquiler\Elastica\Query\Ids;
+use Enalquiler\Elastica\Query\Term;
+use Enalquiler\Elastica\Query\Term as TermQuery;
+use Enalquiler\Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Type;
 
 class BoolQueryTest extends BaseTest
 {
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testAddFilterInvalid()
     {
@@ -306,7 +306,7 @@ class BoolQueryTest extends BaseTest
         $index->refresh();
 
         $this->hideDeprecated();
-        $boolQuery = new \Elastica\Query\Bool();
+        $boolQuery = new \Enalquiler\Elastica\Query\Bool();
         $this->showDeprecated();
 
         $resultSet = $type->search($boolQuery);
@@ -324,7 +324,7 @@ class BoolQueryTest extends BaseTest
         }
 
         $this->hideDeprecated();
-        $reflection = new \ReflectionClass(new \Elastica\Query\Bool());
+        $reflection = new \ReflectionClass(new \Enalquiler\Elastica\Query\Bool());
         $this->showDeprecated();
 
         $this->assertFileDeprecated($reflection->getFileName(), 'Elastica\Query\Bool is deprecated. Use BoolQuery instead. From PHP7 bool is reserved word and this class will be removed in further Elastica releases');

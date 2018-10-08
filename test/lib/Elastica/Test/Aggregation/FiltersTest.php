@@ -1,12 +1,12 @@
 <?php
-namespace Elastica\Test\Aggregation;
+namespace Enalquiler\Elastica\Test\Aggregation;
 
-use Elastica\Aggregation\Avg;
-use Elastica\Aggregation\Filters;
-use Elastica\Document;
-use Elastica\Filter\Exists;
-use Elastica\Filter\Term;
-use Elastica\Query;
+use Enalquiler\Elastica\Aggregation\Avg;
+use Enalquiler\Elastica\Aggregation\Filters;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Filter\Exists;
+use Enalquiler\Elastica\Filter\Term;
+use Enalquiler\Elastica\Query;
 
 class FiltersTest extends BaseAggregationTest
 {
@@ -28,7 +28,7 @@ class FiltersTest extends BaseAggregationTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testAddFilterInvalid()
     {
@@ -144,7 +144,7 @@ class FiltersTest extends BaseAggregationTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      * @expectedExceptionMessage Name must be a string
      */
     public function testWrongName()
@@ -157,7 +157,7 @@ class FiltersTest extends BaseAggregationTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      * @expectedExceptionMessage Name must be a string
      */
     public function testWrongNameWithLegacyFilter()
@@ -170,7 +170,7 @@ class FiltersTest extends BaseAggregationTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      * @expectedExceptionMessage Mix named and anonymous keys are not allowed
      */
     public function testMixNamedAndAnonymousFilters()
@@ -182,7 +182,7 @@ class FiltersTest extends BaseAggregationTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      * @expectedExceptionMessage Mix named and anonymous keys are not allowed
      */
     public function testMixNamedAndAnonymousFiltersWithLegacyFilters()
@@ -196,7 +196,7 @@ class FiltersTest extends BaseAggregationTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      * @expectedExceptionMessage Mix named and anonymous keys are not allowed
      */
     public function testMixAnonymousAndNamedFilters()
@@ -209,7 +209,7 @@ class FiltersTest extends BaseAggregationTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      * @expectedExceptionMessage Mix named and anonymous keys are not allowed
      */
     public function testMixAnonymousAndNamedFiltersWithLegacyFilters()

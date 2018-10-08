@@ -1,7 +1,7 @@
 <?php
-namespace Elastica\Test\Filter;
+namespace Enalquiler\Elastica\Test\Filter;
 
-use Elastica\Test\DeprecatedClassBase as BaseTest;
+use Enalquiler\Elastica\Test\DeprecatedClassBase as BaseTest;
 
 class AbstractTest extends BaseTest
 {
@@ -10,7 +10,7 @@ class AbstractTest extends BaseTest
      */
     public function testDeprecated()
     {
-        $reflection = new \ReflectionClass('Elastica\Filter\AbstractFilter');
+        $reflection = new \ReflectionClass('Enalquiler\Elastica\Filter\AbstractFilter');
         $this->assertFileDeprecated($reflection->getFileName(), 'Deprecated: Filters are deprecated. Use queries in filter context. See https://www.elastic.co/guide/en/elasticsearch/reference/2.0/query-dsl-filters.html');
     }
 
@@ -58,7 +58,7 @@ class AbstractTest extends BaseTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testSetCacheKeyEmptyKey()
     {
@@ -85,6 +85,6 @@ class AbstractTest extends BaseTest
 
     private function getStub()
     {
-        return $this->getMockForAbstractClass('Elastica\Filter\AbstractFilter');
+        return $this->getMockForAbstractClass('Enalquiler\Elastica\Filter\AbstractFilter');
     }
 }

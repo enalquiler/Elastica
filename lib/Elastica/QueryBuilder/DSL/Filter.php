@@ -1,38 +1,38 @@
 <?php
-namespace Elastica\QueryBuilder\DSL;
+namespace Enalquiler\Elastica\QueryBuilder\DSL;
 
-use Elastica\Filter\AbstractFilter;
-use Elastica\Filter\BoolAnd;
-use Elastica\Filter\BoolFilter;
-use Elastica\Filter\BoolNot;
-use Elastica\Filter\BoolOr;
-use Elastica\Filter\Exists;
-use Elastica\Filter\GeoBoundingBox;
-use Elastica\Filter\GeoDistance;
-use Elastica\Filter\GeoDistanceRange;
-use Elastica\Filter\GeohashCell;
-use Elastica\Filter\GeoPolygon;
-use Elastica\Filter\GeoShapePreIndexed;
-use Elastica\Filter\GeoShapeProvided;
-use Elastica\Filter\HasChild;
-use Elastica\Filter\HasParent;
-use Elastica\Filter\Ids;
-use Elastica\Filter\Indices;
-use Elastica\Filter\Limit;
-use Elastica\Filter\MatchAll;
-use Elastica\Filter\Missing;
-use Elastica\Filter\Nested;
-use Elastica\Filter\NumericRange;
-use Elastica\Filter\Prefix;
-use Elastica\Filter\Query as QueryFilter;
-use Elastica\Filter\Range;
-use Elastica\Filter\Regexp;
-use Elastica\Filter\Script;
-use Elastica\Filter\Term;
-use Elastica\Filter\Terms;
-use Elastica\Filter\Type;
-use Elastica\Query\AbstractQuery;
-use Elastica\QueryBuilder\DSL;
+use Enalquiler\Elastica\Filter\AbstractFilter;
+use Enalquiler\Elastica\Filter\BoolAnd;
+use Enalquiler\Elastica\Filter\BoolFilter;
+use Enalquiler\Elastica\Filter\BoolNot;
+use Enalquiler\Elastica\Filter\BoolOr;
+use Enalquiler\Elastica\Filter\Exists;
+use Enalquiler\Elastica\Filter\GeoBoundingBox;
+use Enalquiler\Elastica\Filter\GeoDistance;
+use Enalquiler\Elastica\Filter\GeoDistanceRange;
+use Enalquiler\Elastica\Filter\GeohashCell;
+use Enalquiler\Elastica\Filter\GeoPolygon;
+use Enalquiler\Elastica\Filter\GeoShapePreIndexed;
+use Enalquiler\Elastica\Filter\GeoShapeProvided;
+use Enalquiler\Elastica\Filter\HasChild;
+use Enalquiler\Elastica\Filter\HasParent;
+use Enalquiler\Elastica\Filter\Ids;
+use Enalquiler\Elastica\Filter\Indices;
+use Enalquiler\Elastica\Filter\Limit;
+use Enalquiler\Elastica\Filter\MatchAll;
+use Enalquiler\Elastica\Filter\Missing;
+use Enalquiler\Elastica\Filter\Nested;
+use Enalquiler\Elastica\Filter\NumericRange;
+use Enalquiler\Elastica\Filter\Prefix;
+use Enalquiler\Elastica\Filter\Query as QueryFilter;
+use Enalquiler\Elastica\Filter\Range;
+use Enalquiler\Elastica\Filter\Regexp;
+use Enalquiler\Elastica\Filter\Script;
+use Enalquiler\Elastica\Filter\Term;
+use Enalquiler\Elastica\Filter\Terms;
+use Enalquiler\Elastica\Filter\Type;
+use Enalquiler\Elastica\Query\AbstractQuery;
+use Enalquiler\Elastica\QueryBuilder\DSL;
 
 /**
  * elasticsearch filter DSL.
@@ -72,7 +72,7 @@ class Filter implements DSL
      *
      * @link https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-bool-filter.html
      *
-     * @return \Elastica\Filter\Bool
+     * @return \Enalquiler\Elastica\Filter\Bool
      */
     public function bool()
     {

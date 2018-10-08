@@ -1,5 +1,5 @@
 <?php
-namespace Elastica\Exception;
+namespace Enalquiler\Elastica\Exception;
 
 class BulkException extends \RuntimeException implements ExceptionInterface
 {

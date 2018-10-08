@@ -1,12 +1,12 @@
 <?php
-namespace Elastica\Test\Filter;
+namespace Enalquiler\Elastica\Test\Filter;
 
-use Elastica\Document;
-use Elastica\Filter\Nested;
-use Elastica\Filter\Terms;
-use Elastica\Search;
-use Elastica\Test\Base as BaseTest;
-use Elastica\Type\Mapping;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Filter\Nested;
+use Enalquiler\Elastica\Filter\Terms;
+use Enalquiler\Elastica\Search;
+use Enalquiler\Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Type\Mapping;
 
 class NestedFilterWithSetFilterTest extends BaseTest
 {

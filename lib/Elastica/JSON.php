@@ -1,7 +1,7 @@
 <?php
-namespace Elastica;
+namespace Enalquiler\Elastica;
 
-use Elastica\Exception\JSONParseException;
+use Enalquiler\Elastica\Exception\JSONParseException;
 
 /**
  * Elastica JSON tools.

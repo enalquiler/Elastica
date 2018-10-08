@@ -1,7 +1,7 @@
 <?php
-namespace Elastica\Test\Exception\Bulk\Response;
+namespace Enalquiler\Elastica\Test\Exception\Bulk\Response;
 
-use Elastica\Test\Exception\AbstractExceptionTest;
+use Enalquiler\Elastica\Test\Exception\AbstractExceptionTest;
 
 class ActionExceptionTest extends AbstractExceptionTest
 {

@@ -1,8 +1,8 @@
 <?php
-namespace Elastica\Node;
+namespace Enalquiler\Elastica\Node;
 
-use Elastica\Node as BaseNode;
-use Elastica\Request;
+use Enalquiler\Elastica\Node as BaseNode;
+use Enalquiler\Elastica\Request;
 
 /**
  * Elastica cluster node object.
@@ -37,7 +37,7 @@ class Stats
     /**
      * Create new stats for node.
      *
-     * @param \Elastica\Node $node Elastica node object
+     * @param \Enalquiler\Elastica\Node $node Elastica node object
      */
     public function __construct(BaseNode $node)
     {
@@ -81,7 +81,7 @@ class Stats
     /**
      * Returns node object.
      *
-     * @return \Elastica\Node Node object
+     * @return \Enalquiler\Elastica\Node Node object
      */
     public function getNode()
     {
@@ -91,7 +91,7 @@ class Stats
     /**
      * Returns response object.
      *
-     * @return \Elastica\Response Response object
+     * @return \Enalquiler\Elastica\Response Response object
      */
     public function getResponse()
     {
@@ -101,7 +101,7 @@ class Stats
     /**
      * Reloads all nodes information. Has to be called if informations changed.
      *
-     * @return \Elastica\Response Response object
+     * @return \Enalquiler\Elastica\Response Response object
      */
     public function refresh()
     {

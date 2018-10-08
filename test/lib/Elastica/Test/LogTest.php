@@ -1,8 +1,8 @@
 <?php
-namespace Elastica\Test;
+namespace Enalquiler\Elastica\Test;
 
-use Elastica\Log;
-use Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Log;
+use Enalquiler\Elastica\Test\Base as BaseTest;
 use Psr\Log\LogLevel;
 
 class LogTest extends BaseTest

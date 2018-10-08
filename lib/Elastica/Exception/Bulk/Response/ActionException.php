@@ -1,8 +1,8 @@
 <?php
-namespace Elastica\Exception\Bulk\Response;
+namespace Enalquiler\Elastica\Exception\Bulk\Response;
 
-use Elastica\Bulk\Response;
-use Elastica\Exception\BulkException;
+use Enalquiler\Elastica\Bulk\Response;
+use Enalquiler\Elastica\Exception\BulkException;
 
 class ActionException extends BulkException
 {
@@ -12,7 +12,7 @@ class ActionException extends BulkException
     protected $_response;
 
     /**
-     * @param \Elastica\Bulk\Response $response
+     * @param \Enalquiler\Elastica\Bulk\Response $response
      */
     public function __construct(Response $response)
     {
@@ -22,7 +22,7 @@ class ActionException extends BulkException
     }
 
     /**
-     * @return \Elastica\Bulk\Action
+     * @return \Enalquiler\Elastica\Bulk\Action
      */
     public function getAction()
     {
@@ -30,7 +30,7 @@ class ActionException extends BulkException
     }
 
     /**
-     * @return \Elastica\Bulk\Response
+     * @return \Enalquiler\Elastica\Bulk\Response
      */
     public function getResponse()
     {
@@ -38,7 +38,7 @@ class ActionException extends BulkException
     }
 
     /**
-     * @param \Elastica\Bulk\Response $response
+     * @param \Enalquiler\Elastica\Bulk\Response $response
      *
      * @return string
      */

@@ -1,13 +1,13 @@
 <?php
-namespace Elastica\Test\Query;
+namespace Enalquiler\Elastica\Test\Query;
 
-use Elastica\Document;
-use Elastica\Filter\Exists;
-use Elastica\Filter\Term;
-use Elastica\Query\FunctionScore;
-use Elastica\Query\MatchAll;
-use Elastica\Script\Script;
-use Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Filter\Exists;
+use Enalquiler\Elastica\Filter\Term;
+use Enalquiler\Elastica\Query\FunctionScore;
+use Enalquiler\Elastica\Query\MatchAll;
+use Enalquiler\Elastica\Script\Script;
+use Enalquiler\Elastica\Test\Base as BaseTest;
 
 class FunctionScoreTest extends BaseTest
 {
@@ -47,7 +47,7 @@ class FunctionScoreTest extends BaseTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\DeprecatedException
+     * @expectedException \Enalquiler\Elastica\Exception\DeprecatedException
      */
     public function testSetFilterWithLegacyFilterDeprecated()
     {
@@ -62,7 +62,7 @@ class FunctionScoreTest extends BaseTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testAddFunctionInvalid()
     {
@@ -94,7 +94,7 @@ class FunctionScoreTest extends BaseTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testAddDecayFunctionInvalid()
     {
@@ -127,7 +127,7 @@ class FunctionScoreTest extends BaseTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testScriptScoreFunctionInvalid()
     {
@@ -160,7 +160,7 @@ class FunctionScoreTest extends BaseTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testAddFieldValueFactorFunctionInvalid()
     {
@@ -193,7 +193,7 @@ class FunctionScoreTest extends BaseTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testAddBoostFactorFunctionFunctionInvalid()
     {
@@ -228,7 +228,7 @@ class FunctionScoreTest extends BaseTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testAddWeightFunctionFunctionInvalid()
     {
@@ -261,7 +261,7 @@ class FunctionScoreTest extends BaseTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testAddRandomScoreFunctionInvalid()
     {
@@ -440,11 +440,11 @@ class FunctionScoreTest extends BaseTest
      */
     public function testAddBoostFactorFunction()
     {
-        $filter = new \Elastica\Query\Term(['price' => 4.5]);
+        $filter = new \Enalquiler\Elastica\Query\Term(['price' => 4.5]);
         $query = new FunctionScore();
         $query->addWeightFunction(5.0, $filter);
 
-        $sameFilter = new \Elastica\Query\Term(['price' => 4.5]);
+        $sameFilter = new \Enalquiler\Elastica\Query\Term(['price' => 4.5]);
         $sameQuery = new FunctionScore();
         $this->hideDeprecated();
         $sameQuery->addBoostFactorFunction(5.0, $sameFilter);
@@ -478,7 +478,7 @@ class FunctionScoreTest extends BaseTest
      */
     public function testWeight()
     {
-        $filter = new \Elastica\Query\Term(['price' => 4.5]);
+        $filter = new \Enalquiler\Elastica\Query\Term(['price' => 4.5]);
         $query = new FunctionScore();
         $query->addWeightFunction(5.0, $filter);
 
@@ -548,7 +548,7 @@ class FunctionScoreTest extends BaseTest
      */
     public function testRandomScore()
     {
-        $filter = new \Elastica\Query\Term(['price' => 4.5]);
+        $filter = new \Enalquiler\Elastica\Query\Term(['price' => 4.5]);
         $query = new FunctionScore();
         $query->addRandomScoreFunction(2, $filter);
 
@@ -624,7 +624,7 @@ class FunctionScoreTest extends BaseTest
      */
     public function testRandomScoreWeight()
     {
-        $filter = new \Elastica\Query\Term(['price' => 4.5]);
+        $filter = new \Enalquiler\Elastica\Query\Term(['price' => 4.5]);
         $query = new FunctionScore();
         $query->addRandomScoreFunction(2, $filter, 2);
 
@@ -754,7 +754,7 @@ class FunctionScoreTest extends BaseTest
         $returnedValue = $query->setMinScore(0.8);
 
         $this->assertEquals($expected, $query->toArray());
-        $this->assertInstanceOf('Elastica\Query\FunctionScore', $returnedValue);
+        $this->assertInstanceOf('Enalquiler\Elastica\Query\FunctionScore', $returnedValue);
 
         $response = $this->_getIndexForTest()->search($query);
         $results = $response->getResults();

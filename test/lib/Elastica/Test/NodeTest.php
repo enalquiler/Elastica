@@ -1,8 +1,8 @@
 <?php
-namespace Elastica\Test;
+namespace Enalquiler\Elastica\Test;
 
-use Elastica\Node;
-use Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Node;
+use Enalquiler\Elastica\Test\Base as BaseTest;
 
 class NodeTest extends BaseTest
 {
@@ -16,7 +16,7 @@ class NodeTest extends BaseTest
         $name = reset($names);
 
         $node = new Node($name, $client);
-        $this->assertInstanceOf('Elastica\Node', $node);
+        $this->assertInstanceOf('Enalquiler\Elastica\Node', $node);
     }
 
     /**
@@ -32,7 +32,7 @@ class NodeTest extends BaseTest
 
         $info = $node->getInfo();
 
-        $this->assertInstanceOf('Elastica\Node\Info', $info);
+        $this->assertInstanceOf('Enalquiler\Elastica\Node\Info', $info);
     }
 
     /**
@@ -48,7 +48,7 @@ class NodeTest extends BaseTest
 
         $stats = $node->getStats();
 
-        $this->assertInstanceOf('Elastica\Node\Stats', $stats);
+        $this->assertInstanceOf('Enalquiler\Elastica\Node\Stats', $stats);
     }
 
     /**

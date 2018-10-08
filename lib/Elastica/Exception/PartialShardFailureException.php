@@ -1,9 +1,9 @@
 <?php
-namespace Elastica\Exception;
+namespace Enalquiler\Elastica\Exception;
 
-use Elastica\JSON;
-use Elastica\Request;
-use Elastica\Response;
+use Enalquiler\Elastica\JSON;
+use Enalquiler\Elastica\Request;
+use Enalquiler\Elastica\Response;
 
 /**
  * Partial shard failure exception.
@@ -15,8 +15,8 @@ class PartialShardFailureException extends ResponseException
     /**
      * Construct Exception.
      *
-     * @param \Elastica\Request  $request
-     * @param \Elastica\Response $response
+     * @param \Enalquiler\Elastica\Request  $request
+     * @param \Enalquiler\Elastica\Response $response
      */
     public function __construct(Request $request, Response $response)
     {

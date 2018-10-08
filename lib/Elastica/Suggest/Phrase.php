@@ -1,7 +1,7 @@
 <?php
-namespace Elastica\Suggest;
+namespace Enalquiler\Elastica\Suggest;
 
-use Elastica\Suggest\CandidateGenerator\AbstractCandidateGenerator;
+use Enalquiler\Elastica\Suggest\CandidateGenerator\AbstractCandidateGenerator;
 
 /**
  * Class Phrase.

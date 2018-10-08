@@ -1,9 +1,9 @@
 <?php
-namespace Elastica\Exception\Connection;
+namespace Enalquiler\Elastica\Exception\Connection;
 
-use Elastica\Exception\ConnectionException;
-use Elastica\Request;
-use Elastica\Response;
+use Enalquiler\Elastica\Exception\ConnectionException;
+use Enalquiler\Elastica\Request;
+use Enalquiler\Elastica\Response;
 
 /**
  * Connection exception.
@@ -23,8 +23,8 @@ class HttpException extends ConnectionException
      * Construct Exception.
      *
      * @param int|string         $error    Error
-     * @param \Elastica\Request  $request
-     * @param \Elastica\Response $response
+     * @param \Enalquiler\Elastica\Request  $request
+     * @param \Enalquiler\Elastica\Response $response
      */
     public function __construct($error, Request $request = null, Response $response = null)
     {

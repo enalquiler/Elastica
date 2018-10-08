@@ -1,13 +1,13 @@
 <?php
-namespace Elastica;
+namespace Enalquiler\Elastica;
 
-use Elastica\Exception\DeprecatedException;
-use Elastica\Exception\InvalidException;
-use Elastica\Exception\NotFoundException;
-use Elastica\Exception\RuntimeException;
-use Elastica\ResultSet\BuilderInterface;
-use Elastica\Script\AbstractScript;
-use Elastica\Type\Mapping;
+use Enalquiler\Elastica\Exception\DeprecatedException;
+use Enalquiler\Elastica\Exception\InvalidException;
+use Enalquiler\Elastica\Exception\NotFoundException;
+use Enalquiler\Elastica\Exception\RuntimeException;
+use Enalquiler\Elastica\ResultSet\BuilderInterface;
+use Enalquiler\Elastica\Script\AbstractScript;
+use Enalquiler\Elastica\Type\Mapping;
 
 /**
  * Elastica type object.
@@ -42,7 +42,7 @@ class Type implements SearchableInterface
     /**
      * Creates a new type object inside the given index.
      *
-     * @param \Elastica\Index $index Index Object
+     * @param \Enalquiler\Elastica\Index $index Index Object
      * @param string          $name  Type name
      */
     public function __construct(Index $index, $name)
@@ -54,9 +54,9 @@ class Type implements SearchableInterface
     /**
      * Adds the given document to the search index.
      *
-     * @param \Elastica\Document $doc Document with data
+     * @param \Enalquiler\Elastica\Document $doc Document with data
      *
-     * @return \Elastica\Response
+     * @return \Enalquiler\Elastica\Response
      */
     public function addDocument(Document $doc)
     {
@@ -135,12 +135,12 @@ class Type implements SearchableInterface
      *
      * @link https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-update.html
      *
-     * @param \Elastica\Document|\Elastica\Script\AbstractScript $data    Document with update data
+     * @param \Enalquiler\Elastica\Document|\Elastica\Script\AbstractScript $data    Document with update data
      * @param array                                              $options array of query params to use for query. For possible options check es api
      *
-     * @throws \Elastica\Exception\InvalidException
+     * @throws \Enalquiler\Elastica\Exception\InvalidException
      *
-     * @return \Elastica\Response
+     * @return \Enalquiler\Elastica\Response
      */
     public function updateDocument($data, array $options = [])
     {
@@ -168,7 +168,7 @@ class Type implements SearchableInterface
      *
      * @param array|\Elastica\Document[] $docs Array of Elastica\Document
      *
-     * @return \Elastica\Bulk\ResponseSet
+     * @return \Enalquiler\Elastica\Bulk\ResponseSet
      *
      * @link https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html
      */
@@ -186,7 +186,7 @@ class Type implements SearchableInterface
      *
      * @param array|\Elastica\Document[] $docs Array of Elastica\Document
      *
-     * @return \Elastica\Bulk\ResponseSet
+     * @return \Enalquiler\Elastica\Bulk\ResponseSet
      *
      * @link https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html
      */
@@ -204,7 +204,7 @@ class Type implements SearchableInterface
      *
      * @param objects[] $objects
      *
-     * @return \Elastica\Bulk\ResponseSet
+     * @return \Enalquiler\Elastica\Bulk\ResponseSet
      *
      * @link https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html
      */
@@ -232,10 +232,10 @@ class Type implements SearchableInterface
      * @param string $id      Document id
      * @param array  $options Options for the get request.
      *
-     * @throws \Elastica\Exception\NotFoundException
-     * @throws \Elastica\Exception\ResponseException
+     * @throws \Enalquiler\Elastica\Exception\NotFoundException
+     * @throws \Enalquiler\Elastica\Exception\ResponseException
      *
-     * @return \Elastica\Document
+     * @return \Enalquiler\Elastica\Document
      */
     public function getDocument($id, $options = [])
     {
@@ -289,9 +289,9 @@ class Type implements SearchableInterface
     /**
      * Sets value type mapping for this type.
      *
-     * @param \Elastica\Type\Mapping|array $mapping Elastica\Type\MappingType object or property array with all mappings
+     * @param \Enalquiler\Elastica\Type\Mapping|array $mapping Elastica\Type\MappingType object or property array with all mappings
      *
-     * @return \Elastica\Response
+     * @return \Enalquiler\Elastica\Response
      */
     public function setMapping($mapping)
     {
@@ -344,7 +344,7 @@ class Type implements SearchableInterface
      * @param string|array|\Elastica\Query $query   Array with all query data inside or a Elastica\Query object
      * @param int|array                    $options OPTIONAL Limit or associative array of options (option=>value)
      *
-     * @return \Elastica\ResultSet with all results inside
+     * @return \Enalquiler\Elastica\ResultSet with all results inside
      *
      * @see \Elastica\SearchableInterface::search
      */
@@ -374,7 +374,7 @@ class Type implements SearchableInterface
     /**
      * Returns index client.
      *
-     * @return \Elastica\Index Index object
+     * @return \Enalquiler\Elastica\Index Index object
      */
     public function getIndex()
     {
@@ -382,9 +382,9 @@ class Type implements SearchableInterface
     }
 
     /**
-     * @param \Elastica\Document $document
+     * @param \Enalquiler\Elastica\Document $document
      *
-     * @return \Elastica\Response
+     * @return \Enalquiler\Elastica\Response
      */
     public function deleteDocument(Document $document)
     {
@@ -409,7 +409,7 @@ class Type implements SearchableInterface
      *
      * @param array|\Elastica\Document[] $docs Array of Elastica\Document
      *
-     * @return \Elastica\Bulk\ResponseSet
+     * @return \Enalquiler\Elastica\Bulk\ResponseSet
      *
      * @link https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html
      */
@@ -431,9 +431,9 @@ class Type implements SearchableInterface
      * @param array      $options
      *
      * @throws \InvalidArgumentException
-     * @throws \Elastica\Exception\NotFoundException
+     * @throws \Enalquiler\Elastica\Exception\NotFoundException
      *
-     * @return \Elastica\Response Response object
+     * @return \Enalquiler\Elastica\Response Response object
      */
     public function deleteById($id, array $options = [])
     {
@@ -460,7 +460,7 @@ class Type implements SearchableInterface
      * @param array       $ids
      * @param string|bool $routing Optional routing key for all ids
      *
-     * @return \Elastica\Response Response  object
+     * @return \Enalquiler\Elastica\Response Response  object
      */
     public function deleteIds(array $ids, $routing = false)
     {
@@ -470,10 +470,10 @@ class Type implements SearchableInterface
     /**
      * Deletes entries in the db based on a query.
      *
-     * @param \Elastica\Query|string $query   Query object
+     * @param \Enalquiler\Elastica\Query|string $query   Query object
      * @param array                  $options Optional params
      *
-     * @return \Elastica\Response
+     * @return \Enalquiler\Elastica\Response
      *
      * @link https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-delete-by-query.html
      */
@@ -510,7 +510,7 @@ class Type implements SearchableInterface
      * @param array  $data   OPTIONAL Arguments as array
      * @param array  $query  OPTIONAL Query params
      *
-     * @return \Elastica\Response Response object
+     * @return \Enalquiler\Elastica\Response Response object
      */
     public function request($path, $method, $data = [], array $query = [])
     {

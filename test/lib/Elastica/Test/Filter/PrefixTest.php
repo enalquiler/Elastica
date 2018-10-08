@@ -1,10 +1,10 @@
 <?php
-namespace Elastica\Test\Filter;
+namespace Enalquiler\Elastica\Test\Filter;
 
-use Elastica\Document;
-use Elastica\Filter\Prefix;
-use Elastica\Test\DeprecatedClassBase as BaseTest;
-use Elastica\Type\Mapping;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Filter\Prefix;
+use Enalquiler\Elastica\Test\DeprecatedClassBase as BaseTest;
+use Enalquiler\Elastica\Type\Mapping;
 
 class PrefixTest extends BaseTest
 {

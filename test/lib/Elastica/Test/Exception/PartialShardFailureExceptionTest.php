@@ -1,11 +1,11 @@
 <?php
-namespace Elastica\Test\Exception;
+namespace Enalquiler\Elastica\Test\Exception;
 
-use Elastica\Document;
-use Elastica\Exception\PartialShardFailureException;
-use Elastica\JSON;
-use Elastica\Query;
-use Elastica\ResultSet;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Exception\PartialShardFailureException;
+use Enalquiler\Elastica\JSON;
+use Enalquiler\Elastica\Query;
+use Enalquiler\Elastica\ResultSet;
 
 class PartialShardFailureExceptionTest extends AbstractExceptionTest
 {

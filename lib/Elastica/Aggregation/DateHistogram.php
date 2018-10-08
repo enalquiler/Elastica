@@ -1,7 +1,7 @@
 <?php
-namespace Elastica\Aggregation;
+namespace Enalquiler\Elastica\Aggregation;
 
-use Elastica\Exception\DeprecatedException;
+use Enalquiler\Elastica\Exception\DeprecatedException;
 
 /**
  * Class DateHistogram.

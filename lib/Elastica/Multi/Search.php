@@ -1,10 +1,10 @@
 <?php
-namespace Elastica\Multi;
+namespace Enalquiler\Elastica\Multi;
 
-use Elastica\Client;
-use Elastica\JSON;
-use Elastica\Request;
-use Elastica\Search as BaseSearch;
+use Enalquiler\Elastica\Client;
+use Enalquiler\Elastica\JSON;
+use Enalquiler\Elastica\Request;
+use Enalquiler\Elastica\Search as BaseSearch;
 
 /**
  * Elastica multi search.
@@ -38,7 +38,7 @@ class Search
     /**
      * Constructs search object.
      *
-     * @param \Elastica\Client      $client  Client object
+     * @param \Enalquiler\Elastica\Client      $client  Client object
      * @param MultiBuilderInterface $builder
      */
     public function __construct(Client $client, MultiBuilderInterface $builder = null)
@@ -48,7 +48,7 @@ class Search
     }
 
     /**
-     * @return \Elastica\Client
+     * @return \Enalquiler\Elastica\Client
      */
     public function getClient()
     {
@@ -66,7 +66,7 @@ class Search
     }
 
     /**
-     * @param \Elastica\Search $search
+     * @param \Enalquiler\Elastica\Search $search
      * @param string           $key    Optional key
      *
      * @return $this
@@ -130,7 +130,7 @@ class Search
     }
 
     /**
-     * @return \Elastica\Multi\ResultSet
+     * @return \Enalquiler\Elastica\Multi\ResultSet
      */
     public function search()
     {
@@ -160,7 +160,7 @@ class Search
     }
 
     /**
-     * @param \Elastica\Search $search
+     * @param \Enalquiler\Elastica\Search $search
      *
      * @return string
      */
@@ -177,7 +177,7 @@ class Search
     }
 
     /**
-     * @param \Elastica\Search $search
+     * @param \Enalquiler\Elastica\Search $search
      *
      * @return array
      */

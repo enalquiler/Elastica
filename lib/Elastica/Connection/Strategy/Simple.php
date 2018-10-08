@@ -1,7 +1,7 @@
 <?php
-namespace Elastica\Connection\Strategy;
+namespace Enalquiler\Elastica\Connection\Strategy;
 
-use Elastica\Exception\ClientException;
+use Enalquiler\Elastica\Exception\ClientException;
 
 /**
  * Description of SimpleStrategy.
@@ -13,9 +13,9 @@ class Simple implements StrategyInterface
     /**
      * @param array|\Elastica\Connection[] $connections
      *
-     * @throws \Elastica\Exception\ClientException
+     * @throws \Enalquiler\Elastica\Exception\ClientException
      *
-     * @return \Elastica\Connection
+     * @return \Enalquiler\Elastica\Connection
      */
     public function getConnection($connections)
     {

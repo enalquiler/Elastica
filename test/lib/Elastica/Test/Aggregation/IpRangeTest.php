@@ -1,10 +1,10 @@
 <?php
-namespace Elastica\Test\Aggregation;
+namespace Enalquiler\Elastica\Test\Aggregation;
 
-use Elastica\Aggregation\IpRange;
-use Elastica\Document;
-use Elastica\Query;
-use Elastica\Type\Mapping;
+use Enalquiler\Elastica\Aggregation\IpRange;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Query;
+use Enalquiler\Elastica\Type\Mapping;
 
 class IpRangeTest extends BaseAggregationTest
 {

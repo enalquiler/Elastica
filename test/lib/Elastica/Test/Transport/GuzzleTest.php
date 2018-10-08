@@ -1,10 +1,10 @@
 <?php
-namespace Elastica\Test\Transport;
+namespace Enalquiler\Elastica\Test\Transport;
 
-use Elastica\Document;
-use Elastica\Query;
-use Elastica\ResultSet;
-use Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Query;
+use Enalquiler\Elastica\ResultSet;
+use Enalquiler\Elastica\Test\Base as BaseTest;
 
 class GuzzleTest extends BaseTest
 {
@@ -168,7 +168,7 @@ class GuzzleTest extends BaseTest
 
     /**
      * @group unit
-     * @expectedException Elastica\Exception\Connection\GuzzleException
+     * @expectedException \Enalquiler\Elastica\Exception\Connection\GuzzleException
      */
     public function testInvalidConnection()
     {

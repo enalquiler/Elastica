@@ -1,11 +1,11 @@
 <?php
-namespace Elastica\Test;
+namespace Enalquiler\Elastica\Test;
 
-use Elastica\Client;
-use Elastica\IndexTemplate;
-use Elastica\Request;
-use Elastica\Response;
-use Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Client;
+use Enalquiler\Elastica\IndexTemplate;
+use Enalquiler\Elastica\Request;
+use Enalquiler\Elastica\Response;
+use Enalquiler\Elastica\Test\Base as BaseTest;
 
 /**
  * IndexTemplate class tests.
@@ -28,7 +28,7 @@ class IndexTemplateTest extends BaseTest
     }
 
     /**
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      * @group unit
      */
     public function testIncorrectInstantiate()
@@ -45,7 +45,7 @@ class IndexTemplateTest extends BaseTest
         $name = 'index_template1';
         $response = new Response('');
         /** @var \PHPUnit_Framework_MockObject_MockObject|Client $clientMock */
-        $clientMock = $this->getMock('\Elastica\Client', ['request']);
+        $clientMock = $this->getMock('\Enalquiler\Elastica\Client', ['request']);
         $clientMock->expects($this->once())
             ->method('request')
             ->with('/_template/'.$name, Request::DELETE, [], [])
@@ -63,7 +63,7 @@ class IndexTemplateTest extends BaseTest
         $response = new Response('');
         $name = 'index_template1';
         /** @var \PHPUnit_Framework_MockObject_MockObject|Client $clientMock */
-        $clientMock = $this->getMock('\Elastica\Client', ['request']);
+        $clientMock = $this->getMock('\Enalquiler\Elastica\Client', ['request']);
         $clientMock->expects($this->once())
             ->method('request')
             ->with('/_template/'.$name, Request::PUT, $args, [])
@@ -81,7 +81,7 @@ class IndexTemplateTest extends BaseTest
         $response = new Response('');
         $response->setTransferInfo(['http_code' => 200]);
         /** @var \PHPUnit_Framework_MockObject_MockObject|Client $clientMock */
-        $clientMock = $this->getMock('\Elastica\Client', ['request']);
+        $clientMock = $this->getMock('\Enalquiler\Elastica\Client', ['request']);
         $clientMock->expects($this->once())
             ->method('request')
             ->with('/_template/'.$name, Request::HEAD, [], [])

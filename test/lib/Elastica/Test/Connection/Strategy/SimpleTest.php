@@ -1,9 +1,9 @@
 <?php
-namespace Elastica\Test\Connection\Strategy;
+namespace Enalquiler\Elastica\Test\Connection\Strategy;
 
-use Elastica\Connection;
-use Elastica\Exception\ConnectionException;
-use Elastica\Test\Base;
+use Enalquiler\Elastica\Connection;
+use Enalquiler\Elastica\Exception\ConnectionException;
+use Enalquiler\Elastica\Test\Base;
 
 /**
  * Description of SimplyTest.
@@ -33,7 +33,7 @@ class SimpleTest extends Base
 
     /**
      * @group functional
-     * @expectedException \Elastica\Exception\ConnectionException
+     * @expectedException \Enalquiler\Elastica\Exception\ConnectionException
      */
     public function testFailConnection()
     {
@@ -103,7 +103,7 @@ class SimpleTest extends Base
     {
         $strategy = $client->getConnectionStrategy();
 
-        $this->assertInstanceOf('Elastica\Connection\Strategy\Simple', $strategy);
+        $this->assertInstanceOf('Enalquiler\Elastica\Connection\Strategy\Simple', $strategy);
     }
 
     protected function _checkResponse($response)

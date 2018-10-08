@@ -1,10 +1,10 @@
 <?php
-namespace Elastica\Test\ResultSet;
+namespace Enalquiler\Elastica\Test\ResultSet;
 
-use Elastica\Query;
-use Elastica\Response;
-use Elastica\ResultSet\DefaultBuilder;
-use Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Query;
+use Enalquiler\Elastica\Response;
+use Enalquiler\Elastica\ResultSet\DefaultBuilder;
+use Enalquiler\Elastica\Test\Base as BaseTest;
 
 /**
  * @group unit

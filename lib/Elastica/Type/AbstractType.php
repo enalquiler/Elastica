@@ -1,12 +1,12 @@
 <?php
-namespace Elastica\Type;
+namespace Enalquiler\Elastica\Type;
 
-use Elastica\Client;
-use Elastica\Exception\InvalidException;
-use Elastica\Index;
-use Elastica\SearchableInterface;
-use Elastica\Type as BaseType;
-use Elastica\Util;
+use Enalquiler\Elastica\Client;
+use Enalquiler\Elastica\Exception\InvalidException;
+use Enalquiler\Elastica\Index;
+use Enalquiler\Elastica\SearchableInterface;
+use Enalquiler\Elastica\Type as BaseType;
+use Enalquiler\Elastica\Util;
 
 /**
  * Abstract helper class to implement search indices based on models.
@@ -92,9 +92,9 @@ abstract class AbstractType implements SearchableInterface
      * Reads index and type name from protected vars _indexName and _typeName.
      * Has to be set in child class
      *
-     * @param \Elastica\Client $client OPTIONAL Client object
+     * @param \Enalquiler\Elastica\Client $client OPTIONAL Client object
      *
-     * @throws \Elastica\Exception\InvalidException
+     * @throws \Enalquiler\Elastica\Exception\InvalidException
      */
     public function __construct(Client $client = null)
     {
@@ -134,7 +134,7 @@ abstract class AbstractType implements SearchableInterface
      * @param string|\Elastica\Query $query
      * @param array|int              $options
      *
-     * @return \Elastica\Search
+     * @return \Enalquiler\Elastica\Search
      */
     public function createSearch($query = '', $options = null)
     {
@@ -147,7 +147,7 @@ abstract class AbstractType implements SearchableInterface
      * @param string|array|\Elastica\Query $query   Array with all query data inside or a Elastica\Query object
      * @param null                         $options
      *
-     * @return \Elastica\ResultSet with all results inside
+     * @return \Enalquiler\Elastica\ResultSet with all results inside
      *
      * @see \Elastica\SearchableInterface::search
      */
@@ -173,7 +173,7 @@ abstract class AbstractType implements SearchableInterface
     /**
      * Returns the search index.
      *
-     * @return \Elastica\Index Index object
+     * @return \Enalquiler\Elastica\Index Index object
      */
     public function getIndex()
     {
@@ -183,7 +183,7 @@ abstract class AbstractType implements SearchableInterface
     /**
      * Returns type object.
      *
-     * @return \Elastica\Type Type object
+     * @return \Enalquiler\Elastica\Type Type object
      */
     public function getType()
     {

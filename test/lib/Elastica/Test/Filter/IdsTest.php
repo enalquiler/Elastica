@@ -1,11 +1,11 @@
 <?php
-namespace Elastica\Test\Filter;
+namespace Enalquiler\Elastica\Test\Filter;
 
-use Elastica\Document;
-use Elastica\Filter\Ids;
-use Elastica\Filter\Type;
-use Elastica\Query;
-use Elastica\Test\DeprecatedClassBase as BaseTest;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Filter\Ids;
+use Enalquiler\Elastica\Filter\Type;
+use Enalquiler\Elastica\Query;
+use Enalquiler\Elastica\Test\DeprecatedClassBase as BaseTest;
 
 class IdsTest extends BaseTest
 {
@@ -248,6 +248,6 @@ class IdsTest extends BaseTest
         $this->assertEquals(['foo', $type->getName()], $filter->getParam('type'));
 
         $returnValue = $filter->addType('bar');
-        $this->assertInstanceOf('Elastica\Filter\Ids', $returnValue);
+        $this->assertInstanceOf('Enalquiler\Elastica\Filter\Ids', $returnValue);
     }
 }

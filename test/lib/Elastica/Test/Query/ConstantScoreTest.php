@@ -1,14 +1,14 @@
 <?php
-namespace Elastica\Test\Query;
+namespace Enalquiler\Elastica\Test\Query;
 
-use Elastica\Document;
-use Elastica\Filter\Exists;
-use Elastica\Filter\Ids;
-use Elastica\Filter\Term;
-use Elastica\Index;
-use Elastica\Query\ConstantScore;
-use Elastica\Query\MatchAll;
-use Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Filter\Exists;
+use Enalquiler\Elastica\Filter\Ids;
+use Enalquiler\Elastica\Filter\Term;
+use Enalquiler\Elastica\Index;
+use Enalquiler\Elastica\Query\ConstantScore;
+use Enalquiler\Elastica\Query\MatchAll;
+use Enalquiler\Elastica\Test\Base as BaseTest;
 
 class ConstantScoreTest extends BaseTest
 {
@@ -23,7 +23,7 @@ class ConstantScoreTest extends BaseTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testConstructInvalid()
     {
@@ -53,7 +53,7 @@ class ConstantScoreTest extends BaseTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testSetFilterInvalid()
     {
@@ -87,7 +87,7 @@ class ConstantScoreTest extends BaseTest
     {
         return [
             [
-                new \Elastica\Query\Term(['foo', 'bar']),
+                new \Enalquiler\Elastica\Query\Term(['foo', 'bar']),
                 [
                     'constant_score' => [
                         'filter' => [
@@ -189,7 +189,7 @@ class ConstantScoreTest extends BaseTest
         $query = new ConstantScore();
 
         $boost = 1.2;
-        $filter = new \Elastica\Query\Ids();
+        $filter = new \Enalquiler\Elastica\Query\Ids();
         $filter->setIds([1]);
         $query->setFilter($filter);
         $query->setBoost($boost);
@@ -234,7 +234,7 @@ class ConstantScoreTest extends BaseTest
      */
     public function testConstruct()
     {
-        $filter = new \Elastica\Query\Ids();
+        $filter = new \Enalquiler\Elastica\Query\Ids();
         $filter->setIds([1]);
 
         $query = new ConstantScore($filter);

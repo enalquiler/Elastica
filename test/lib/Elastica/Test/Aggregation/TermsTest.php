@@ -1,9 +1,9 @@
 <?php
-namespace Elastica\Test\Aggregation;
+namespace Enalquiler\Elastica\Test\Aggregation;
 
-use Elastica\Aggregation\Terms;
-use Elastica\Document;
-use Elastica\Query;
+use Enalquiler\Elastica\Aggregation\Terms;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Query;
 
 class TermsTest extends BaseAggregationTest
 {

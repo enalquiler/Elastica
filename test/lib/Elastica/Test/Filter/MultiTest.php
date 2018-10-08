@@ -1,10 +1,10 @@
 <?php
-namespace Elastica\Test\Filter;
+namespace Enalquiler\Elastica\Test\Filter;
 
-use Elastica\Filter\AbstractMulti;
-use Elastica\Filter\MatchAll;
-use Elastica\Test\Base;
-use Elastica\Test\DeprecatedClassBase as BaseTest;
+use Enalquiler\Elastica\Filter\AbstractMulti;
+use Enalquiler\Elastica\Filter\MatchAll;
+use Enalquiler\Elastica\Test\Base;
+use Enalquiler\Elastica\Test\DeprecatedClassBase as BaseTest;
 
 class AbstractMultiTest extends BaseTest
 {
@@ -13,7 +13,7 @@ class AbstractMultiTest extends BaseTest
      */
     public function testDeprecated()
     {
-        $reflection = new \ReflectionClass('Elastica\Filter\AbstractMulti');
+        $reflection = new \ReflectionClass('Enalquiler\Elastica\Filter\AbstractMulti');
         $this->assertFileDeprecated($reflection->getFileName(), 'Deprecated: Filters are deprecated. Use queries in filter context. See https://www.elastic.co/guide/en/elasticsearch/reference/2.0/query-dsl-filters.html');
     }
 
@@ -106,7 +106,7 @@ class AbstractMultiTest extends BaseTest
 
     private function getStub()
     {
-        return $this->getMockForAbstractClass('Elastica\Test\Filter\AbstractMultiDebug');
+        return $this->getMockForAbstractClass('Enalquiler\Elastica\Test\Filter\AbstractMultiDebug');
     }
 }
 

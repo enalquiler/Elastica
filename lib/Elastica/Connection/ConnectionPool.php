@@ -1,9 +1,9 @@
 <?php
-namespace Elastica\Connection;
+namespace Enalquiler\Elastica\Connection;
 
-use Elastica\Client;
-use Elastica\Connection;
-use Elastica\Connection\Strategy\StrategyInterface;
+use Enalquiler\Elastica\Client;
+use Enalquiler\Elastica\Connection;
+use Enalquiler\Elastica\Connection\Strategy\StrategyInterface;
 use Exception;
 
 /**
@@ -30,7 +30,7 @@ class ConnectionPool
 
     /**
      * @param array                                           $connections
-     * @param \Elastica\Connection\Strategy\StrategyInterface $strategy
+     * @param \Enalquiler\Elastica\Connection\Strategy\StrategyInterface $strategy
      * @param callback                                        $callback
      */
     public function __construct(array $connections, StrategyInterface $strategy, $callback = null)
@@ -43,7 +43,7 @@ class ConnectionPool
     }
 
     /**
-     * @param \Elastica\Connection $connection
+     * @param \Enalquiler\Elastica\Connection $connection
      *
      * @return $this
      */
@@ -89,9 +89,9 @@ class ConnectionPool
     }
 
     /**
-     * @throws \Elastica\Exception\ClientException
+     * @throws \Enalquiler\Elastica\Exception\ClientException
      *
-     * @return \Elastica\Connection
+     * @return \Enalquiler\Elastica\Connection
      */
     public function getConnection()
     {
@@ -99,7 +99,7 @@ class ConnectionPool
     }
 
     /**
-     * @param \Elastica\Connection $connection
+     * @param \Enalquiler\Elastica\Connection $connection
      * @param \Exception           $e
      * @param Client               $client
      */
@@ -113,7 +113,7 @@ class ConnectionPool
     }
 
     /**
-     * @return \Elastica\Connection\Strategy\StrategyInterface
+     * @return \Enalquiler\Elastica\Connection\Strategy\StrategyInterface
      */
     public function getStrategy()
     {

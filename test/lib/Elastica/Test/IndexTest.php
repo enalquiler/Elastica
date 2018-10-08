@@ -1,17 +1,17 @@
 <?php
-namespace Elastica\Test;
+namespace Enalquiler\Elastica\Test;
 
-use Elastica\Document;
-use Elastica\Exception\ResponseException;
-use Elastica\Index;
-use Elastica\Query\HasChild;
-use Elastica\Query\QueryString;
-use Elastica\Query\SimpleQueryString;
-use Elastica\Query\Term;
-use Elastica\Status;
-use Elastica\Test\Base as BaseTest;
-use Elastica\Type;
-use Elastica\Type\Mapping;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Exception\ResponseException;
+use Enalquiler\Elastica\Index;
+use Enalquiler\Elastica\Query\HasChild;
+use Enalquiler\Elastica\Query\QueryString;
+use Enalquiler\Elastica\Query\SimpleQueryString;
+use Enalquiler\Elastica\Query\Term;
+use Enalquiler\Elastica\Status;
+use Enalquiler\Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Type;
+use Enalquiler\Elastica\Type\Mapping;
 
 class IndexTest extends BaseTest
 {
@@ -283,7 +283,7 @@ class IndexTest extends BaseTest
 
     /**
      * @group functional
-     * @expectedException \Elastica\Exception\ResponseException
+     * @expectedException \Enalquiler\Elastica\Exception\ResponseException
      */
     public function testAddRemoveAlias()
     {
@@ -690,7 +690,7 @@ class IndexTest extends BaseTest
             $response = $error->getResponse();
             $this->assertTrue($response->hasError());
             $request = $error->getRequest();
-            $this->assertInstanceOf('Elastica\Request', $request);
+            $this->assertInstanceOf('Enalquiler\Elastica\Request', $request);
         }
     }
 
@@ -770,7 +770,7 @@ class IndexTest extends BaseTest
     }
 
     /**
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      *
      * @group functional
      */
@@ -921,7 +921,7 @@ class IndexTest extends BaseTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testThrowExceptionIfNotScalar()
     {

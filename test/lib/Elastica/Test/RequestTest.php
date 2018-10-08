@@ -1,9 +1,9 @@
 <?php
-namespace Elastica\Test;
+namespace Enalquiler\Elastica\Test;
 
-use Elastica\Connection;
-use Elastica\Request;
-use Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Connection;
+use Enalquiler\Elastica\Request;
+use Enalquiler\Elastica\Test\Base as BaseTest;
 
 class RequestTest extends BaseTest
 {
@@ -27,7 +27,7 @@ class RequestTest extends BaseTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testInvalidConnection()
     {
@@ -48,7 +48,7 @@ class RequestTest extends BaseTest
 
         $response = $request->send();
 
-        $this->assertInstanceOf('Elastica\Response', $response);
+        $this->assertInstanceOf('Enalquiler\Elastica\Response', $response);
     }
 
     /**

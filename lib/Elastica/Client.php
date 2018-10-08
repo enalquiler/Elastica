@@ -1,10 +1,10 @@
 <?php
-namespace Elastica;
+namespace Enalquiler\Elastica;
 
-use Elastica\Bulk\Action;
-use Elastica\Exception\ConnectionException;
-use Elastica\Exception\InvalidException;
-use Elastica\Script\AbstractScript;
+use Enalquiler\Elastica\Bulk\Action;
+use Enalquiler\Elastica\Exception\ConnectionException;
+use Enalquiler\Elastica\Exception\InvalidException;
+use Enalquiler\Elastica\Script\AbstractScript;
 use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
 
@@ -187,7 +187,7 @@ class Client
      *
      * @param string $key Config key
      *
-     * @throws \Elastica\Exception\InvalidException
+     * @throws \Enalquiler\Elastica\Exception\InvalidException
      *
      * @return array|string Config value
      */
@@ -242,7 +242,7 @@ class Client
      *
      * @param string $name Index name to create connection to
      *
-     * @return \Elastica\Index Index for the given name
+     * @return \Enalquiler\Elastica\Index Index for the given name
      */
     public function getIndex($name)
     {
@@ -255,7 +255,7 @@ class Client
      * @param string $header      The HTTP Header
      * @param string $headerValue The HTTP Header Value
      *
-     * @throws \Elastica\Exception\InvalidException If $header or $headerValue is not a string
+     * @throws \Enalquiler\Elastica\Exception\InvalidException If $header or $headerValue is not a string
      *
      * @return $this
      */
@@ -275,7 +275,7 @@ class Client
      *
      * @param string $header The HTTP Header to remove
      *
-     * @throws \Elastica\Exception\InvalidException If $header is not a string
+     * @throws \Enalquiler\Elastica\Exception\InvalidException If $header is not a string
      *
      * @return $this
      */
@@ -303,9 +303,9 @@ class Client
      *
      * @param array|\Elastica\Document[] $docs Array of Elastica\Document
      *
-     * @throws \Elastica\Exception\InvalidException If docs is empty
+     * @throws \Enalquiler\Elastica\Exception\InvalidException If docs is empty
      *
-     * @return \Elastica\Bulk\ResponseSet Response object
+     * @return \Enalquiler\Elastica\Bulk\ResponseSet Response object
      */
     public function updateDocuments(array $docs)
     {
@@ -315,7 +315,7 @@ class Client
 
         $bulk = new Bulk($this);
 
-        $bulk->addDocuments($docs, \Elastica\Bulk\Action::OP_TYPE_UPDATE);
+        $bulk->addDocuments($docs, \Enalquiler\Elastica\Bulk\Action::OP_TYPE_UPDATE);
 
         return $bulk->send();
     }
@@ -331,9 +331,9 @@ class Client
      *
      * @param array|\Elastica\Document[] $docs Array of Elastica\Document
      *
-     * @throws \Elastica\Exception\InvalidException If docs is empty
+     * @throws \Enalquiler\Elastica\Exception\InvalidException If docs is empty
      *
-     * @return \Elastica\Bulk\ResponseSet Response object
+     * @return \Enalquiler\Elastica\Bulk\ResponseSet Response object
      */
     public function addDocuments(array $docs)
     {
@@ -357,7 +357,7 @@ class Client
      * @param string                                                   $type    type of index to update
      * @param array                                                    $options array of query params to use for query. For possible options check es api
      *
-     * @return \Elastica\Response
+     * @return \Enalquiler\Elastica\Response
      *
      * @link https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-update.html
      */
@@ -432,8 +432,8 @@ class Client
     }
 
     /**
-     * @param \Elastica\Response $response
-     * @param \Elastica\Document $document
+     * @param \Enalquiler\Elastica\Response $response
+     * @param \Enalquiler\Elastica\Document $document
      * @param string             $fields   Array of field names to be populated or '_source' if whole document data should be updated
      */
     protected function _populateDocumentFieldsFromResponse(Response $response, Document $document, $fields)
@@ -462,9 +462,9 @@ class Client
      *
      * @param array|\Elastica\Document[] $docs
      *
-     * @throws \Elastica\Exception\InvalidException
+     * @throws \Enalquiler\Elastica\Exception\InvalidException
      *
-     * @return \Elastica\Bulk\ResponseSet
+     * @return \Enalquiler\Elastica\Bulk\ResponseSet
      */
     public function deleteDocuments(array $docs)
     {
@@ -481,7 +481,7 @@ class Client
     /**
      * Returns the status object for all indices.
      *
-     * @return \Elastica\Status Status object
+     * @return \Enalquiler\Elastica\Status Status object
      */
     public function getStatus()
     {
@@ -491,7 +491,7 @@ class Client
     /**
      * Returns the current cluster.
      *
-     * @return \Elastica\Cluster Cluster object
+     * @return \Enalquiler\Elastica\Cluster Cluster object
      */
     public function getCluster()
     {
@@ -507,7 +507,7 @@ class Client
     }
 
     /**
-     * @param \Elastica\Connection $connection
+     * @param \Enalquiler\Elastica\Connection $connection
      *
      * @return $this
      */
@@ -529,9 +529,9 @@ class Client
     }
 
     /**
-     * @throws \Elastica\Exception\ClientException
+     * @throws \Enalquiler\Elastica\Exception\ClientException
      *
-     * @return \Elastica\Connection
+     * @return \Enalquiler\Elastica\Connection
      */
     public function getConnection()
     {
@@ -539,7 +539,7 @@ class Client
     }
 
     /**
-     * @return \Elastica\Connection[]
+     * @return \Enalquiler\Elastica\Connection[]
      */
     public function getConnections()
     {
@@ -547,7 +547,7 @@ class Client
     }
 
     /**
-     * @return \Elastica\Connection\Strategy\StrategyInterface
+     * @return \Enalquiler\Elastica\Connection\Strategy\StrategyInterface
      */
     public function getConnectionStrategy()
     {
@@ -576,9 +576,9 @@ class Client
      * @param string|\Elastica\Type  $type    Type of documents
      * @param string|bool            $routing Optional routing key for all ids
      *
-     * @throws \Elastica\Exception\InvalidException
+     * @throws \Enalquiler\Elastica\Exception\InvalidException
      *
-     * @return \Elastica\Bulk\ResponseSet Response  object
+     * @return \Enalquiler\Elastica\Bulk\ResponseSet Response  object
      */
     public function deleteIds(array $ids, $index, $type, $routing = false)
     {
@@ -620,10 +620,10 @@ class Client
      *
      * @param array $params Parameter array
      *
-     * @throws \Elastica\Exception\ResponseException
-     * @throws \Elastica\Exception\InvalidException
+     * @throws \Enalquiler\Elastica\Exception\ResponseException
+     * @throws \Enalquiler\Elastica\Exception\InvalidException
      *
-     * @return \Elastica\Bulk\ResponseSet Response object
+     * @return \Enalquiler\Elastica\Bulk\ResponseSet Response object
      */
     public function bulk(array $params)
     {
@@ -717,7 +717,7 @@ class Client
      *
      * @param array $args OPTIONAL Optional arguments
      *
-     * @return \Elastica\Response Response object
+     * @return \Enalquiler\Elastica\Response Response object
      *
      * @link https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-optimize.html
      */
@@ -729,7 +729,7 @@ class Client
     /**
      * Refreshes all search indices.
      *
-     * @return \Elastica\Response Response object
+     * @return \Enalquiler\Elastica\Response Response object
      *
      * @link https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-refresh.html
      */

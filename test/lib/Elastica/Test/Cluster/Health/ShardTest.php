@@ -1,8 +1,8 @@
 <?php
-namespace Elastica\Test\Cluster\Health;
+namespace Enalquiler\Elastica\Test\Cluster\Health;
 
-use Elastica\Cluster\Health\Shard as HealthShard;
-use Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Cluster\Health\Shard as HealthShard;
+use Enalquiler\Elastica\Test\Base as BaseTest;
 
 class ShardTest extends BaseTest
 {

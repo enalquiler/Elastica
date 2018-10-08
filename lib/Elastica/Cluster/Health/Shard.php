@@ -1,5 +1,5 @@
 <?php
-namespace Elastica\Cluster\Health;
+namespace Enalquiler\Elastica\Cluster\Health;
 
 /**
  * Wraps status information for a shard.

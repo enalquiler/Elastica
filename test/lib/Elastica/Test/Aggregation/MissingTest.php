@@ -1,9 +1,9 @@
 <?php
-namespace Elastica\Test\Aggregation;
+namespace Enalquiler\Elastica\Test\Aggregation;
 
-use Elastica\Aggregation\Missing;
-use Elastica\Document;
-use Elastica\Query;
+use Enalquiler\Elastica\Aggregation\Missing;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Query;
 
 class MissingTest extends BaseAggregationTest
 {

@@ -1,8 +1,8 @@
 <?php
-namespace Elastica\Test\Query;
+namespace Enalquiler\Elastica\Test\Query;
 
-use Elastica\Query\Limit;
-use Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Query\Limit;
+use Enalquiler\Elastica\Test\Base as BaseTest;
 
 class LimitTest extends BaseTest
 {
@@ -14,7 +14,7 @@ class LimitTest extends BaseTest
         $query = new Limit(10);
         $this->assertEquals(10, $query->getParam('value'));
 
-        $this->assertInstanceOf('Elastica\Query\Limit', $query->setLimit(20));
+        $this->assertInstanceOf('Enalquiler\Elastica\Query\Limit', $query->setLimit(20));
         $this->assertEquals(20, $query->getParam('value'));
     }
 

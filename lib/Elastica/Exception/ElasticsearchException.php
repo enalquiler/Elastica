@@ -1,5 +1,5 @@
 <?php
-namespace Elastica\Exception;
+namespace Enalquiler\Elastica\Exception;
 
 /**
  * Elasticsearch exception.

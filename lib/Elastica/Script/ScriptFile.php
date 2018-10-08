@@ -1,7 +1,7 @@
 <?php
-namespace Elastica\Script;
+namespace Enalquiler\Elastica\Script;
 
-use Elastica\Exception\InvalidException;
+use Enalquiler\Elastica\Exception\InvalidException;
 
 /**
  * Script objects, containing script internals.
@@ -53,7 +53,7 @@ class ScriptFile extends Script
     /**
      * @param string|array|\Elastica\ScriptFile $data
      *
-     * @throws \Elastica\Exception\InvalidException
+     * @throws \Enalquiler\Elastica\Exception\InvalidException
      *
      * @return self
      */
@@ -77,7 +77,7 @@ class ScriptFile extends Script
     /**
      * @param array $data
      *
-     * @throws \Elastica\Exception\InvalidException
+     * @throws \Enalquiler\Elastica\Exception\InvalidException
      *
      * @return self
      */

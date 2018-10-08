@@ -1,8 +1,8 @@
 <?php
-namespace Elastica\Exception;
+namespace Enalquiler\Elastica\Exception;
 
-use Elastica\Request;
-use Elastica\Response;
+use Enalquiler\Elastica\Request;
+use Enalquiler\Elastica\Response;
 
 /**
  * Connection exception.
@@ -25,8 +25,8 @@ class ConnectionException extends \RuntimeException implements ExceptionInterfac
      * Construct Exception.
      *
      * @param string             $message  Message
-     * @param \Elastica\Request  $request
-     * @param \Elastica\Response $response
+     * @param \Enalquiler\Elastica\Request  $request
+     * @param \Enalquiler\Elastica\Response $response
      */
     public function __construct($message, Request $request = null, Response $response = null)
     {
@@ -39,7 +39,7 @@ class ConnectionException extends \RuntimeException implements ExceptionInterfac
     /**
      * Returns request object.
      *
-     * @return \Elastica\Request Request object
+     * @return \Enalquiler\Elastica\Request Request object
      */
     public function getRequest()
     {
@@ -49,7 +49,7 @@ class ConnectionException extends \RuntimeException implements ExceptionInterfac
     /**
      * Returns response object.
      *
-     * @return \Elastica\Response Response object
+     * @return \Enalquiler\Elastica\Response Response object
      */
     public function getResponse()
     {

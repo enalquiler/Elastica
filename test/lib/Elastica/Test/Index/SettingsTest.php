@@ -1,11 +1,11 @@
 <?php
-namespace Elastica\Test\Index;
+namespace Enalquiler\Elastica\Test\Index;
 
-use Elastica\Document;
-use Elastica\Exception\ResponseException;
-use Elastica\Index;
-use Elastica\Index\Settings as IndexSettings;
-use Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Exception\ResponseException;
+use Enalquiler\Elastica\Index;
+use Enalquiler\Elastica\Index\Settings as IndexSettings;
+use Enalquiler\Elastica\Test\Base as BaseTest;
 
 class SettingsTest extends BaseTest
 {
@@ -168,7 +168,7 @@ class SettingsTest extends BaseTest
 
         $response = $settings->setMergePolicy('merge_factor', 15);
         $this->assertEquals(15, $settings->getMergePolicy('merge_factor'));
-        $this->assertInstanceOf('Elastica\Response', $response);
+        $this->assertInstanceOf('Enalquiler\Elastica\Response', $response);
         $this->assertTrue($response->isOk());
 
         $settings->setMergePolicy('merge_factor', 10);
@@ -198,7 +198,7 @@ class SettingsTest extends BaseTest
 
         $response = $settings->setMergePolicy('merge_factor', 15);
         $this->assertEquals(15, $settings->getMergePolicy('merge_factor'));
-        $this->assertInstanceOf('Elastica\Response', $response);
+        $this->assertInstanceOf('Enalquiler\Elastica\Response', $response);
         $this->assertTrue($response->isOk());
 
         $index->delete();

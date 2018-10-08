@@ -1,5 +1,5 @@
 <?php
-namespace Elastica\Cluster\Health;
+namespace Enalquiler\Elastica\Cluster\Health;
 
 /**
  * Wraps status information for an index.
@@ -123,7 +123,7 @@ class Index
     /**
      * Gets the health of the shards in this index.
      *
-     * @return \Elastica\Cluster\Health\Shard[]
+     * @return \Enalquiler\Elastica\Cluster\Health\Shard[]
      */
     public function getShards()
     {

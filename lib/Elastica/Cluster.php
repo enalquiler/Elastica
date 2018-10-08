@@ -1,9 +1,9 @@
 <?php
-namespace Elastica;
+namespace Enalquiler\Elastica;
 
-use Elastica\Cluster\Health;
-use Elastica\Cluster\Settings;
-use Elastica\Exception\NotImplementedException;
+use Enalquiler\Elastica\Cluster\Health;
+use Enalquiler\Elastica\Cluster\Settings;
+use Enalquiler\Elastica\Exception\NotImplementedException;
 
 /**
  * Cluster information for elasticsearch.
@@ -38,7 +38,7 @@ class Cluster
     /**
      * Creates a cluster object.
      *
-     * @param \Elastica\Client $client Connection client object
+     * @param \Enalquiler\Elastica\Client $client Connection client object
      */
     public function __construct(Client $client)
     {
@@ -59,7 +59,7 @@ class Cluster
     /**
      * Returns the response object.
      *
-     * @return \Elastica\Response Response object
+     * @return \Enalquiler\Elastica\Response Response object
      */
     public function getResponse()
     {
@@ -107,7 +107,7 @@ class Cluster
     /**
      * Returns all nodes of the cluster.
      *
-     * @return \Elastica\Node[]
+     * @return \Enalquiler\Elastica\Node[]
      */
     public function getNodes()
     {
@@ -124,7 +124,7 @@ class Cluster
     /**
      * Returns the client object.
      *
-     * @return \Elastica\Client Client object
+     * @return \Enalquiler\Elastica\Client Client object
      */
     public function getClient()
     {
@@ -138,7 +138,7 @@ class Cluster
      *
      * @param array $args Additional arguments
      *
-     * @throws \Elastica\Exception\NotImplementedException
+     * @throws \Enalquiler\Elastica\Exception\NotImplementedException
      */
     public function getInfo(array $args)
     {
@@ -150,7 +150,7 @@ class Cluster
      *
      * @link https://www.elastic.co/guide/en/elasticsearch/reference/current/cluster-health.html
      *
-     * @return \Elastica\Cluster\Health
+     * @return \Enalquiler\Elastica\Cluster\Health
      */
     public function getHealth()
     {
@@ -160,7 +160,7 @@ class Cluster
     /**
      * Return Cluster settings.
      *
-     * @return \Elastica\Cluster\Settings
+     * @return \Enalquiler\Elastica\Cluster\Settings
      */
     public function getSettings()
     {
@@ -174,7 +174,7 @@ class Cluster
      *
      * @param string $delay OPTIONAL Seconds to shutdown cluster after (default = 1s)
      *
-     * @return \Elastica\Response
+     * @return \Enalquiler\Elastica\Response
      */
     public function shutdown($delay = '1s')
     {

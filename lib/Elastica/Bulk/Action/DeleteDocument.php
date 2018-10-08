@@ -1,7 +1,7 @@
 <?php
-namespace Elastica\Bulk\Action;
+namespace Enalquiler\Elastica\Bulk\Action;
 
-use Elastica\AbstractUpdateAction;
+use Enalquiler\Elastica\AbstractUpdateAction;
 
 class DeleteDocument extends AbstractDocument
 {
@@ -11,7 +11,7 @@ class DeleteDocument extends AbstractDocument
     protected $_opType = self::OP_TYPE_DELETE;
 
     /**
-     * @param \Elastica\AbstractUpdateAction $action
+     * @param \Enalquiler\Elastica\AbstractUpdateAction $action
      *
      * @return array
      */

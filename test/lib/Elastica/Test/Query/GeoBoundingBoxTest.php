@@ -1,8 +1,8 @@
 <?php
-namespace Elastica\Test\Query;
+namespace Enalquiler\Elastica\Test\Query;
 
-use Elastica\Query\GeoBoundingBox;
-use Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Query\GeoBoundingBox;
+use Enalquiler\Elastica\Test\Base as BaseTest;
 
 class GeoBoundingBoxTest extends BaseTest
 {
@@ -20,12 +20,12 @@ class GeoBoundingBoxTest extends BaseTest
         $this->assertEquals($expectedArray, $query->getParam($key));
 
         $returnValue = $query->addCoordinates($key, $coords);
-        $this->assertInstanceOf('Elastica\Query\GeoBoundingBox', $returnValue);
+        $this->assertInstanceOf('Enalquiler\Elastica\Query\GeoBoundingBox', $returnValue);
     }
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testAddCoordinatesInvalidException()
     {

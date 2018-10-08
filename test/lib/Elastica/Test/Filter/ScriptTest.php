@@ -1,9 +1,9 @@
 <?php
-namespace Elastica\Test\Filter;
+namespace Enalquiler\Elastica\Test\Filter;
 
-use Elastica\Filter\Script as ScriptFilter;
-use Elastica\Script\Script;
-use Elastica\Test\DeprecatedClassBase as BaseTest;
+use Enalquiler\Elastica\Filter\Script as ScriptFilter;
+use Enalquiler\Elastica\Script\Script;
+use Enalquiler\Elastica\Test\DeprecatedClassBase as BaseTest;
 
 class ScriptTest extends BaseTest
 {

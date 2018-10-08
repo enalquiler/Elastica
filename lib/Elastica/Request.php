@@ -1,7 +1,7 @@
 <?php
-namespace Elastica;
+namespace Enalquiler\Elastica;
 
-use Elastica\Exception\InvalidException;
+use Enalquiler\Elastica\Exception\InvalidException;
 
 /**
  * Elastica Request object.
@@ -30,7 +30,7 @@ class Request extends Param
      * @param array      $query      OPTIONAL Query params
      * @param Connection $connection
      *
-     * @return \Elastica\Request OPTIONAL Connection object
+     * @return \Enalquiler\Elastica\Request OPTIONAL Connection object
      */
     public function __construct($path, $method = self::GET, $data = [], array $query = [], Connection $connection = null)
     {
@@ -131,7 +131,7 @@ class Request extends Param
     }
 
     /**
-     * @param \Elastica\Connection $connection
+     * @param \Enalquiler\Elastica\Connection $connection
      *
      * @return $this
      */
@@ -147,7 +147,7 @@ class Request extends Param
      *
      * @throws Exception\InvalidException If no valid connection was setted
      *
-     * @return \Elastica\Connection
+     * @return \Enalquiler\Elastica\Connection
      */
     public function getConnection()
     {
@@ -161,7 +161,7 @@ class Request extends Param
     /**
      * Sends request to server.
      *
-     * @return \Elastica\Response Response object
+     * @return \Enalquiler\Elastica\Response Response object
      */
     public function send()
     {

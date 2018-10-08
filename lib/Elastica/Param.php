@@ -1,7 +1,7 @@
 <?php
-namespace Elastica;
+namespace Enalquiler\Elastica;
 
-use Elastica\Exception\InvalidException;
+use Enalquiler\Elastica\Exception\InvalidException;
 
 /**
  * Class to handle params.
@@ -150,7 +150,7 @@ class Param implements ArrayableInterface
      *
      * @param string $key Key to return
      *
-     * @throws \Elastica\Exception\InvalidException If requested key is not set
+     * @throws \Enalquiler\Elastica\Exception\InvalidException If requested key is not set
      *
      * @return mixed Key value
      */

@@ -1,9 +1,9 @@
 <?php
-namespace Elastica\Transport;
+namespace Enalquiler\Elastica\Transport;
 
-use Elastica\JSON;
-use Elastica\Request;
-use Elastica\Response;
+use Enalquiler\Elastica\JSON;
+use Enalquiler\Elastica\Request;
+use Enalquiler\Elastica\Response;
 
 /**
  * Elastica Null Transport object.
@@ -18,10 +18,10 @@ class NullTransport extends AbstractTransport
     /**
      * Null transport.
      *
-     * @param \Elastica\Request $request
+     * @param \Enalquiler\Elastica\Request $request
      * @param array             $params  Hostname, port, path, ...
      *
-     * @return \Elastica\Response Response empty object
+     * @return \Enalquiler\Elastica\Response Response empty object
      */
     public function exec(Request $request, array $params)
     {

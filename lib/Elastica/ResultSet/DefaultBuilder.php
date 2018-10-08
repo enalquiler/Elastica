@@ -1,10 +1,10 @@
 <?php
-namespace Elastica\ResultSet;
+namespace Enalquiler\Elastica\ResultSet;
 
-use Elastica\Query;
-use Elastica\Response;
-use Elastica\Result;
-use Elastica\ResultSet;
+use Enalquiler\Elastica\Query;
+use Enalquiler\Elastica\Response;
+use Enalquiler\Elastica\Result;
+use Enalquiler\Elastica\ResultSet;
 
 class DefaultBuilder implements BuilderInterface
 {

@@ -1,9 +1,9 @@
 <?php
-namespace Elastica\Test;
+namespace Enalquiler\Elastica\Test;
 
-use Elastica\Param;
-use Elastica\Test\Base as BaseTest;
-use Elastica\Util;
+use Enalquiler\Elastica\Param;
+use Enalquiler\Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Util;
 
 class ParamTest extends BaseTest
 {
@@ -13,7 +13,7 @@ class ParamTest extends BaseTest
     public function testToArrayEmpty()
     {
         $param = new Param();
-        $this->assertInstanceOf('Elastica\Param', $param);
+        $this->assertInstanceOf('Enalquiler\Elastica\Param', $param);
         $this->assertEquals([$this->_getFilterName($param) => []], $param->toArray());
     }
 
@@ -26,7 +26,7 @@ class ParamTest extends BaseTest
         $params = ['hello' => 'word', 'nicolas' => 'ruflin'];
         $param->setParams($params);
 
-        $this->assertInstanceOf('Elastica\Param', $param);
+        $this->assertInstanceOf('Enalquiler\Elastica\Param', $param);
         $this->assertEquals([$this->_getFilterName($param) => $params], $param->toArray());
     }
 
@@ -83,7 +83,7 @@ class ParamTest extends BaseTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testGetParamInvalid()
     {

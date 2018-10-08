@@ -1,8 +1,8 @@
 <?php
-namespace Elastica;
+namespace Enalquiler\Elastica;
 
-use Elastica\Exception\JSONParseException;
-use Elastica\Exception\NotFoundException;
+use Enalquiler\Elastica\Exception\JSONParseException;
+use Enalquiler\Elastica\Exception\NotFoundException;
 
 /**
  * Elastica Response object.
@@ -307,7 +307,7 @@ class Response
     /**
      * Time request took.
      *
-     * @throws \Elastica\Exception\NotFoundException
+     * @throws \Enalquiler\Elastica\Exception\NotFoundException
      *
      * @return int Time request took
      */
@@ -325,7 +325,7 @@ class Response
     /**
      * Get the _shard statistics for the response.
      *
-     * @throws \Elastica\Exception\NotFoundException
+     * @throws \Enalquiler\Elastica\Exception\NotFoundException
      *
      * @return array
      */
@@ -343,7 +343,7 @@ class Response
     /**
      * Get the _scroll value for the response.
      *
-     * @throws \Elastica\Exception\NotFoundException
+     * @throws \Enalquiler\Elastica\Exception\NotFoundException
      *
      * @return string
      */

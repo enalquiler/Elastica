@@ -1,11 +1,11 @@
 <?php
-namespace Elastica\Test\Query;
+namespace Enalquiler\Elastica\Test\Query;
 
-use Elastica\Document;
-use Elastica\Query;
-use Elastica\Query\GeoDistance;
-use Elastica\Query\MatchAll;
-use Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Query;
+use Enalquiler\Elastica\Query\GeoDistance;
+use Enalquiler\Elastica\Query\MatchAll;
+use Enalquiler\Elastica\Test\Base as BaseTest;
 
 class GeoDistanceTest extends BaseTest
 {

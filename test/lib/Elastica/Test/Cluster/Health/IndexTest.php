@@ -1,8 +1,8 @@
 <?php
-namespace Elastica\Test\Cluster\Health;
+namespace Enalquiler\Elastica\Test\Cluster\Health;
 
-use Elastica\Cluster\Health\Index as HealthIndex;
-use Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Cluster\Health\Index as HealthIndex;
+use Enalquiler\Elastica\Test\Base as BaseTest;
 
 class IndexTest extends BaseTest
 {
@@ -138,7 +138,7 @@ class IndexTest extends BaseTest
         $this->assertEquals(3, count($shards));
 
         foreach ($shards as $shard) {
-            $this->assertInstanceOf('Elastica\Cluster\Health\Shard', $shard);
+            $this->assertInstanceOf('Enalquiler\Elastica\Cluster\Health\Shard', $shard);
         }
     }
 }

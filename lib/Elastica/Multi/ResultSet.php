@@ -1,8 +1,8 @@
 <?php
-namespace Elastica\Multi;
+namespace Enalquiler\Elastica\Multi;
 
-use Elastica\Response;
-use Elastica\ResultSet as BaseResultSet;
+use Enalquiler\Elastica\Response;
+use Enalquiler\Elastica\ResultSet as BaseResultSet;
 
 /**
  * Elastica multi search result set
@@ -36,7 +36,7 @@ class ResultSet implements \Iterator, \ArrayAccess, \Countable
     /**
      * Constructs ResultSet object.
      *
-     * @param \Elastica\Response $response
+     * @param \Enalquiler\Elastica\Response $response
      * @param BaseResultSet[]
      */
     public function __construct(Response $response, $resultSets)
@@ -56,7 +56,7 @@ class ResultSet implements \Iterator, \ArrayAccess, \Countable
     /**
      * Returns response object.
      *
-     * @return \Elastica\Response Response object
+     * @return \Enalquiler\Elastica\Response Response object
      */
     public function getResponse()
     {

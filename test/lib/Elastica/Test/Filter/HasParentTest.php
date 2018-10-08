@@ -1,10 +1,10 @@
 <?php
-namespace Elastica\Test\Filter;
+namespace Enalquiler\Elastica\Test\Filter;
 
-use Elastica\Document;
-use Elastica\Filter\HasParent;
-use Elastica\Query\MatchAll;
-use Elastica\Test\DeprecatedClassBase as BaseTest;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Filter\HasParent;
+use Enalquiler\Elastica\Query\MatchAll;
+use Enalquiler\Elastica\Test\DeprecatedClassBase as BaseTest;
 
 class HasParentTest extends BaseTest
 {
@@ -60,7 +60,7 @@ class HasParentTest extends BaseTest
         $this->assertEquals('bar', $filter->getParam('type'));
 
         $returnValue = $filter->setType('last');
-        $this->assertInstanceOf('Elastica\Filter\HasParent', $returnValue);
+        $this->assertInstanceOf('Enalquiler\Elastica\Filter\HasParent', $returnValue);
     }
 
     /**
@@ -68,7 +68,7 @@ class HasParentTest extends BaseTest
      */
     public function testFilterInsideHasParent()
     {
-        $f = new \Elastica\Filter\MatchAll();
+        $f = new \Enalquiler\Elastica\Filter\MatchAll();
 
         $type = 'test';
 
@@ -91,11 +91,11 @@ class HasParentTest extends BaseTest
     {
         $index = $this->prepareSearchData();
 
-        $f = new \Elastica\Filter\Term();
+        $f = new \Enalquiler\Elastica\Filter\Term();
         $f->setTerm('user', 'parent1');
         $filter = new HasParent($f, 'parent');
 
-        $searchQuery = new \Elastica\Query();
+        $searchQuery = new \Enalquiler\Elastica\Query();
         $searchQuery->setPostFilter($filter);
         $searchResults = $index->search($searchQuery);
 
@@ -114,11 +114,11 @@ class HasParentTest extends BaseTest
     {
         $index = $this->prepareSearchData();
 
-        $f = new \Elastica\Query\Term();
+        $f = new \Enalquiler\Elastica\Query\Term();
         $f->setTerm('user', 'parent1');
         $filter = new HasParent($f, 'parent');
 
-        $searchQuery = new \Elastica\Query();
+        $searchQuery = new \Enalquiler\Elastica\Query();
         $searchQuery->setPostFilter($filter);
         $searchResults = $index->search($searchQuery);
 
@@ -139,7 +139,7 @@ class HasParentTest extends BaseTest
         $parentType = $index->getType('parent');
 
         $childType = $index->getType('child');
-        $childMapping = new \Elastica\Type\Mapping($childType);
+        $childMapping = new \Enalquiler\Elastica\Type\Mapping($childType);
         $childMapping->setParent('parent');
         $childMapping->send();
 

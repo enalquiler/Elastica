@@ -1,9 +1,9 @@
 <?php
-namespace Elastica\Test\Query;
+namespace Enalquiler\Elastica\Test\Query;
 
-use Elastica\Document;
-use Elastica\Query\SimpleQueryString;
-use Elastica\Test\Base;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Query\SimpleQueryString;
+use Enalquiler\Elastica\Test\Base;
 
 class SimpleQueryStringTest extends Base
 {
@@ -74,7 +74,7 @@ class SimpleQueryStringTest extends Base
         $query->setMinimumShouldMatch($expected['simple_query_string']['minimum_should_match']);
 
         $this->assertEquals($expected, $query->toArray());
-        $this->assertInstanceOf('Elastica\Query\SimpleQueryString', $query->setMinimumShouldMatch('75%'));
+        $this->assertInstanceOf('Enalquiler\Elastica\Query\SimpleQueryString', $query->setMinimumShouldMatch('75%'));
     }
 
     /**

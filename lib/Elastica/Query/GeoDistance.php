@@ -1,5 +1,5 @@
 <?php
-namespace Elastica\Query;
+namespace Enalquiler\Elastica\Query;
 
 /**
  * Geo distance query.
@@ -25,7 +25,7 @@ class GeoDistance extends AbstractGeoDistance
      * @param array|string $location Location as array or geohash: array('lat' => 48.86, 'lon' => 2.35) OR 'drm3btev3e86'
      * @param string       $distance Distance
      *
-     * @throws \Elastica\Exception\InvalidException
+     * @throws \Enalquiler\Elastica\Exception\InvalidException
      */
     public function __construct($key, $location, $distance)
     {

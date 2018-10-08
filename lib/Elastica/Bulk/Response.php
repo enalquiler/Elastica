@@ -1,7 +1,7 @@
 <?php
-namespace Elastica\Bulk;
+namespace Enalquiler\Elastica\Bulk;
 
-use Elastica\Response as BaseResponse;
+use Enalquiler\Elastica\Response as BaseResponse;
 
 class Response extends BaseResponse
 {
@@ -17,7 +17,7 @@ class Response extends BaseResponse
 
     /**
      * @param array|string          $responseData
-     * @param \Elastica\Bulk\Action $action
+     * @param \Enalquiler\Elastica\Bulk\Action $action
      * @param string                $opType
      */
     public function __construct($responseData, Action $action, $opType)
@@ -29,7 +29,7 @@ class Response extends BaseResponse
     }
 
     /**
-     * @return \Elastica\Bulk\Action
+     * @return \Enalquiler\Elastica\Bulk\Action
      */
     public function getAction()
     {

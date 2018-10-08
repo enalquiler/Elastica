@@ -1,10 +1,10 @@
 <?php
-namespace Elastica\Test\Filter;
+namespace Enalquiler\Elastica\Test\Filter;
 
-use Elastica\Document;
-use Elastica\Filter\Regexp;
-use Elastica\Test\DeprecatedClassBase as BaseTest;
-use Elastica\Type\Mapping;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Filter\Regexp;
+use Enalquiler\Elastica\Test\DeprecatedClassBase as BaseTest;
+use Enalquiler\Elastica\Type\Mapping;
 
 class RegexpTest extends BaseTest
 {

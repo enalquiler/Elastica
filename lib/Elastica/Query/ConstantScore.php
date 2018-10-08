@@ -1,8 +1,8 @@
 <?php
-namespace Elastica\Query;
+namespace Enalquiler\Elastica\Query;
 
-use Elastica\Exception\InvalidException;
-use Elastica\Filter\AbstractFilter;
+use Enalquiler\Elastica\Exception\InvalidException;
+use Enalquiler\Elastica\Filter\AbstractFilter;
 
 /**
  * Constant score query.

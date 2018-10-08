@@ -1,8 +1,8 @@
 <?php
-namespace Elastica\Bulk\Action;
+namespace Enalquiler\Elastica\Bulk\Action;
 
-use Elastica\Document;
-use Elastica\Script\AbstractScript;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Script\AbstractScript;
 
 class UpdateDocument extends IndexDocument
 {
@@ -14,7 +14,7 @@ class UpdateDocument extends IndexDocument
     /**
      * Set the document for this bulk update action.
      *
-     * @param \Elastica\Document $document
+     * @param \Enalquiler\Elastica\Document $document
      *
      * @return $this
      */
@@ -40,7 +40,7 @@ class UpdateDocument extends IndexDocument
     }
 
     /**
-     * @param \Elastica\Script\AbstractScript $script
+     * @param \Enalquiler\Elastica\Script\AbstractScript $script
      *
      * @return $this
      */

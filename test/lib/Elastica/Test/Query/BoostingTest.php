@@ -1,10 +1,10 @@
 <?php
-namespace Elastica\Test\Query;
+namespace Enalquiler\Elastica\Test\Query;
 
-use Elastica\Document;
-use Elastica\Query\Boosting;
-use Elastica\Query\Term;
-use Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Query\Boosting;
+use Enalquiler\Elastica\Query\Term;
+use Enalquiler\Elastica\Test\Base as BaseTest;
 
 class BoostingTest extends BaseTest
 {

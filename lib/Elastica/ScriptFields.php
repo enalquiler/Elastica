@@ -1,7 +1,7 @@
 <?php
-namespace Elastica;
+namespace Enalquiler\Elastica;
 
-use Elastica\Script\ScriptFields as BaseScriptFields;
+use Enalquiler\Elastica\Script\ScriptFields as BaseScriptFields;
 
 /**
  * Kept for BC reasons.

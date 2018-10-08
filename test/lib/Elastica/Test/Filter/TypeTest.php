@@ -1,8 +1,8 @@
 <?php
-namespace Elastica\Test\Filter;
+namespace Enalquiler\Elastica\Test\Filter;
 
-use Elastica\Filter\Type;
-use Elastica\Test\DeprecatedClassBase as BaseTest;
+use Enalquiler\Elastica\Filter\Type;
+use Enalquiler\Elastica\Test\DeprecatedClassBase as BaseTest;
 
 class TypeTest extends BaseTest
 {
@@ -22,7 +22,7 @@ class TypeTest extends BaseTest
     {
         $typeFilter = new Type();
         $returnValue = $typeFilter->setType('type_name');
-        $this->assertInstanceOf('Elastica\Filter\Type', $returnValue);
+        $this->assertInstanceOf('Enalquiler\Elastica\Filter\Type', $returnValue);
     }
 
     /**

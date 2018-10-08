@@ -1,7 +1,7 @@
 <?php
-namespace Elastica\Rescore;
+namespace Enalquiler\Elastica\Rescore;
 
-use Elastica\Query as BaseQuery;
+use Enalquiler\Elastica\Query as BaseQuery;
 
 /**
  * Query Rescore.

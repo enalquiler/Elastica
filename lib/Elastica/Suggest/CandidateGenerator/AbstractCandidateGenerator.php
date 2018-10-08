@@ -1,7 +1,7 @@
 <?php
-namespace Elastica\Suggest\CandidateGenerator;
+namespace Enalquiler\Elastica\Suggest\CandidateGenerator;
 
-use Elastica\Param;
+use Enalquiler\Elastica\Param;
 
 class AbstractCandidateGenerator extends Param
 {

@@ -1,10 +1,10 @@
 <?php
-namespace Elastica\Test\Filter;
+namespace Enalquiler\Elastica\Test\Filter;
 
-use Elastica\Document;
-use Elastica\Filter\Terms;
-use Elastica\Query;
-use Elastica\Test\DeprecatedClassBase as BaseTest;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Filter\Terms;
+use Enalquiler\Elastica\Query;
+use Enalquiler\Elastica\Test\DeprecatedClassBase as BaseTest;
 
 class TermsTest extends BaseTest
 {
@@ -19,6 +19,7 @@ class TermsTest extends BaseTest
 
     /**
      * @group functional
+     * @group target
      */
     public function testLookup()
     {
@@ -77,7 +78,7 @@ class TermsTest extends BaseTest
         $this->assertEquals('bool', $filter->getParam('execution'));
 
         $returnValue = $filter->setExecution('bool');
-        $this->assertInstanceOf('Elastica\Filter\Terms', $returnValue);
+        $this->assertInstanceOf('Enalquiler\Elastica\Filter\Terms', $returnValue);
     }
 
     /**
@@ -94,7 +95,7 @@ class TermsTest extends BaseTest
         $this->assertEquals($expected, $filter->toArray());
 
         $returnValue = $filter->setTerms($field, $terms);
-        $this->assertInstanceOf('Elastica\Filter\Terms', $returnValue);
+        $this->assertInstanceOf('Enalquiler\Elastica\Filter\Terms', $returnValue);
     }
 
     /**
@@ -109,7 +110,7 @@ class TermsTest extends BaseTest
         $this->assertEquals($expected, $filter->toArray());
 
         $returnValue = $filter->addTerm('cyan');
-        $this->assertInstanceOf('Elastica\Filter\Terms', $returnValue);
+        $this->assertInstanceOf('Enalquiler\Elastica\Filter\Terms', $returnValue);
     }
 
     /**
@@ -128,7 +129,7 @@ class TermsTest extends BaseTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testToArrayInvalidException()
     {

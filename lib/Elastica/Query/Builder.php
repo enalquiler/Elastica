@@ -1,9 +1,9 @@
 <?php
-namespace Elastica\Query;
+namespace Enalquiler\Elastica\Query;
 
-use Elastica\Exception\InvalidException;
-use Elastica\Exception\JSONParseException;
-use Elastica\JSON;
+use Enalquiler\Elastica\Exception\InvalidException;
+use Enalquiler\Elastica\Exception\JSONParseException;
+use Enalquiler\Elastica\JSON;
 
 trigger_error('This builder is deprecated and will be removed in further Elastica releases. Use new Elastica\QueryBuilder instead.', E_USER_DEPRECATED);
 

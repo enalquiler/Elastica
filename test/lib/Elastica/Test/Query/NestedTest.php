@@ -1,9 +1,9 @@
 <?php
-namespace Elastica\Test\Query;
+namespace Enalquiler\Elastica\Test\Query;
 
-use Elastica\Query\Nested;
-use Elastica\Query\QueryString;
-use Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Query\Nested;
+use Enalquiler\Elastica\Query\QueryString;
+use Enalquiler\Elastica\Test\Base as BaseTest;
 
 class NestedTest extends BaseTest
 {
@@ -16,8 +16,8 @@ class NestedTest extends BaseTest
         $path = 'test1';
 
         $queryString = new QueryString('test');
-        $this->assertInstanceOf('Elastica\Query\Nested', $nested->setQuery($queryString));
-        $this->assertInstanceOf('Elastica\Query\Nested', $nested->setPath($path));
+        $this->assertInstanceOf('Enalquiler\Elastica\Query\Nested', $nested->setQuery($queryString));
+        $this->assertInstanceOf('Enalquiler\Elastica\Query\Nested', $nested->setPath($path));
         $expected = [
             'nested' => [
                 'query' => $queryString->toArray(),

@@ -1,18 +1,18 @@
 <?php
-namespace Elastica\Test;
+namespace Enalquiler\Elastica\Test;
 
-use Elastica\Document;
-use Elastica\Exception\InvalidException;
-use Elastica\Filter\Exists;
-use Elastica\Query;
-use Elastica\Query\Builder;
-use Elastica\Query\Term;
-use Elastica\Query\Text;
-use Elastica\Script\Script;
-use Elastica\Script\ScriptFields;
-use Elastica\Suggest;
-use Elastica\Test\Base as BaseTest;
-use Elastica\Type;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Exception\InvalidException;
+use Enalquiler\Elastica\Filter\Exists;
+use Enalquiler\Elastica\Query;
+use Enalquiler\Elastica\Query\Builder;
+use Enalquiler\Elastica\Query\Term;
+use Enalquiler\Elastica\Query\Text;
+use Enalquiler\Elastica\Script\Script;
+use Enalquiler\Elastica\Script\ScriptFields;
+use Enalquiler\Elastica\Suggest;
+use Enalquiler\Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Type;
 
 class QueryTest extends BaseTest
 {
@@ -39,7 +39,7 @@ class QueryTest extends BaseTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testSetFilterInvalid()
     {
@@ -65,7 +65,7 @@ class QueryTest extends BaseTest
         $errorsCollector->assertOnlyDeprecatedErrors(
             [
                 'Deprecated: Elastica\Query::setFilter() passing filter as AbstractFilter is deprecated. Pass instance of AbstractQuery instead.',
-                'Deprecated: Elastica\Query::setFilter() is deprecated and will be removed in further Elastica releases. Use Elastica\Query::setPostFilter() instead.',
+                'Deprecated: Elastica\Query::setFilter() is deprecated and will be removed in further Elastica releases. use Enalquiler\Elastica\Query::setPostFilter() instead.',
                 'Deprecated: Elastica\Query::setPostFilter() passing filter as AbstractFilter is deprecated. Pass instance of AbstractQuery instead.',
             ]
         );
@@ -73,7 +73,7 @@ class QueryTest extends BaseTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testSetPostFilterInvalid()
     {
@@ -186,7 +186,7 @@ class QueryTest extends BaseTest
     {
         $query = new Query();
         $suggest = new Suggest();
-        $this->assertInstanceOf('Elastica\Query', $query->setSuggest($suggest));
+        $this->assertInstanceOf('Enalquiler\Elastica\Query', $query->setSuggest($suggest));
     }
 
     /**
@@ -439,7 +439,7 @@ class QueryTest extends BaseTest
     public function testAddAggregationToArrayCast()
     {
         $query = new Query();
-        $aggregation = new \Elastica\Aggregation\Terms('text');
+        $aggregation = new \Enalquiler\Elastica\Aggregation\Terms('text');
         $aggregation->setField('field');
 
         $query->addAggregation($aggregation);
@@ -477,7 +477,7 @@ class QueryTest extends BaseTest
     public function testSetRescoreToArrayCast()
     {
         $query = new Query();
-        $rescore = new \Elastica\Rescore\Query();
+        $rescore = new \Enalquiler\Elastica\Rescore\Query();
         $rescore->setQueryWeight(1);
 
         $query->setRescore($rescore);
@@ -496,7 +496,7 @@ class QueryTest extends BaseTest
     public function testSetPostFilterToArrayCast()
     {
         $query = new Query();
-        $postFilter = new \Elastica\Query\Terms();
+        $postFilter = new \Enalquiler\Elastica\Query\Terms();
         $postFilter->setTerms('key', ['term']);
         $query->setPostFilter($postFilter);
 
@@ -516,7 +516,7 @@ class QueryTest extends BaseTest
         $this->hideDeprecated();
 
         $query = new Query();
-        $postFilter = new \Elastica\Filter\Terms();
+        $postFilter = new \Enalquiler\Elastica\Filter\Terms();
         $postFilter->setTerms('key', ['term']);
         $query->setPostFilter($postFilter);
 

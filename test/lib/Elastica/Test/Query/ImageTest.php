@@ -1,12 +1,12 @@
 <?php
-namespace Elastica\Test\Query;
+namespace Enalquiler\Elastica\Test\Query;
 
-use Elastica\Document;
-use Elastica\Index;
-use Elastica\Query\Image;
-use Elastica\Test\Base as BaseTest;
-use Elastica\Type;
-use Elastica\Type\Mapping;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Index;
+use Enalquiler\Elastica\Query\Image;
+use Enalquiler\Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Type;
+use Enalquiler\Elastica\Type\Mapping;
 
 class ImageTest extends BaseTest
 {

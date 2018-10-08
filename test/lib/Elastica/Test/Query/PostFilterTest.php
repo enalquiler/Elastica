@@ -1,11 +1,11 @@
 <?php
-namespace Elastica\Test\Query;
+namespace Enalquiler\Elastica\Test\Query;
 
-use Elastica\Document;
-use Elastica\Filter\Term;
-use Elastica\Query;
-use Elastica\Query\Match;
-use Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Filter\Term;
+use Enalquiler\Elastica\Query;
+use Enalquiler\Elastica\Query\Match;
+use Enalquiler\Elastica\Test\Base as BaseTest;
 
 class PostFilterTest extends BaseTest
 {
@@ -64,7 +64,7 @@ class PostFilterTest extends BaseTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testFilterInvalid()
     {

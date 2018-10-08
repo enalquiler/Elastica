@@ -1,10 +1,10 @@
 <?php
-namespace Elastica\Test\Transport;
+namespace Enalquiler\Elastica\Test\Transport;
 
-use Elastica\Document;
-use Elastica\Query;
-use Elastica\ResultSet;
-use Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Query;
+use Enalquiler\Elastica\ResultSet;
+use Enalquiler\Elastica\Test\Base as BaseTest;
 
 class HttpTest extends BaseTest
 {
@@ -83,7 +83,7 @@ class HttpTest extends BaseTest
 
         $id = 1;
         $data = ['id' => $id, 'name' => 'Item 1'];
-        $doc = new \Elastica\Document($id, $data);
+        $doc = new \Enalquiler\Elastica\Document($id, $data);
 
         $type->addDocument($doc);
 
@@ -118,7 +118,7 @@ class HttpTest extends BaseTest
             Послушай: далеко, далеко, на озере Чад /
             Изысканный бродит жираф.'];
 
-        $doc = new \Elastica\Document($id, $data);
+        $doc = new \Enalquiler\Elastica\Document($id, $data);
 
         $type->addDocument($doc);
 

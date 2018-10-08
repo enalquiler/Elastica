@@ -1,12 +1,12 @@
 <?php
-namespace Elastica\Test\Query;
+namespace Enalquiler\Elastica\Test\Query;
 
-use Elastica\Document;
-use Elastica\Index;
-use Elastica\Query;
-use Elastica\Query\Indices;
-use Elastica\Query\Term;
-use Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Index;
+use Enalquiler\Elastica\Query;
+use Enalquiler\Elastica\Query\Indices;
+use Enalquiler\Elastica\Query\Term;
+use Enalquiler\Elastica\Test\Base as BaseTest;
 
 class IndicesTest extends BaseTest
 {
@@ -104,7 +104,7 @@ class IndicesTest extends BaseTest
         $this->assertEquals($expected, $query->getParam('indices'));
 
         $returnValue = $query->setIndices($indices);
-        $this->assertInstanceOf('Elastica\Query\Indices', $returnValue);
+        $this->assertInstanceOf('Enalquiler\Elastica\Query\Indices', $returnValue);
     }
 
     /**
@@ -126,6 +126,6 @@ class IndicesTest extends BaseTest
         $this->assertEquals($expected, $query->getParam('indices'));
 
         $returnValue = $query->addIndex('bar');
-        $this->assertInstanceOf('Elastica\Query\Indices', $returnValue);
+        $this->assertInstanceOf('Enalquiler\Elastica\Query\Indices', $returnValue);
     }
 }

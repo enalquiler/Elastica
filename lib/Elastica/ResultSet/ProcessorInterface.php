@@ -1,7 +1,7 @@
 <?php
-namespace Elastica\ResultSet;
+namespace Enalquiler\Elastica\ResultSet;
 
-use Elastica\ResultSet;
+use Enalquiler\Elastica\ResultSet;
 
 interface ProcessorInterface
 {

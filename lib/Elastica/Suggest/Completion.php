@@ -1,5 +1,5 @@
 <?php
-namespace Elastica\Suggest;
+namespace Enalquiler\Elastica\Suggest;
 
 /**
  * Completion suggester.

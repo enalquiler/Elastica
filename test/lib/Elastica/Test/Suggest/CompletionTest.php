@@ -1,11 +1,11 @@
 <?php
-namespace Elastica\Test\Suggest;
+namespace Enalquiler\Elastica\Test\Suggest;
 
-use Elastica\Document;
-use Elastica\Index;
-use Elastica\Query;
-use Elastica\Suggest\Completion;
-use Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Index;
+use Enalquiler\Elastica\Query;
+use Enalquiler\Elastica\Suggest\Completion;
+use Enalquiler\Elastica\Test\Base as BaseTest;
 
 class CompletionTest extends BaseTest
 {
@@ -135,6 +135,6 @@ class CompletionTest extends BaseTest
 
         $this->assertEquals($fuzzy, $suggest->getParam('fuzzy'));
 
-        $this->assertInstanceOf('Elastica\\Suggest\\Completion', $suggest->setFuzzy($fuzzy));
+        $this->assertInstanceOf('Enalquiler\\Elastica\\Suggest\\Completion', $suggest->setFuzzy($fuzzy));
     }
 }

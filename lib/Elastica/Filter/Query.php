@@ -1,8 +1,8 @@
 <?php
-namespace Elastica\Filter;
+namespace Enalquiler\Elastica\Filter;
 
-use Elastica\Exception\InvalidException;
-use Elastica\Query\AbstractQuery;
+use Enalquiler\Elastica\Exception\InvalidException;
+use Enalquiler\Elastica\Query\AbstractQuery;
 
 trigger_error('Deprecated: Filters are deprecated. Use queries in filter context. See https://www.elastic.co/guide/en/elasticsearch/reference/2.0/query-dsl-filters.html', E_USER_DEPRECATED);
 
@@ -40,7 +40,7 @@ class Query extends AbstractFilter
      *
      * @param array|\Elastica\Query\AbstractQuery $query
      *
-     * @throws \Elastica\Exception\InvalidException If parameter is invalid
+     * @throws \Enalquiler\Elastica\Exception\InvalidException If parameter is invalid
      *
      * @return $this
      */

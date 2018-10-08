@@ -1,10 +1,10 @@
 <?php
-namespace Elastica\Test\Filter;
+namespace Enalquiler\Elastica\Test\Filter;
 
-use Elastica\Filter\BoolNot;
-use Elastica\Filter\Exists;
-use Elastica\Filter\Ids;
-use Elastica\Test\DeprecatedClassBase as BaseTest;
+use Enalquiler\Elastica\Filter\BoolNot;
+use Enalquiler\Elastica\Filter\Exists;
+use Enalquiler\Elastica\Filter\Ids;
+use Enalquiler\Elastica\Test\DeprecatedClassBase as BaseTest;
 
 class BoolNotTest extends BaseTest
 {

@@ -1,9 +1,9 @@
 <?php
-namespace Elastica\Test\Aggregation;
+namespace Enalquiler\Elastica\Test\Aggregation;
 
-use Elastica\Aggregation\Histogram;
-use Elastica\Document;
-use Elastica\Query;
+use Enalquiler\Elastica\Aggregation\Histogram;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Query;
 
 class HistogramTest extends BaseAggregationTest
 {

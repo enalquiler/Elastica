@@ -1,5 +1,5 @@
 <?php
-namespace Elastica\Query;
+namespace Enalquiler\Elastica\Query;
 
 /**
  * Nested query.
@@ -25,7 +25,7 @@ class Nested extends AbstractQuery
     /**
      * Sets nested query.
      *
-     * @param \Elastica\Query\AbstractQuery $query
+     * @param \Enalquiler\Elastica\Query\AbstractQuery $query
      *
      * @return $this
      */

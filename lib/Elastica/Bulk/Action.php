@@ -1,10 +1,10 @@
 <?php
-namespace Elastica\Bulk;
+namespace Enalquiler\Elastica\Bulk;
 
-use Elastica\Bulk;
-use Elastica\Index;
-use Elastica\JSON;
-use Elastica\Type;
+use Enalquiler\Elastica\Bulk;
+use Enalquiler\Elastica\Index;
+use Enalquiler\Elastica\JSON;
+use Enalquiler\Elastica\Type;
 
 class Action
 {

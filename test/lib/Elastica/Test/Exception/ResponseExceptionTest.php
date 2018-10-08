@@ -1,8 +1,8 @@
 <?php
-namespace Elastica\Test\Exception;
+namespace Enalquiler\Elastica\Test\Exception;
 
-use Elastica\Document;
-use Elastica\Exception\ResponseException;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Exception\ResponseException;
 
 class ResponseExceptionTest extends AbstractExceptionTest
 {

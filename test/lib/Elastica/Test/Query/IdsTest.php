@@ -1,10 +1,10 @@
 <?php
-namespace Elastica\Test\Query;
+namespace Enalquiler\Elastica\Test\Query;
 
-use Elastica\Document;
-use Elastica\Query\Ids;
-use Elastica\Query\Type;
-use Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Query\Ids;
+use Enalquiler\Elastica\Query\Type;
+use Enalquiler\Elastica\Test\Base as BaseTest;
 
 class IdsTest extends BaseTest
 {

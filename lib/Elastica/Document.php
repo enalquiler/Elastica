@@ -1,10 +1,10 @@
 <?php
-namespace Elastica;
+namespace Enalquiler\Elastica;
 
-use Elastica\Bulk\Action;
-use Elastica\Exception\DeprecatedException;
-use Elastica\Exception\InvalidException;
-use Elastica\Exception\NotImplementedException;
+use Enalquiler\Elastica\Bulk\Action;
+use Enalquiler\Elastica\Exception\DeprecatedException;
+use Enalquiler\Elastica\Exception\InvalidException;
+use Enalquiler\Elastica\Exception\NotImplementedException;
 
 /**
  * Single document stored in elastic search.
@@ -90,7 +90,7 @@ class Document extends AbstractUpdateAction
     /**
      * @param string $key
      *
-     * @throws \Elastica\Exception\InvalidException
+     * @throws \Enalquiler\Elastica\Exception\InvalidException
      *
      * @return mixed
      */
@@ -107,7 +107,7 @@ class Document extends AbstractUpdateAction
      * @param string $key
      * @param mixed  $value
      *
-     * @throws \Elastica\Exception\InvalidException
+     * @throws \Enalquiler\Elastica\Exception\InvalidException
      *
      * @return $this
      */
@@ -134,7 +134,7 @@ class Document extends AbstractUpdateAction
     /**
      * @param string $key
      *
-     * @throws \Elastica\Exception\InvalidException
+     * @throws \Enalquiler\Elastica\Exception\InvalidException
      *
      * @return $this
      */
@@ -151,7 +151,7 @@ class Document extends AbstractUpdateAction
     /**
      * Adds the given key/value pair to the document.
      *
-     * @deprecated Will be removed in further Elastica releases. Use Elastica\Document::set instead
+     * @deprecated Will be removed in further Elastica releases. use Enalquiler\Elastica\Document::set instead
      *
      * @param string $key   Document entry key
      * @param mixed  $value Document entry value
@@ -160,7 +160,7 @@ class Document extends AbstractUpdateAction
      */
     public function add($key, $value)
     {
-        trigger_error('Deprecated: Elastica\Document::add is deprecated and will be removed in further Elastica releases. Use Elastica\Document::set instead.', E_USER_DEPRECATED);
+        trigger_error('Deprecated: Elastica\Document::add is deprecated and will be removed in further Elastica releases. use Enalquiler\Elastica\Document::set instead.', E_USER_DEPRECATED);
 
         return $this->set($key, $value);
     }
@@ -257,7 +257,7 @@ class Document extends AbstractUpdateAction
     /**
      * @deprecated setScript() is no longer available as of 0.90.2. See http://elastica.io/migration/0.90.2/upsert.html to migrate. This method will be removed in further Elastica releases
      *
-     * @param \Elastica\Script\Script $data
+     * @param \Enalquiler\Elastica\Script\Script $data
      *
      * @throws NotImplementedException
      */
@@ -342,7 +342,7 @@ class Document extends AbstractUpdateAction
     /**
      * @param array|\Elastica\Document $data
      *
-     * @throws \Elastica\Exception\InvalidException
+     * @throws \Enalquiler\Elastica\Exception\InvalidException
      *
      * @return self
      */

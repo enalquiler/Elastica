@@ -1,8 +1,8 @@
 <?php
-namespace Elastica\Query;
+namespace Enalquiler\Elastica\Query;
 
-use Elastica\Exception\InvalidException;
-use Elastica\Filter\AbstractFilter;
+use Enalquiler\Elastica\Exception\InvalidException;
+use Enalquiler\Elastica\Filter\AbstractFilter;
 
 /**
  * Bool query.
@@ -16,7 +16,7 @@ class BoolQuery extends AbstractQuery
     /**
      * Add should part to query.
      *
-     * @param \Elastica\Query\AbstractQuery|array $args Should query
+     * @param \Enalquiler\Elastica\Query\AbstractQuery|array $args Should query
      *
      * @return $this
      */
@@ -28,7 +28,7 @@ class BoolQuery extends AbstractQuery
     /**
      * Add must part to query.
      *
-     * @param \Elastica\Query\AbstractQuery|array $args Must query
+     * @param \Enalquiler\Elastica\Query\AbstractQuery|array $args Must query
      *
      * @return $this
      */
@@ -40,7 +40,7 @@ class BoolQuery extends AbstractQuery
     /**
      * Add must not part to query.
      *
-     * @param \Elastica\Query\AbstractQuery|array $args Must not query
+     * @param \Enalquiler\Elastica\Query\AbstractQuery|array $args Must not query
      *
      * @return $this
      */
@@ -52,7 +52,7 @@ class BoolQuery extends AbstractQuery
     /**
      * Sets the filter.
      *
-     * @param \Elastica\Query\AbstractQuery $filter Filter object
+     * @param \Enalquiler\Elastica\Query\AbstractQuery $filter Filter object
      *
      * @return $this
      */
@@ -71,9 +71,9 @@ class BoolQuery extends AbstractQuery
      * Adds a query to the current object.
      *
      * @param string                              $type Query type
-     * @param \Elastica\Query\AbstractQuery|array $args Query
+     * @param \Enalquiler\Elastica\Query\AbstractQuery|array $args Query
      *
-     * @throws \Elastica\Exception\InvalidException If not valid query
+     * @throws \Enalquiler\Elastica\Exception\InvalidException If not valid query
      *
      * @return $this
      */

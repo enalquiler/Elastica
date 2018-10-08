@@ -1,37 +1,37 @@
 <?php
-namespace Elastica\QueryBuilder\DSL;
+namespace Enalquiler\Elastica\QueryBuilder\DSL;
 
-use Elastica\Exception\DeprecatedException;
-use Elastica\Exception\NotImplementedException;
-use Elastica\Filter\AbstractFilter;
-use Elastica\Query\AbstractQuery;
-use Elastica\Query\BoolQuery;
-use Elastica\Query\Boosting;
-use Elastica\Query\Common;
-use Elastica\Query\ConstantScore;
-use Elastica\Query\DisMax;
-use Elastica\Query\Filtered;
-use Elastica\Query\FunctionScore;
-use Elastica\Query\Fuzzy;
-use Elastica\Query\GeoDistance;
-use Elastica\Query\HasChild;
-use Elastica\Query\HasParent;
-use Elastica\Query\Ids;
-use Elastica\Query\Match;
-use Elastica\Query\MatchAll;
-use Elastica\Query\MoreLikeThis;
-use Elastica\Query\MultiMatch;
-use Elastica\Query\Nested;
-use Elastica\Query\Prefix;
-use Elastica\Query\QueryString;
-use Elastica\Query\Range;
-use Elastica\Query\Regexp;
-use Elastica\Query\SimpleQueryString;
-use Elastica\Query\Term;
-use Elastica\Query\Terms;
-use Elastica\Query\TopChildren;
-use Elastica\Query\Wildcard;
-use Elastica\QueryBuilder\DSL;
+use Enalquiler\Elastica\Exception\DeprecatedException;
+use Enalquiler\Elastica\Exception\NotImplementedException;
+use Enalquiler\Elastica\Filter\AbstractFilter;
+use Enalquiler\Elastica\Query\AbstractQuery;
+use Enalquiler\Elastica\Query\BoolQuery;
+use Enalquiler\Elastica\Query\Boosting;
+use Enalquiler\Elastica\Query\Common;
+use Enalquiler\Elastica\Query\ConstantScore;
+use Enalquiler\Elastica\Query\DisMax;
+use Enalquiler\Elastica\Query\Filtered;
+use Enalquiler\Elastica\Query\FunctionScore;
+use Enalquiler\Elastica\Query\Fuzzy;
+use Enalquiler\Elastica\Query\GeoDistance;
+use Enalquiler\Elastica\Query\HasChild;
+use Enalquiler\Elastica\Query\HasParent;
+use Enalquiler\Elastica\Query\Ids;
+use Enalquiler\Elastica\Query\Match;
+use Enalquiler\Elastica\Query\MatchAll;
+use Enalquiler\Elastica\Query\MoreLikeThis;
+use Enalquiler\Elastica\Query\MultiMatch;
+use Enalquiler\Elastica\Query\Nested;
+use Enalquiler\Elastica\Query\Prefix;
+use Enalquiler\Elastica\Query\QueryString;
+use Enalquiler\Elastica\Query\Range;
+use Enalquiler\Elastica\Query\Regexp;
+use Enalquiler\Elastica\Query\SimpleQueryString;
+use Enalquiler\Elastica\Query\Term;
+use Enalquiler\Elastica\Query\Terms;
+use Enalquiler\Elastica\Query\TopChildren;
+use Enalquiler\Elastica\Query\Wildcard;
+use Enalquiler\Elastica\QueryBuilder\DSL;
 
 /**
  * elasticsearch query DSL.
@@ -72,7 +72,7 @@ class Query implements DSL
      *
      * @link https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-multi-match-query.html
      *
-     * @return \Elastica\Query\MultiMatch
+     * @return \Enalquiler\Elastica\Query\MultiMatch
      */
     public function multi_match()
     {
@@ -84,7 +84,7 @@ class Query implements DSL
      *
      * @link https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-bool-query.html
      *
-     * @return \Elastica\Query\BoolQuery
+     * @return \Enalquiler\Elastica\Query\BoolQuery
      */
     public function bool()
     {

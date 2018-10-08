@@ -1,7 +1,7 @@
 <?php
-namespace Elastica\Aggregation;
+namespace Enalquiler\Elastica\Aggregation;
 
-use Elastica\Exception\InvalidException;
+use Enalquiler\Elastica\Exception\InvalidException;
 
 /**
  * Class Range.
@@ -17,7 +17,7 @@ class Range extends AbstractSimpleAggregation
      * @param int|float $toValue   high end of this range, exclusive (less than)
      * @param string    $key       customized key value
      *
-     * @throws \Elastica\Exception\InvalidException
+     * @throws \Enalquiler\Elastica\Exception\InvalidException
      *
      * @return $this
      */

@@ -1,7 +1,7 @@
 <?php
-namespace Elastica\Query;
+namespace Enalquiler\Elastica\Query;
 
-use Elastica;
+use Enalquiler\Elastica;
 
 /**
  * Script query.
@@ -27,7 +27,7 @@ class Script extends AbstractQuery
     /**
      * Sets script object.
      *
-     * @param \Elastica\Script\Script|string|array $script
+     * @param \Enalquiler\Elastica\Script\Script|string|array $script
      *
      * @return $this
      */

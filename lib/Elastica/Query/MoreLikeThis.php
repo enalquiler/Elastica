@@ -1,8 +1,8 @@
 <?php
-namespace Elastica\Query;
+namespace Enalquiler\Elastica\Query;
 
-use Elastica\Document;
-use Elastica\Exception\DeprecatedException;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Exception\DeprecatedException;
 
 /**
  * More Like This query.
@@ -18,7 +18,7 @@ class MoreLikeThis extends AbstractQuery
      *
      * @param array $fields Field names
      *
-     * @return \Elastica\Query\MoreLikeThis Current object
+     * @return \Enalquiler\Elastica\Query\MoreLikeThis Current object
      */
     public function setFields(array $fields)
     {
@@ -31,8 +31,8 @@ class MoreLikeThis extends AbstractQuery
      * @param array $ids Document ids
      *
      * @deprecated Option "ids" deprecated as of ES 2.0.0-beta1 and will be removed in further Elastica releases. Use "like" instead.
-     
-     * @return \Elastica\Query\MoreLikeThis Current object
+
+     * @return \Enalquiler\Elastica\Query\MoreLikeThis Current object
      */
     public function setIds(array $ids)
     {
@@ -57,7 +57,7 @@ class MoreLikeThis extends AbstractQuery
      * @param string $likeText
      *
      * @deprecated Option "like_text" deprecated as of ES 2.0.0-beta1 and will be removed at further Elastica releases. Use "like" instead.
-     
+
      * @return $this
      */
     public function setLikeText($likeText)

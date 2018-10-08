@@ -1,8 +1,8 @@
 <?php
-namespace Elastica\Query;
+namespace Enalquiler\Elastica\Query;
 
-use Elastica\Exception\InvalidException;
-use Elastica\Filter\AbstractFilter;
+use Enalquiler\Elastica\Exception\InvalidException;
+use Enalquiler\Elastica\Filter\AbstractFilter;
 
 trigger_error('Use BoolQuery instead. Filtered query is deprecated since ES 2.0.0-beta1 and this class will be removed in further Elastica releases.', E_USER_DEPRECATED);
 
@@ -20,8 +20,8 @@ class Filtered extends AbstractQuery
     /**
      * Constructs a filtered query.
      *
-     * @param \Elastica\Query\AbstractQuery $query  OPTIONAL Query object
-     * @param \Elastica\Query\AbstractQuery $filter OPTIONAL Filter object
+     * @param \Enalquiler\Elastica\Query\AbstractQuery $query  OPTIONAL Query object
+     * @param \Enalquiler\Elastica\Query\AbstractQuery $filter OPTIONAL Filter object
      */
     public function __construct(AbstractQuery $query = null, $filter = null)
     {
@@ -41,7 +41,7 @@ class Filtered extends AbstractQuery
     /**
      * Sets a query.
      *
-     * @param \Elastica\Query\AbstractQuery $query Query object
+     * @param \Enalquiler\Elastica\Query\AbstractQuery $query Query object
      *
      * @return $this
      */
@@ -53,7 +53,7 @@ class Filtered extends AbstractQuery
     /**
      * Sets the filter.
      *
-     * @param \Elastica\Query\AbstractQuery $filter Filter object
+     * @param \Enalquiler\Elastica\Query\AbstractQuery $filter Filter object
      *
      * @return $this
      */
@@ -73,7 +73,7 @@ class Filtered extends AbstractQuery
     /**
      * Gets the filter.
      *
-     * @return \Elastica\Query\AbstractQuery|\Elastica\Filter\AbstractFilter
+     * @return \Enalquiler\Elastica\Query\AbstractQuery|\Elastica\Filter\AbstractFilter
      */
     public function getFilter()
     {
@@ -83,7 +83,7 @@ class Filtered extends AbstractQuery
     /**
      * Gets the query.
      *
-     * @return \Elastica\Query\AbstractQuery
+     * @return \Enalquiler\Elastica\Query\AbstractQuery
      */
     public function getQuery()
     {

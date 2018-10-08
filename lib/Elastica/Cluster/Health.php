@@ -1,9 +1,9 @@
 <?php
-namespace Elastica\Cluster;
+namespace Enalquiler\Elastica\Cluster;
 
-use Elastica\Client;
-use Elastica\Cluster\Health\Index;
-use Elastica\Request;
+use Enalquiler\Elastica\Client;
+use Enalquiler\Elastica\Cluster\Health\Index;
+use Enalquiler\Elastica\Request;
 
 /**
  * Elastic cluster health.
@@ -25,7 +25,7 @@ class Health
     protected $_data;
 
     /**
-     * @param \Elastica\Client $client The Elastica client.
+     * @param \Enalquiler\Elastica\Client $client The Elastica client.
      */
     public function __construct(Client $client)
     {
@@ -171,7 +171,7 @@ class Health
     /**
      * Gets the status of the indices.
      *
-     * @return \Elastica\Cluster\Health\Index[]
+     * @return \Enalquiler\Elastica\Cluster\Health\Index[]
      */
     public function getIndices()
     {

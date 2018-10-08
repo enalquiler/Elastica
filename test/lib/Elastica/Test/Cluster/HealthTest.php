@@ -1,7 +1,7 @@
 <?php
-namespace Elastica\Test\Cluster;
+namespace Enalquiler\Elastica\Test\Cluster;
 
-use Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Test\Base as BaseTest;
 
 class HealthTest extends BaseTest
 {
@@ -34,7 +34,7 @@ class HealthTest extends BaseTest
         ];
 
         $health = $this
-            ->getMockBuilder('Elastica\Cluster\Health')
+            ->getMockBuilder('Enalquiler\Elastica\Cluster\Health')
             ->setConstructorArgs([$this->_getClient()])
             ->setMethods(['_retrieveHealthData'])
             ->getMock();
@@ -141,7 +141,7 @@ class HealthTest extends BaseTest
         $this->assertEquals(2, count($indices));
 
         foreach ($indices as $index) {
-            $this->assertInstanceOf('Elastica\Cluster\Health\Index', $index);
+            $this->assertInstanceOf('Enalquiler\Elastica\Cluster\Health\Index', $index);
         }
     }
 }

@@ -1,7 +1,7 @@
 <?php
-namespace Elastica\Aggregation;
+namespace Enalquiler\Elastica\Aggregation;
 
-use Elastica\Exception\InvalidException;
+use Enalquiler\Elastica\Exception\InvalidException;
 
 /**
  * Class GeoDistance.
@@ -55,7 +55,7 @@ class GeoDistance extends AbstractAggregation
      * @param int $fromValue a distance
      * @param int $toValue   a distance
      *
-     * @throws \Elastica\Exception\InvalidException
+     * @throws \Enalquiler\Elastica\Exception\InvalidException
      *
      * @return $this
      */

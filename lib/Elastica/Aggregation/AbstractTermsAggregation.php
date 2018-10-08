@@ -1,5 +1,5 @@
 <?php
-namespace Elastica\Aggregation;
+namespace Enalquiler\Elastica\Aggregation;
 
 /**
  * Class AbstractTermsAggregation.

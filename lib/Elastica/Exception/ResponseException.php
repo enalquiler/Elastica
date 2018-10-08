@@ -1,8 +1,8 @@
 <?php
-namespace Elastica\Exception;
+namespace Enalquiler\Elastica\Exception;
 
-use Elastica\Request;
-use Elastica\Response;
+use Enalquiler\Elastica\Request;
+use Enalquiler\Elastica\Response;
 
 /**
  * Response exception.
@@ -24,8 +24,8 @@ class ResponseException extends \RuntimeException implements ExceptionInterface
     /**
      * Construct Exception.
      *
-     * @param \Elastica\Request  $request
-     * @param \Elastica\Response $response
+     * @param \Enalquiler\Elastica\Request  $request
+     * @param \Enalquiler\Elastica\Response $response
      */
     public function __construct(Request $request, Response $response)
     {
@@ -37,7 +37,7 @@ class ResponseException extends \RuntimeException implements ExceptionInterface
     /**
      * Returns request object.
      *
-     * @return \Elastica\Request Request object
+     * @return \Enalquiler\Elastica\Request Request object
      */
     public function getRequest()
     {
@@ -47,7 +47,7 @@ class ResponseException extends \RuntimeException implements ExceptionInterface
     /**
      * Returns response object.
      *
-     * @return \Elastica\Response Response object
+     * @return \Enalquiler\Elastica\Response Response object
      */
     public function getResponse()
     {

@@ -1,12 +1,12 @@
 <?php
-namespace Elastica\Test\Aggregation;
+namespace Enalquiler\Elastica\Test\Aggregation;
 
-use Elastica\Aggregation\SignificantTerms;
-use Elastica\Document;
-use Elastica\Filter\Exists;
-use Elastica\Filter\Terms as TermsFilter;
-use Elastica\Query;
-use Elastica\Query\Terms;
+use Enalquiler\Elastica\Aggregation\SignificantTerms;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Filter\Exists;
+use Enalquiler\Elastica\Filter\Terms as TermsFilter;
+use Enalquiler\Elastica\Query;
+use Enalquiler\Elastica\Query\Terms;
 
 class SignificantTermsTest extends BaseAggregationTest
 {
@@ -27,7 +27,7 @@ class SignificantTermsTest extends BaseAggregationTest
 
     /**
      * @group unit
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testSetBackgroundFilterInvalid()
     {

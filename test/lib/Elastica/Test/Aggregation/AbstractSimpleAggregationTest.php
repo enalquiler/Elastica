@@ -1,12 +1,12 @@
 <?php
-namespace Elastica\Test\Aggregation;
+namespace Enalquiler\Elastica\Test\Aggregation;
 
 class AbstractSimpleAggregationTest extends BaseAggregationTest
 {
     public function setUp()
     {
         $this->aggregation = $this->getMockForAbstractClass(
-            'Elastica\Aggregation\AbstractSimpleAggregation',
+            'Enalquiler\Elastica\Aggregation\AbstractSimpleAggregation',
             ['whatever']
         );
     }
@@ -14,7 +14,7 @@ class AbstractSimpleAggregationTest extends BaseAggregationTest
     public function testToArrayThrowsExceptionOnUnsetParams()
     {
         $this->setExpectedException(
-            'Elastica\Exception\InvalidException',
+            'Enalquiler\Elastica\Exception\InvalidException',
             'Either the field param or the script param should be set'
         );
 

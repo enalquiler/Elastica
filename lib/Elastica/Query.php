@@ -1,16 +1,16 @@
 <?php
-namespace Elastica;
+namespace Enalquiler\Elastica;
 
-use Elastica\Aggregation\AbstractAggregation;
-use Elastica\Exception\InvalidException;
-use Elastica\Exception\NotImplementedException;
-use Elastica\Filter\AbstractFilter;
-use Elastica\Query\AbstractQuery;
-use Elastica\Query\MatchAll;
-use Elastica\Query\QueryString;
-use Elastica\Script\AbstractScript;
-use Elastica\Script\ScriptFields;
-use Elastica\Suggest\AbstractSuggest;
+use Enalquiler\Elastica\Aggregation\AbstractAggregation;
+use Enalquiler\Elastica\Exception\InvalidException;
+use Enalquiler\Elastica\Exception\NotImplementedException;
+use Enalquiler\Elastica\Filter\AbstractFilter;
+use Enalquiler\Elastica\Query\AbstractQuery;
+use Enalquiler\Elastica\Query\MatchAll;
+use Enalquiler\Elastica\Query\QueryString;
+use Enalquiler\Elastica\Script\AbstractScript;
+use Enalquiler\Elastica\Script\ScriptFields;
+use Enalquiler\Elastica\Suggest\AbstractSuggest;
 
 /**
  * Elastica query object.
@@ -53,7 +53,7 @@ class Query extends Param
      *
      * @param mixed $query
      *
-     * @throws \Elastica\Exception\NotImplementedException
+     * @throws \Enalquiler\Elastica\Exception\NotImplementedException
      *
      * @return self
      */
@@ -105,7 +105,7 @@ class Query extends Param
     /**
      * Sets the query.
      *
-     * @param \Elastica\Query\AbstractQuery $query Query object
+     * @param \Enalquiler\Elastica\Query\AbstractQuery $query Query object
      *
      * @return $this
      */
@@ -117,7 +117,7 @@ class Query extends Param
     /**
      * Gets the query object.
      *
-     * @return \Elastica\Query\AbstractQuery
+     * @return \Enalquiler\Elastica\Query\AbstractQuery
      **/
     public function getQuery()
     {
@@ -127,12 +127,12 @@ class Query extends Param
     /**
      * Set Filter.
      *
-     * @param \Elastica\Query\AbstractQuery $filter Filter object
+     * @param \Enalquiler\Elastica\Query\AbstractQuery $filter Filter object
      *
      * @return $this
      *
      * @link    https://github.com/elasticsearch/elasticsearch/issues/7422
-     * @deprecated Use Elastica\Query::setPostFilter() instead, this method will be removed in further Elastica releases
+     * @deprecated use Enalquiler\Elastica\Query::setPostFilter() instead, this method will be removed in further Elastica releases
      */
     public function setFilter($filter)
     {
@@ -142,7 +142,7 @@ class Query extends Param
             throw new InvalidException('Filter must be instance of AbstractQuery');
         }
 
-        trigger_error('Deprecated: Elastica\Query::setFilter() is deprecated and will be removed in further Elastica releases. Use Elastica\Query::setPostFilter() instead.', E_USER_DEPRECATED);
+        trigger_error('Deprecated: Elastica\Query::setFilter() is deprecated and will be removed in further Elastica releases. use Enalquiler\Elastica\Query::setPostFilter() instead.', E_USER_DEPRECATED);
 
         return $this->setPostFilter($filter);
     }
@@ -324,7 +324,7 @@ class Query extends Param
      * Adds a Script to the query.
      *
      * @param string                          $name
-     * @param \Elastica\Script\AbstractScript $script Script object
+     * @param \Enalquiler\Elastica\Script\AbstractScript $script Script object
      *
      * @return $this
      */
@@ -382,7 +382,7 @@ class Query extends Param
      *
      * @param float $minScore Minimum score to filter documents by
      *
-     * @throws \Elastica\Exception\InvalidException
+     * @throws \Enalquiler\Elastica\Exception\InvalidException
      *
      * @return $this
      */
@@ -398,7 +398,7 @@ class Query extends Param
     /**
      * Add a suggest term.
      *
-     * @param \Elastica\Suggest $suggest suggestion object
+     * @param \Enalquiler\Elastica\Suggest $suggest suggestion object
      *
      * @return $this
      */

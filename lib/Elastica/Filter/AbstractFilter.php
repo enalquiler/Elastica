@@ -1,8 +1,8 @@
 <?php
-namespace Elastica\Filter;
+namespace Enalquiler\Elastica\Filter;
 
-use Elastica\Exception\InvalidException;
-use Elastica\Param;
+use Enalquiler\Elastica\Exception\InvalidException;
+use Enalquiler\Elastica\Param;
 
 trigger_error('Deprecated: Filters are deprecated. Use queries in filter context. See https://www.elastic.co/guide/en/elasticsearch/reference/2.0/query-dsl-filters.html', E_USER_DEPRECATED);
 
@@ -33,7 +33,7 @@ abstract class AbstractFilter extends Param
      *
      * @param string $cacheKey Cache key
      *
-     * @throws \Elastica\Exception\InvalidException If given key is empty
+     * @throws \Enalquiler\Elastica\Exception\InvalidException If given key is empty
      *
      * @return $this
      */

@@ -1,7 +1,7 @@
 <?php
-namespace Elastica\Query;
+namespace Enalquiler\Elastica\Query;
 
-use Elastica\Type as ElasticaType;
+use Enalquiler\Elastica\Type as ElasticaType;
 
 /**
  * Ids Query.

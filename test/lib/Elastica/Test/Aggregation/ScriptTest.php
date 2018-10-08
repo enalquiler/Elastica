@@ -1,10 +1,10 @@
 <?php
-namespace Elastica\Test\Aggregation;
+namespace Enalquiler\Elastica\Test\Aggregation;
 
-use Elastica\Aggregation\Sum;
-use Elastica\Document;
-use Elastica\Query;
-use Elastica\Script\Script;
+use Enalquiler\Elastica\Aggregation\Sum;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Query;
+use Enalquiler\Elastica\Script\Script;
 
 class ScriptTest extends BaseAggregationTest
 {

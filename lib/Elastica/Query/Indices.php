@@ -1,7 +1,7 @@
 <?php
-namespace Elastica\Query;
+namespace Enalquiler\Elastica\Query;
 
-use Elastica\Index as ElasticaIndex;
+use Enalquiler\Elastica\Index as ElasticaIndex;
 
 /**
  * Class Indices.

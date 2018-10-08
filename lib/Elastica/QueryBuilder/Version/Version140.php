@@ -1,5 +1,5 @@
 <?php
-namespace Elastica\QueryBuilder\Version;
+namespace Enalquiler\Elastica\QueryBuilder\Version;
 
 /**
  * elasticsearch 1.4 DSL.

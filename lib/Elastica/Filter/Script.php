@@ -1,7 +1,7 @@
 <?php
-namespace Elastica\Filter;
+namespace Enalquiler\Elastica\Filter;
 
-use Elastica;
+use Enalquiler\Elastica;
 
 trigger_error('Deprecated: Filters are deprecated. Use queries in filter context. See https://www.elastic.co/guide/en/elasticsearch/reference/2.0/query-dsl-filters.html', E_USER_DEPRECATED);
 
@@ -37,7 +37,7 @@ class Script extends AbstractFilter
     /**
      * Sets script object.
      *
-     * @param \Elastica\Script\Script|string|array $script
+     * @param \Enalquiler\Elastica\Script\Script|string|array $script
      *
      * @return $this
      */

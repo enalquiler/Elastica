@@ -1,5 +1,5 @@
 <?php
-namespace Elastica\QueryBuilder;
+namespace Enalquiler\Elastica\QueryBuilder;
 
 /**
  * Abstract Version class.

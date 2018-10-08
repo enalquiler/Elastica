@@ -1,7 +1,7 @@
 <?php
-namespace Elastica\QueryBuilder\Version;
+namespace Enalquiler\Elastica\QueryBuilder\Version;
 
-use Elastica\QueryBuilder\Version;
+use Enalquiler\Elastica\QueryBuilder\Version;
 
 /**
  * elasticsearch 2.4 DSL.

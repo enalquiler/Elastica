@@ -1,8 +1,8 @@
 <?php
-namespace Elastica\Bulk\Action;
+namespace Enalquiler\Elastica\Bulk\Action;
 
-use Elastica\AbstractUpdateAction;
-use Elastica\Document;
+use Enalquiler\Elastica\AbstractUpdateAction;
+use Enalquiler\Elastica\Document;
 
 class IndexDocument extends AbstractDocument
 {
@@ -12,7 +12,7 @@ class IndexDocument extends AbstractDocument
     protected $_opType = self::OP_TYPE_INDEX;
 
     /**
-     * @param \Elastica\Document $document
+     * @param \Enalquiler\Elastica\Document $document
      *
      * @return $this
      */
@@ -26,7 +26,7 @@ class IndexDocument extends AbstractDocument
     }
 
     /**
-     * @param \Elastica\AbstractUpdateAction $action
+     * @param \Enalquiler\Elastica\AbstractUpdateAction $action
      *
      * @return array
      */

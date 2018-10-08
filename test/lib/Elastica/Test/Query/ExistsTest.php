@@ -1,8 +1,8 @@
 <?php
-namespace Elastica\Test\Query;
+namespace Enalquiler\Elastica\Test\Query;
 
-use Elastica\Query\Exists;
-use Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Query\Exists;
+use Enalquiler\Elastica\Test\Base as BaseTest;
 
 class ExistsTest extends BaseTest
 {
@@ -29,7 +29,7 @@ class ExistsTest extends BaseTest
         $this->assertEquals($field, $query->getParam('field'));
 
         $newField = 'hello world';
-        $this->assertInstanceOf('Elastica\Query\Exists', $query->setField($newField));
+        $this->assertInstanceOf('Enalquiler\Elastica\Query\Exists', $query->setField($newField));
 
         $this->assertEquals($newField, $query->getParam('field'));
     }

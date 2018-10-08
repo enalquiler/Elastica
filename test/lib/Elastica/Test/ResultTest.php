@@ -1,10 +1,10 @@
 <?php
-namespace Elastica\Test;
+namespace Enalquiler\Elastica\Test;
 
-use Elastica\Document;
-use Elastica\Result;
-use Elastica\Test\Base as BaseTest;
-use Elastica\Type\Mapping;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Result;
+use Enalquiler\Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Type\Mapping;
 
 class ResultTest extends BaseTest
 {
@@ -33,8 +33,8 @@ class ResultTest extends BaseTest
 
         $result = $resultSet->current();
 
-        $this->assertInstanceOf('Elastica\Result', $result);
-        $this->assertInstanceOf('Elastica\Document', $result->getDocument());
+        $this->assertInstanceOf('Enalquiler\Elastica\Result', $result);
+        $this->assertInstanceOf('Enalquiler\Elastica\Document', $result->getDocument());
         $this->assertEquals($index->getName(), $result->getIndex());
         $this->assertEquals($typeName, $result->getType());
         $this->assertEquals($docId, $result->getId());
@@ -77,7 +77,7 @@ class ResultTest extends BaseTest
         $result = $resultSet->current();
 
         $this->assertEquals([], $result->getSource());
-        $this->assertInstanceOf('Elastica\Result', $result);
+        $this->assertInstanceOf('Enalquiler\Elastica\Result', $result);
         $this->assertEquals($indexName, $result->getIndex());
         $this->assertEquals($typeName, $result->getType());
         $this->assertEquals($docId, $result->getId());

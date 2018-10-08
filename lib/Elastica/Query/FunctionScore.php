@@ -1,10 +1,10 @@
 <?php
-namespace Elastica\Query;
+namespace Enalquiler\Elastica\Query;
 
-use Elastica\Exception\DeprecatedException;
-use Elastica\Exception\InvalidException;
-use Elastica\Filter\AbstractFilter;
-use Elastica\Script\AbstractScript;
+use Enalquiler\Elastica\Exception\DeprecatedException;
+use Enalquiler\Elastica\Exception\InvalidException;
+use Enalquiler\Elastica\Filter\AbstractFilter;
+use Enalquiler\Elastica\Script\AbstractScript;
 
 /**
  * Class FunctionScore.
@@ -111,7 +111,7 @@ class FunctionScore extends AbstractQuery
     /**
      * Add a script_score function to the query.
      *
-     * @param \Elastica\Script\AbstractScript $script a Script object
+     * @param \Enalquiler\Elastica\Script\AbstractScript $script a Script object
      * @param AbstractQuery                   $filter an optional filter to apply to the function
      * @param float                           $weight the weight of the function
      *

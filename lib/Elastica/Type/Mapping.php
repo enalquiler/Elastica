@@ -1,9 +1,9 @@
 <?php
-namespace Elastica\Type;
+namespace Enalquiler\Elastica\Type;
 
-use Elastica\Exception\InvalidException;
-use Elastica\Request;
-use Elastica\Type;
+use Enalquiler\Elastica\Exception\InvalidException;
+use Enalquiler\Elastica\Request;
+use Enalquiler\Elastica\Type;
 
 /**
  * Elastica Mapping object.
@@ -31,7 +31,7 @@ class Mapping
     /**
      * Construct Mapping.
      *
-     * @param \Elastica\Type $type       OPTIONAL Type object
+     * @param \Enalquiler\Elastica\Type $type       OPTIONAL Type object
      * @param array          $properties OPTIONAL Properties
      */
     public function __construct(Type $type = null, array $properties = [])
@@ -49,7 +49,7 @@ class Mapping
      * Sets the mapping type
      * Enter description here ...
      *
-     * @param \Elastica\Type $type Type object
+     * @param \Enalquiler\Elastica\Type $type Type object
      *
      * @return $this
      */
@@ -99,7 +99,7 @@ class Mapping
     /**
      * Returns mapping type.
      *
-     * @return \Elastica\Type Type
+     * @return \Enalquiler\Elastica\Type Type
      */
     public function getType()
     {
@@ -243,7 +243,7 @@ class Mapping
     /**
      * Converts the mapping to an array.
      *
-     * @throws \Elastica\Exception\InvalidException
+     * @throws \Enalquiler\Elastica\Exception\InvalidException
      *
      * @return array Mapping as array
      */
@@ -263,7 +263,7 @@ class Mapping
      *
      * @param array $query Query string parameters to send with mapping
      *
-     * @return \Elastica\Response Response object
+     * @return \Enalquiler\Elastica\Response Response object
      */
     public function send(array $query = [])
     {
@@ -277,7 +277,7 @@ class Mapping
      *
      * @param array|\Elastica\Type\Mapping $mapping Mapping object or properties array
      *
-     * @throws \Elastica\Exception\InvalidException If invalid type
+     * @throws \Enalquiler\Elastica\Exception\InvalidException If invalid type
      *
      * @return self
      */

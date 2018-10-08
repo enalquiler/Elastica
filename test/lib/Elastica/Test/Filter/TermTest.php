@@ -1,8 +1,8 @@
 <?php
-namespace Elastica\Test\Filter;
+namespace Enalquiler\Elastica\Test\Filter;
 
-use Elastica\Filter\Term;
-use Elastica\Test\DeprecatedClassBase as BaseTest;
+use Enalquiler\Elastica\Filter\Term;
+use Enalquiler\Elastica\Test\DeprecatedClassBase as BaseTest;
 
 class TermTest extends BaseTest
 {

@@ -1,11 +1,11 @@
 <?php
-namespace Elastica\Test\Query;
+namespace Enalquiler\Elastica\Test\Query;
 
-use Elastica\Query;
-use Elastica\Query\Match;
-use Elastica\Query\Term;
-use Elastica\Rescore\Query as QueryRescore;
-use Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Query;
+use Enalquiler\Elastica\Query\Match;
+use Enalquiler\Elastica\Query\Term;
+use Enalquiler\Elastica\Rescore\Query as QueryRescore;
+use Enalquiler\Elastica\Test\Base as BaseTest;
 
 class RescoreTest extends BaseTest
 {

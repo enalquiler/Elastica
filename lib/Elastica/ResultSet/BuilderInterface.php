@@ -1,9 +1,9 @@
 <?php
-namespace Elastica\ResultSet;
+namespace Enalquiler\Elastica\ResultSet;
 
-use Elastica\Query;
-use Elastica\Response;
-use Elastica\ResultSet;
+use Enalquiler\Elastica\Query;
+use Enalquiler\Elastica\Response;
+use Enalquiler\Elastica\ResultSet;
 
 interface BuilderInterface
 {

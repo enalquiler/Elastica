@@ -1,8 +1,8 @@
 <?php
-namespace Elastica;
+namespace Enalquiler\Elastica;
 
-use Elastica\Node\Info;
-use Elastica\Node\Stats;
+use Enalquiler\Elastica\Node\Info;
+use Enalquiler\Elastica\Node\Stats;
 
 /**
  * Elastica cluster node object.
@@ -48,7 +48,7 @@ class Node
      * Create a new node object.
      *
      * @param string           $id     Node id or name
-     * @param \Elastica\Client $client Node object
+     * @param \Enalquiler\Elastica\Client $client Node object
      */
     public function __construct($id, Client $client)
     {
@@ -93,7 +93,7 @@ class Node
     /**
      * Returns the current client object.
      *
-     * @return \Elastica\Client Client
+     * @return \Enalquiler\Elastica\Client Client
      */
     public function getClient()
     {
@@ -105,7 +105,7 @@ class Node
      *
      * @link https://www.elastic.co/guide/en/elasticsearch/reference/current/cluster-nodes-stats.html
      *
-     * @return \Elastica\Node\Stats Node stats
+     * @return \Enalquiler\Elastica\Node\Stats Node stats
      */
     public function getStats()
     {
@@ -121,7 +121,7 @@ class Node
      *
      * @link https://www.elastic.co/guide/en/elasticsearch/reference/current/cluster-nodes-info.html
      *
-     * @return \Elastica\Node\Info Node info object
+     * @return \Enalquiler\Elastica\Node\Info Node info object
      */
     public function getInfo()
     {
@@ -148,7 +148,7 @@ class Node
      *
      * @param string $delay OPTIONAL Delay after which node is shut down (default = 1s)
      *
-     * @return \Elastica\Response
+     * @return \Enalquiler\Elastica\Response
      *
      * @link https://www.elastic.co/guide/en/elasticsearch/reference/current/cluster-nodes-shutdown.html
      */

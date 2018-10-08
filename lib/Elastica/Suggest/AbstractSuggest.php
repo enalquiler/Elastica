@@ -1,9 +1,9 @@
 <?php
-namespace Elastica\Suggest;
+namespace Enalquiler\Elastica\Suggest;
 
-use Elastica\Exception\InvalidException;
-use Elastica\NameableInterface;
-use Elastica\Param;
+use Enalquiler\Elastica\Exception\InvalidException;
+use Enalquiler\Elastica\NameableInterface;
+use Enalquiler\Elastica\Param;
 
 /**
  * Class AbstractSuggestion.
@@ -80,7 +80,7 @@ abstract class AbstractSuggest extends Param implements NameableInterface
      *
      * @param string $name The name of the suggest.
      *
-     * @throws \Elastica\Exception\InvalidException If name is empty
+     * @throws \Enalquiler\Elastica\Exception\InvalidException If name is empty
      *
      * @return $this
      */

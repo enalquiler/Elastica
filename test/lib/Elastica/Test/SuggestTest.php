@@ -1,10 +1,10 @@
 <?php
-namespace Elastica\Test;
+namespace Enalquiler\Elastica\Test;
 
-use Elastica\Exception\NotImplementedException;
-use Elastica\Filter\BoolFilter;
-use Elastica\Suggest;
-use Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Exception\NotImplementedException;
+use Enalquiler\Elastica\Filter\BoolFilter;
+use Enalquiler\Elastica\Suggest;
+use Enalquiler\Elastica\Test\Base as BaseTest;
 
 class SuggestTest extends BaseTest
 {

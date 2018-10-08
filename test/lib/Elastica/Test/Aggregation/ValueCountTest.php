@@ -1,9 +1,9 @@
 <?php
-namespace Elastica\Test\Aggregation;
+namespace Enalquiler\Elastica\Test\Aggregation;
 
-use Elastica\Aggregation\ValueCount;
-use Elastica\Document;
-use Elastica\Query;
+use Enalquiler\Elastica\Aggregation\ValueCount;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Query;
 
 class ValueCountTest extends BaseAggregationTest
 {

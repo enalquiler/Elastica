@@ -1,12 +1,12 @@
 <?php
-namespace Elastica\Transport;
+namespace Enalquiler\Elastica\Transport;
 
-use Elastica\Connection;
-use Elastica\Exception\PartialShardFailureException;
-use Elastica\Exception\ResponseException;
-use Elastica\JSON;
-use Elastica\Request as ElasticaRequest;
-use Elastica\Response as ElasticaResponse;
+use Enalquiler\Elastica\Connection;
+use Enalquiler\Elastica\Exception\PartialShardFailureException;
+use Enalquiler\Elastica\Exception\ResponseException;
+use Enalquiler\Elastica\JSON;
+use Enalquiler\Elastica\Request as ElasticaRequest;
+use Enalquiler\Elastica\Response as ElasticaResponse;
 use Ivory\HttpAdapter\HttpAdapterInterface;
 use Ivory\HttpAdapter\Message\Request as HttpAdapterRequest;
 use Ivory\HttpAdapter\Message\Response as HttpAdapterResponse;
@@ -41,14 +41,14 @@ class HttpAdapter extends AbstractTransport
      *
      * All calls that are made to the server are done through this function
      *
-     * @param \Elastica\Request $elasticaRequest
+     * @param \Enalquiler\Elastica\Request $elasticaRequest
      * @param array             $params          Host, Port, ...
      *
-     * @throws \Elastica\Exception\ConnectionException
-     * @throws \Elastica\Exception\ResponseException
-     * @throws \Elastica\Exception\Connection\HttpException
+     * @throws \Enalquiler\Elastica\Exception\ConnectionException
+     * @throws \Enalquiler\Elastica\Exception\ResponseException
+     * @throws \Enalquiler\Elastica\Exception\Connection\HttpException
      *
-     * @return \Elastica\Response Response object
+     * @return \Enalquiler\Elastica\Response Response object
      */
     public function exec(ElasticaRequest $elasticaRequest, array $params)
     {
@@ -132,7 +132,7 @@ class HttpAdapter extends AbstractTransport
 
     /**
      * @param ElasticaRequest      $request
-     * @param \Elastica\Connection $connection
+     * @param \Enalquiler\Elastica\Connection $connection
      *
      * @return string
      */

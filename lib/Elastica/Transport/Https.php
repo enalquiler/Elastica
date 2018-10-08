@@ -1,5 +1,5 @@
 <?php
-namespace Elastica\Transport;
+namespace Enalquiler\Elastica\Transport;
 
 /**
  * Elastica Http Transport object.

@@ -1,13 +1,13 @@
 <?php
-namespace Elastica\Test;
+namespace Enalquiler\Elastica\Test;
 
-use Elastica\Document;
-use Elastica\Exception\ResponseException;
-use Elastica\Query;
-use Elastica\Script\ScriptFile;
-use Elastica\Test\Base as BaseTest;
-use Elastica\Type;
-use Elastica\Type\Mapping;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Exception\ResponseException;
+use Enalquiler\Elastica\Query;
+use Enalquiler\Elastica\Script\ScriptFile;
+use Enalquiler\Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Type;
+use Enalquiler\Elastica\Type\Mapping;
 
 class ScriptFileTest extends BaseTest
 {
@@ -91,7 +91,7 @@ class ScriptFileTest extends BaseTest
         $string = 'calculate-distance.groovy';
         $scriptFile = ScriptFile::create($string);
 
-        $this->assertInstanceOf('Elastica\Script\ScriptFile', $scriptFile);
+        $this->assertInstanceOf('Enalquiler\Elastica\Script\ScriptFile', $scriptFile);
 
         $this->assertEquals($string, $scriptFile->getScriptFile());
 
@@ -110,7 +110,7 @@ class ScriptFileTest extends BaseTest
 
         $scriptFile = ScriptFile::create($data);
 
-        $this->assertInstanceOf('Elastica\Script\ScriptFile', $scriptFile);
+        $this->assertInstanceOf('Enalquiler\Elastica\Script\ScriptFile', $scriptFile);
         $this->assertSame($data, $scriptFile);
     }
 
@@ -131,7 +131,7 @@ class ScriptFileTest extends BaseTest
 
         $scriptFile = ScriptFile::create($array);
 
-        $this->assertInstanceOf('Elastica\Script\ScriptFile', $scriptFile);
+        $this->assertInstanceOf('Enalquiler\Elastica\Script\ScriptFile', $scriptFile);
 
         $this->assertEquals($string, $scriptFile->getScriptFile());
         $this->assertEquals($params, $scriptFile->getParams());
@@ -142,7 +142,7 @@ class ScriptFileTest extends BaseTest
     /**
      * @group unit
      * @dataProvider dataProviderCreateInvalid
-     * @expectedException \Elastica\Exception\InvalidException
+     * @expectedException \Enalquiler\Elastica\Exception\InvalidException
      */
     public function testCreateInvalid($data)
     {
@@ -178,6 +178,6 @@ class ScriptFileTest extends BaseTest
         $scriptFile->setScriptFile('bar');
         $this->assertEquals('bar', $scriptFile->getScriptFile());
 
-        $this->assertInstanceOf('Elastica\Script\ScriptFile', $scriptFile->setScriptFile('foo'));
+        $this->assertInstanceOf('Enalquiler\Elastica\Script\ScriptFile', $scriptFile->setScriptFile('foo'));
     }
 }

@@ -1,10 +1,10 @@
 <?php
-namespace Elastica\Test\Query;
+namespace Enalquiler\Elastica\Test\Query;
 
-use Elastica\Document;
-use Elastica\Query\MatchAll;
-use Elastica\Search;
-use Elastica\Test\Base as BaseTest;
+use Enalquiler\Elastica\Document;
+use Enalquiler\Elastica\Query\MatchAll;
+use Enalquiler\Elastica\Search;
+use Enalquiler\Elastica\Test\Base as BaseTest;
 
 class MatchAllTest extends BaseTest
 {
