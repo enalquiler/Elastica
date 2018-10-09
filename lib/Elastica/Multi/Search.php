@@ -21,7 +21,7 @@ class Search
     private $_builder;
 
     /**
-     * @var \Elastica\Client
+     * @var \Enalquiler\Elastica\Client
      */
     protected $_client;
 
@@ -31,7 +31,7 @@ class Search
     protected $_options = [];
 
     /**
-     * @var array|\Elastica\Search[]
+     * @var array|\Enalquiler\Elastica\Search[]
      */
     protected $_searches = [];
 
@@ -83,7 +83,7 @@ class Search
     }
 
     /**
-     * @param array|\Elastica\Search[] $searches
+     * @param array|\Enalquiler\Elastica\Search[] $searches
      *
      * @return $this
      */
@@ -97,7 +97,7 @@ class Search
     }
 
     /**
-     * @param array|\Elastica\Search[] $searches
+     * @param array|\Enalquiler\Elastica\Search[] $searches
      *
      * @return $this
      */
@@ -110,7 +110,7 @@ class Search
     }
 
     /**
-     * @return array|\Elastica\Search[]
+     * @return array|\Enalquiler\Elastica\Search[]
      */
     public function getSearches()
     {

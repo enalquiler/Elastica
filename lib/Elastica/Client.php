@@ -19,7 +19,7 @@ class Client
      * Config with defaults.
      *
      * log: Set to true, to enable logging, set a string to log to a specific file
-     * retryOnConflict: Use in \Elastica\Client::updateDocument
+     * retryOnConflict: Use in \Enalquiler\Elastica\Client::updateDocument
      * bigintConversion: Set to true to enable the JSON bigint to string conversion option (see issue #717)
      *
      * @var array
@@ -53,12 +53,12 @@ class Client
     protected $_connectionPool;
 
     /**
-     * @var \Elastica\Request|null
+     * @var \Enalquiler\Elastica\Request|null
      */
     protected $_lastRequest;
 
     /**
-     * @var \Elastica\Response|null
+     * @var \Enalquiler\Elastica\Response|null
      */
     protected $_lastResponse;
 
@@ -295,13 +295,13 @@ class Client
     /**
      * Uses _bulk to send documents to the server.
      *
-     * Array of \Elastica\Document as input. Index and type has to be
+     * Array of \Enalquiler\Elastica\Document as input. Index and type has to be
      * set inside the document, because for bulk settings documents,
      * documents can belong to any type and index
      *
      * @link https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html
      *
-     * @param array|\Elastica\Document[] $docs Array of Elastica\Document
+     * @param array|\Enalquiler\Elastica\Document[] $docs Array of Elastica\Document
      *
      * @throws \Enalquiler\Elastica\Exception\InvalidException If docs is empty
      *
@@ -323,13 +323,13 @@ class Client
     /**
      * Uses _bulk to send documents to the server.
      *
-     * Array of \Elastica\Document as input. Index and type has to be
+     * Array of \Enalquiler\Elastica\Document as input. Index and type has to be
      * set inside the document, because for bulk settings documents,
      * documents can belong to any type and index
      *
      * @link https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html
      *
-     * @param array|\Elastica\Document[] $docs Array of Elastica\Document
+     * @param array|\Enalquiler\Elastica\Document[] $docs Array of Elastica\Document
      *
      * @throws \Enalquiler\Elastica\Exception\InvalidException If docs is empty
      *
@@ -352,7 +352,7 @@ class Client
      * Update document, using update script. Requires elasticsearch >= 0.19.0.
      *
      * @param int|string                                               $id      document id
-     * @param array|\Elastica\Script\AbstractScript|\Elastica\Document $data    raw data for request body
+     * @param array|\Enalquiler\Elastica\Script\AbstractScript|\Enalquiler\Elastica\Document $data    raw data for request body
      * @param string                                                   $index   index to update
      * @param string                                                   $type    type of index to update
      * @param array                                                    $options array of query params to use for query. For possible options check es api
@@ -460,7 +460,7 @@ class Client
     /**
      * Bulk deletes documents.
      *
-     * @param array|\Elastica\Document[] $docs
+     * @param array|\Enalquiler\Elastica\Document[] $docs
      *
      * @throws \Enalquiler\Elastica\Exception\InvalidException
      *
@@ -555,7 +555,7 @@ class Client
     }
 
     /**
-     * @param array|\Elastica\Connection[] $connections
+     * @param array|\Enalquiler\Elastica\Connection[] $connections
      *
      * @return $this
      */
@@ -572,8 +572,8 @@ class Client
      * @link https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html
      *
      * @param array                  $ids     Document ids
-     * @param string|\Elastica\Index $index   Index name
-     * @param string|\Elastica\Type  $type    Type of documents
+     * @param string|\Enalquiler\Elastica\Index $index   Index name
+     * @param string|\Enalquiler\Elastica\Type  $type    Type of documents
      * @param string|bool            $routing Optional routing key for all ids
      *
      * @throws \Enalquiler\Elastica\Exception\InvalidException

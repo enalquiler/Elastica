@@ -16,7 +16,7 @@ class Info
     /**
      * Response.
      *
-     * @var \Elastica\Response Response object
+     * @var \Enalquiler\Elastica\Response Response object
      */
     protected $_response;
 
@@ -30,7 +30,7 @@ class Info
     /**
      * Node.
      *
-     * @var \Elastica\Node Node object
+     * @var \Enalquiler\Elastica\Node Node object
      */
     protected $_node;
 

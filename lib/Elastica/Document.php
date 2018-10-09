@@ -340,7 +340,7 @@ class Document extends AbstractUpdateAction
     }
 
     /**
-     * @param array|\Elastica\Document $data
+     * @param array|\Enalquiler\Elastica\Document $data
      *
      * @throws \Enalquiler\Elastica\Exception\InvalidException
      *

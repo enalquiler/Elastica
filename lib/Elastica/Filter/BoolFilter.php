@@ -39,7 +39,7 @@ class BoolFilter extends AbstractFilter
     /**
      * Adds should filter.
      *
-     * @param array|\Elastica\Filter\AbstractFilter $args Filter data
+     * @param array|\Enalquiler\Elastica\Filter\AbstractFilter $args Filter data
      *
      * @return $this
      */
@@ -51,7 +51,7 @@ class BoolFilter extends AbstractFilter
     /**
      * Adds must filter.
      *
-     * @param array|\Elastica\Filter\AbstractFilter $args Filter data
+     * @param array|\Enalquiler\Elastica\Filter\AbstractFilter $args Filter data
      *
      * @return $this
      */
@@ -63,7 +63,7 @@ class BoolFilter extends AbstractFilter
     /**
      * Adds mustNot filter.
      *
-     * @param array|\Elastica\Filter\AbstractFilter $args Filter data
+     * @param array|\Enalquiler\Elastica\Filter\AbstractFilter $args Filter data
      *
      * @return $this
      */
@@ -76,7 +76,7 @@ class BoolFilter extends AbstractFilter
      * Adds general filter based on type.
      *
      * @param string                                $type Filter type
-     * @param array|\Elastica\Filter\AbstractFilter $args Filter data
+     * @param array|\Enalquiler\Elastica\Filter\AbstractFilter $args Filter data
      *
      * @throws \Enalquiler\Elastica\Exception\InvalidException
      *
@@ -109,7 +109,7 @@ class BoolFilter extends AbstractFilter
     /**
      * Converts bool filter to array.
      *
-     * @see \Elastica\Filter\AbstractFilter::toArray()
+     * @see \Enalquiler\Elastica\Filter\AbstractFilter::toArray()
      *
      * @return array Filter array
      */

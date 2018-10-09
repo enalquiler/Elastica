@@ -15,7 +15,7 @@ class ResultSet implements \Iterator, \ArrayAccess, \Countable
     /**
      * Result Sets.
      *
-     * @var array|\Elastica\ResultSet[] Result Sets
+     * @var array|\Enalquiler\Elastica\ResultSet[] Result Sets
      */
     protected $_resultSets = [];
 
@@ -29,7 +29,7 @@ class ResultSet implements \Iterator, \ArrayAccess, \Countable
     /**
      * Response.
      *
-     * @var \Elastica\Response Response object
+     * @var \Enalquiler\Elastica\Response Response object
      */
     protected $_response;
 
@@ -46,7 +46,7 @@ class ResultSet implements \Iterator, \ArrayAccess, \Countable
     }
 
     /**
-     * @return array|\Elastica\ResultSet[]
+     * @return array|\Enalquiler\Elastica\ResultSet[]
      */
     public function getResultSets()
     {
@@ -80,7 +80,7 @@ class ResultSet implements \Iterator, \ArrayAccess, \Countable
     }
 
     /**
-     * @return bool|\Elastica\ResultSet
+     * @return bool|\Enalquiler\Elastica\ResultSet
      */
     public function current()
     {

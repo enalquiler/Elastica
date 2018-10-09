@@ -39,7 +39,7 @@ class Indices extends AbstractQuery
     /**
      * Adds one more index on which this query should be applied.
      *
-     * @param string|\Elastica\Index $index
+     * @param string|\Enalquiler\Elastica\Index $index
      *
      * @return $this
      */

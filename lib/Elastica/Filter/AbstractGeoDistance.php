@@ -185,7 +185,7 @@ abstract class AbstractGeoDistance extends AbstractFilter
     }
 
     /**
-     * @see \Elastica\Param::toArray()
+     * @see \Enalquiler\Elastica\Param::toArray()
      *
      * @throws \Enalquiler\Elastica\Exception\InvalidException
      *

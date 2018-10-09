@@ -182,7 +182,7 @@ abstract class AbstractGeoDistance extends AbstractQuery
     }
 
     /**
-     * @see \Elastica\Param::toArray()
+     * @see \Enalquiler\Elastica\Param::toArray()
      *
      * @throws \Enalquiler\Elastica\Exception\InvalidException
      *

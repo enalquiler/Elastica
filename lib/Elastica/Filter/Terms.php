@@ -60,17 +60,17 @@ class Terms extends AbstractFilter
      * Set the lookup parameters for this filter.
      *
      * @param string                       $key     terms key
-     * @param string|\Elastica\Type        $type    document type from which to fetch the terms values
+     * @param string|\Enalquiler\Elastica\Type        $type    document type from which to fetch the terms values
      * @param string                       $id      id of the document from which to fetch the terms values
      * @param string                       $path    the field from which to fetch the values for the filter
-     * @param string|array|\Elastica\Index $options An array of options or the index from which to fetch the terms values. Defaults to the current index.
+     * @param string|array|\Enalquiler\Elastica\Index $options An array of options or the index from which to fetch the terms values. Defaults to the current index.
      *
      * @return $this
      */
     public function setLookup($key, $type, $id, $path, $options = [])
     {
         $this->_key = $key;
-        if ($type instanceof \Elastica\Type) {
+        if ($type instanceof \Enalquiler\Elastica\Type) {
             $type = $type->getName();
         }
         $this->_terms = [
@@ -89,7 +89,7 @@ class Terms extends AbstractFilter
         }
 
         if (!is_null($index)) {
-            if ($index instanceof \Elastica\Index) {
+            if ($index instanceof \Enalquiler\Elastica\Index) {
                 $index = $index->getName();
             }
             $this->_terms['index'] = $index;
@@ -115,7 +115,7 @@ class Terms extends AbstractFilter
     /**
      * Converts object to an array.
      *
-     * @see \Elastica\Filter\AbstractFilter::toArray()
+     * @see \Enalquiler\Elastica\Filter\AbstractFilter::toArray()
      *
      * @throws \Enalquiler\Elastica\Exception\InvalidException
      *

@@ -127,7 +127,7 @@ class Action
     }
 
     /**
-     * @param string|\Elastica\Index $index
+     * @param string|\Enalquiler\Elastica\Index $index
      *
      * @return $this
      */
@@ -142,7 +142,7 @@ class Action
     }
 
     /**
-     * @param string|\Elastica\Type $type
+     * @param string|\Enalquiler\Elastica\Type $type
      *
      * @return $this
      */

@@ -73,7 +73,7 @@ class Filtered extends AbstractQuery
     /**
      * Gets the filter.
      *
-     * @return \Enalquiler\Elastica\Query\AbstractQuery|\Elastica\Filter\AbstractFilter
+     * @return \Enalquiler\Elastica\Query\AbstractQuery|\Enalquiler\Elastica\Filter\AbstractFilter
      */
     public function getFilter()
     {
@@ -95,7 +95,7 @@ class Filtered extends AbstractQuery
      *
      * @return array Query array
      *
-     * @see \Elastica\Query\AbstractQuery::toArray()
+     * @see \Enalquiler\Elastica\Query\AbstractQuery::toArray()
      */
     public function toArray()
     {

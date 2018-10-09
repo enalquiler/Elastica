@@ -11,12 +11,12 @@ use Enalquiler\Elastica\Exception\BulkException;
 class ResponseException extends BulkException
 {
     /**
-     * @var \Elastica\Bulk\ResponseSet ResponseSet object
+     * @var \Enalquiler\Elastica\Bulk\ResponseSet ResponseSet object
      */
     protected $_responseSet;
 
     /**
-     * @var \Elastica\Exception\Bulk\Response\ActionException[]
+     * @var \Enalquiler\Elastica\Exception\Bulk\Response\ActionException[]
      */
     protected $_actionExceptions = [];
 

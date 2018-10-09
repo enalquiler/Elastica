@@ -9,12 +9,12 @@ use Enalquiler\Elastica\Script\AbstractScript;
 abstract class AbstractDocument extends Action
 {
     /**
-     * @var \Elastica\Document|\Elastica\Script\AbstractScript
+     * @var \Enalquiler\Elastica\Document|\Enalquiler\Elastica\Script\AbstractScript
      */
     protected $_data;
 
     /**
-     * @param \Enalquiler\Elastica\Document|\Elastica\Script\AbstractScript $document
+     * @param \Enalquiler\Elastica\Document|\Enalquiler\Elastica\Script\AbstractScript $document
      */
     public function __construct($document)
     {
@@ -57,7 +57,7 @@ abstract class AbstractDocument extends Action
     }
 
     /**
-     * @param \Enalquiler\Elastica\Script\AbstractScript|\Elastica\Document $data
+     * @param \Enalquiler\Elastica\Script\AbstractScript|\Enalquiler\Elastica\Document $data
      *
      * @throws \InvalidArgumentException
      *
@@ -105,7 +105,7 @@ abstract class AbstractDocument extends Action
     }
 
     /**
-     * @return \Enalquiler\Elastica\Document|\Elastica\Script\AbstractScript
+     * @return \Enalquiler\Elastica\Document|\Enalquiler\Elastica\Script\AbstractScript
      */
     public function getData()
     {
@@ -120,7 +120,7 @@ abstract class AbstractDocument extends Action
     abstract protected function _getMetadata(AbstractUpdateAction $source);
 
     /**
-     * @param \Enalquiler\Elastica\Document|\Elastica\Script\AbstractScript $data
+     * @param \Enalquiler\Elastica\Document|\Enalquiler\Elastica\Script\AbstractScript $data
      * @param string                                             $opType
      *
      * @return static

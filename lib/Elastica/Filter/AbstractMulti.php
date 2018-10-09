@@ -70,7 +70,7 @@ abstract class AbstractMulti extends AbstractFilter
     }
 
     /**
-     * @see \Elastica\Param::toArray()
+     * @see \Enalquiler\Elastica\Param::toArray()
      *
      * @return array
      */

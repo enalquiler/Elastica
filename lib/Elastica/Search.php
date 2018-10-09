@@ -61,7 +61,7 @@ class Search
     protected $_types = [];
 
     /**
-     * @var \Elastica\Query
+     * @var \Enalquiler\Elastica\Query
      */
     protected $_query;
 
@@ -73,7 +73,7 @@ class Search
     /**
      * Client object.
      *
-     * @var \Elastica\Client
+     * @var \Enalquiler\Elastica\Client
      */
     protected $_client;
 
@@ -497,7 +497,7 @@ class Search
 
     /**
      * @param array|int                    $options
-     * @param string|array|\Elastica\Query $query
+     * @param string|array|\Enalquiler\Elastica\Query $query
      *
      * @return $this
      */

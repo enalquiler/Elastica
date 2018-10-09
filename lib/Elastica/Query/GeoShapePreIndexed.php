@@ -61,7 +61,7 @@ class GeoShapePreIndexed extends AbstractGeoShape
     /**
      * Converts query to array.
      *
-     * @see \Elastica\Query\AbstractQuery::toArray()
+     * @see \Enalquiler\Elastica\Query\AbstractQuery::toArray()
      *
      * @return array
      */

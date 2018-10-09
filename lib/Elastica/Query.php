@@ -33,7 +33,7 @@ class Query extends Param
     /**
      * Creates a query object.
      *
-     * @param array|\Elastica\Query\AbstractQuery $query OPTIONAL Query object (default = null)
+     * @param array|\Enalquiler\Elastica\Query\AbstractQuery $query OPTIONAL Query object (default = null)
      */
     public function __construct($query = null)
     {
@@ -305,7 +305,7 @@ class Query extends Param
     /**
      * Set script fields.
      *
-     * @param array|\Elastica\Script\ScriptFields $scriptFields Script fields
+     * @param array|\Enalquiler\Elastica\Script\ScriptFields $scriptFields Script fields
      *
      * @return $this
      *
@@ -450,7 +450,7 @@ class Query extends Param
     /**
      * Sets post_filter argument for the query. The filter is applied after the query has executed.
      *
-     * @param array|\Elastica\Query\AbstractQuery $filter
+     * @param array|\Enalquiler\Elastica\Query\AbstractQuery $filter
      *
      * @return $this
      *

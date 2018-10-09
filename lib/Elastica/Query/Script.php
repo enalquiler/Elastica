@@ -15,7 +15,7 @@ class Script extends AbstractQuery
     /**
      * Construct script query.
      *
-     * @param array|string|\Elastica\Script\AbstractScript $script OPTIONAL Script
+     * @param array|string|\Enalquiler\Elastica\Script\AbstractScript $script OPTIONAL Script
      */
     public function __construct($script = null)
     {

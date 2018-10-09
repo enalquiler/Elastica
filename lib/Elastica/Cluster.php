@@ -17,14 +17,14 @@ class Cluster
     /**
      * Client.
      *
-     * @var \Elastica\Client Client object
+     * @var \Enalquiler\Elastica\Client Client object
      */
     protected $_client;
 
     /**
      * Cluster state response.
      *
-     * @var \Elastica\Response
+     * @var \Enalquiler\Elastica\Response
      */
     protected $_response;
 

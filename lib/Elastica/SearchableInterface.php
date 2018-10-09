@@ -25,7 +25,7 @@ interface SearchableInterface
      *      }
      * }
      *
-     * @param string|array|\Elastica\Query $query   Array with all query data inside or a Elastica\Query object
+     * @param string|array|\Enalquiler\Elastica\Query $query   Array with all query data inside or a Elastica\Query object
      * @param null                         $options
      *
      * @return \Enalquiler\Elastica\ResultSet with all results inside
@@ -37,7 +37,7 @@ interface SearchableInterface
      *
      * If no query is set, matchall query is created
      *
-     * @param string|array|\Elastica\Query $query Array with all query data inside or a Elastica\Query object
+     * @param string|array|\Enalquiler\Elastica\Query $query Array with all query data inside or a Elastica\Query object
      *
      * @return int number of documents matching the query
      */

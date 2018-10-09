@@ -20,7 +20,7 @@ abstract class AbstractSimpleAggregation extends AbstractAggregation
     /**
      * Set a script for this aggregation.
      *
-     * @param string|\Elastica\Script\AbstractScript $script
+     * @param string|\Enalquiler\Elastica\Script\AbstractScript $script
      *
      * @return $this
      */

@@ -14,7 +14,7 @@ use Enalquiler\Elastica\Request;
 abstract class AbstractTransport extends Param
 {
     /**
-     * @var \Elastica\Connection
+     * @var \Enalquiler\Elastica\Connection
      */
     protected $_connection;
 

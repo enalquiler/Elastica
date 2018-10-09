@@ -12,12 +12,12 @@ use Enalquiler\Elastica\Response;
 class ConnectionException extends \RuntimeException implements ExceptionInterface
 {
     /**
-     * @var \Elastica\Request Request object
+     * @var \Enalquiler\Elastica\Request Request object
      */
     protected $_request;
 
     /**
-     * @var \Elastica\Response Response object
+     * @var \Enalquiler\Elastica\Response Response object
      */
     protected $_response;
 

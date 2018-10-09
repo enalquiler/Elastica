@@ -15,7 +15,7 @@ class Status
     /**
      * Contains all status infos.
      *
-     * @var \Elastica\Response Response object
+     * @var \Enalquiler\Elastica\Response Response object
      */
     protected $_response;
 
@@ -29,7 +29,7 @@ class Status
     /**
      * Client object.
      *
-     * @var \Elastica\Client Client object
+     * @var \Enalquiler\Elastica\Client Client object
      */
     protected $_client;
 
@@ -98,7 +98,7 @@ class Status
      *
      * @param string $alias Alias name
      *
-     * @return array|\Elastica\Index[] List of Elastica\Index
+     * @return array|\Enalquiler\Elastica\Index[] List of Elastica\Index
      */
     public function getIndicesWithAlias($alias)
     {

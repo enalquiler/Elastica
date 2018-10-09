@@ -25,7 +25,7 @@ class Settings
     /**
      * Response.
      *
-     * @var \Elastica\Response Response object
+     * @var \Enalquiler\Elastica\Response Response object
      */
     protected $_response;
 
@@ -39,7 +39,7 @@ class Settings
     /**
      * Index.
      *
-     * @var \Elastica\Index Index object
+     * @var \Enalquiler\Elastica\Index Index object
      */
     protected $_index;
 
@@ -348,7 +348,7 @@ class Settings
      * - index.auto_expand_replicas
      *
      * @param array  $data   OPTIONAL Data array
-     * @param string $method OPTIONAL Transfer method (default = \Elastica\Request::GET)
+     * @param string $method OPTIONAL Transfer method (default = \Enalquiler\Elastica\Request::GET)
      *
      * @return \Enalquiler\Elastica\Response Response object
      */

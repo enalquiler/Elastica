@@ -22,7 +22,7 @@ class IndexTemplate
     /**
      * Client object.
      *
-     * @var \Elastica\Client Client object
+     * @var \Enalquiler\Elastica\Client Client object
      */
     protected $_client;
 

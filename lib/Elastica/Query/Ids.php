@@ -17,7 +17,7 @@ class Ids extends AbstractQuery
     /**
      * Creates filter object.
      *
-     * @param string|\Elastica\Type $type Type to filter on
+     * @param string|\Enalquiler\Elastica\Type $type Type to filter on
      * @param array                 $ids  List of ids
      */
     public function __construct($type = null, array $ids = [])
@@ -43,7 +43,7 @@ class Ids extends AbstractQuery
     /**
      * Adds one more type to query.
      *
-     * @param string|\Elastica\Type $type Type name or object
+     * @param string|\Enalquiler\Elastica\Type $type Type name or object
      *
      * @return $this
      */
@@ -64,7 +64,7 @@ class Ids extends AbstractQuery
     /**
      * Set type.
      *
-     * @param array|string|\Elastica\Type $type Type name or object
+     * @param array|string|\Enalquiler\Elastica\Type $type Type name or object
      *
      * @return $this
      */
@@ -103,7 +103,7 @@ class Ids extends AbstractQuery
     /**
      * Converts filter to array.
      *
-     * @see \Elastica\Query\AbstractQuery::toArray()
+     * @see \Enalquiler\Elastica\Query\AbstractQuery::toArray()
      *
      * @return array Query array
      */

@@ -14,7 +14,7 @@ use Enalquiler\Elastica\Request;
 class Settings
 {
     /**
-     * @var \Elastica\Client Client object
+     * @var \Enalquiler\Elastica\Client Client object
      */
     protected $_client = null;
 
@@ -185,7 +185,7 @@ class Settings
      * Sends settings request.
      *
      * @param array  $data   OPTIONAL Data array
-     * @param string $method OPTIONAL Transfer method (default = \Elastica\Request::GET)
+     * @param string $method OPTIONAL Transfer method (default = \Enalquiler\Elastica\Request::GET)
      *
      * @return \Enalquiler\Elastica\Response Response object
      */

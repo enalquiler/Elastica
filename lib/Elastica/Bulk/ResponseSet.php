@@ -6,7 +6,7 @@ use Enalquiler\Elastica\Response as BaseResponse;
 class ResponseSet extends BaseResponse implements \Iterator, \Countable
 {
     /**
-     * @var \Elastica\Bulk\Response[]
+     * @var \Enalquiler\Elastica\Bulk\Response[]
      */
     protected $_bulkResponses = [];
 
@@ -95,7 +95,7 @@ class ResponseSet extends BaseResponse implements \Iterator, \Countable
     }
 
     /**
-     * @return bool|\Elastica\Bulk\Response
+     * @return bool|\Enalquiler\Elastica\Bulk\Response
      */
     public function current()
     {

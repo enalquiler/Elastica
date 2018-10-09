@@ -14,7 +14,7 @@ class Node
     /**
      * Client.
      *
-     * @var \Elastica\Client
+     * @var \Enalquiler\Elastica\Client
      */
     protected $_client;
 
@@ -33,14 +33,14 @@ class Node
     /**
      * Node stats.
      *
-     * @var \Elastica\Node\Stats|null Node Stats
+     * @var \Enalquiler\Elastica\Node\Stats|null Node Stats
      */
     protected $_stats;
 
     /**
      * Node info.
      *
-     * @var \Elastica\Node\Info|null Node info
+     * @var \Enalquiler\Elastica\Node\Info|null Node info
      */
     protected $_info;
 

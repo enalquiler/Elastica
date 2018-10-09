@@ -51,7 +51,7 @@ class ScriptFile extends Script
     }
 
     /**
-     * @param string|array|\Elastica\ScriptFile $data
+     * @param string|array|\Enalquiler\Elastica\ScriptFile $data
      *
      * @throws \Enalquiler\Elastica\Exception\InvalidException
      *

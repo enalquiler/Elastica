@@ -7,7 +7,7 @@ use Enalquiler\Elastica\Exception\BulkException;
 class ActionException extends BulkException
 {
     /**
-     * @var \Elastica\Response
+     * @var \Enalquiler\Elastica\Response
      */
     protected $_response;
 

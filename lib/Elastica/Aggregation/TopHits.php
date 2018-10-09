@@ -102,7 +102,7 @@ class TopHits extends AbstractAggregation
     /**
      * Set script fields.
      *
-     * @param array|\Elastica\Script\ScriptFields $scriptFields
+     * @param array|\Enalquiler\Elastica\Script\ScriptFields $scriptFields
      *
      * @return $this
      */

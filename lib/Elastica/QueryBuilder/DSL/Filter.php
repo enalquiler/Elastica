@@ -241,7 +241,7 @@ class Filter implements DSL
      *
      * @link https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-ids-filter.html
      *
-     * @param string|\Elastica\Type $type
+     * @param string|\Enalquiler\Elastica\Type $type
      * @param array                 $ids
      *
      * @return Ids
@@ -426,7 +426,7 @@ class Filter implements DSL
      *
      * @link https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-script-filter.html
      *
-     * @param array|string|\Elastica\Script\Script $script
+     * @param array|string|\Enalquiler\Elastica\Script\Script $script
      *
      * @return Script
      */

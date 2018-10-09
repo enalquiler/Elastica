@@ -18,7 +18,7 @@ class CrossIndex
     /**
      * Type option.
      *
-     * type: string | string[] | \Elastica\Type | \Elastica\Type[] | null
+     * type: string | string[] | \Enalquiler\Elastica\Type | \Enalquiler\Elastica\Type[] | null
      * default: null (means all types)
      */
     const OPTION_TYPE = 'type';
@@ -26,7 +26,7 @@ class CrossIndex
     /**
      * Query option.
      *
-     * type: see \Elastica\Query::create()
+     * type: see \Enalquiler\Elastica\Query::create()
      * default: Elastica\Query\MatchAll
      */
     const OPTION_QUERY = 'query';
@@ -112,7 +112,7 @@ class CrossIndex
     /**
      * Copies type mappings and documents from an old index to a new index.
      *
-     * @see \Elastica\Tool\CrossIndex::reindex()
+     * @see \Enalquiler\Elastica\Tool\CrossIndex::reindex()
      *
      * @param \Enalquiler\Elastica\Index $oldIndex
      * @param \Enalquiler\Elastica\Index $newIndex

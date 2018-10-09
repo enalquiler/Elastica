@@ -14,12 +14,12 @@ use Exception;
 class ConnectionPool
 {
     /**
-     * @var array|\Elastica\Connection[] Connections array
+     * @var array|\Enalquiler\Elastica\Connection[] Connections array
      */
     protected $_connections;
 
     /**
-     * @var \Elastica\Connection\Strategy\StrategyInterface Strategy for connection
+     * @var \Enalquiler\Elastica\Connection\Strategy\StrategyInterface Strategy for connection
      */
     protected $_strategy;
 
@@ -55,7 +55,7 @@ class ConnectionPool
     }
 
     /**
-     * @param array|\Elastica\Connection[] $connections
+     * @param array|\Enalquiler\Elastica\Connection[] $connections
      *
      * @return $this
      */

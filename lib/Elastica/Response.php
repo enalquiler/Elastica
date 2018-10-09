@@ -267,7 +267,7 @@ class Response
 
     /**
      * Sets the transfer info of the curl request. This function is called
-     * from the \Elastica\Client::_callService .
+     * from the \Enalquiler\Elastica\Client::_callService .
      *
      * @param array $transferInfo The curl transfer information.
      *

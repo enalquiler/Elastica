@@ -26,7 +26,7 @@ class Query extends AbstractFilter
     /**
      * Construct query filter.
      *
-     * @param array|\Elastica\Query\AbstractQuery $query
+     * @param array|\Enalquiler\Elastica\Query\AbstractQuery $query
      */
     public function __construct($query = null)
     {
@@ -38,7 +38,7 @@ class Query extends AbstractFilter
     /**
      * Set query.
      *
-     * @param array|\Elastica\Query\AbstractQuery $query
+     * @param array|\Enalquiler\Elastica\Query\AbstractQuery $query
      *
      * @throws \Enalquiler\Elastica\Exception\InvalidException If parameter is invalid
      *
@@ -56,7 +56,7 @@ class Query extends AbstractFilter
     }
 
     /**
-     * @see \Elastica\Param::_getBaseName()
+     * @see \Enalquiler\Elastica\Param::_getBaseName()
      */
     protected function _getBaseName()
     {
@@ -68,7 +68,7 @@ class Query extends AbstractFilter
     }
 
     /**
-     * @see \Elastica\Param::toArray()
+     * @see \Enalquiler\Elastica\Param::toArray()
      */
     public function toArray()
     {

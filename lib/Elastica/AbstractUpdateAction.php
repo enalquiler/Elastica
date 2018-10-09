@@ -12,7 +12,7 @@ use Enalquiler\Elastica\Exception\DeprecatedException;
 class AbstractUpdateAction extends Param
 {
     /**
-     * @var \Elastica\Document
+     * @var \Enalquiler\Elastica\Document
      */
     protected $_upsert;
 

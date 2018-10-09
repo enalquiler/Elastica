@@ -16,7 +16,7 @@ class Stats
     /**
      * Response.
      *
-     * @var \Elastica\Response Response object
+     * @var \Enalquiler\Elastica\Response Response object
      */
     protected $_response;
 
@@ -30,7 +30,7 @@ class Stats
     /**
      * Index.
      *
-     * @var \Elastica\Index Index object
+     * @var \Enalquiler\Elastica\Index Index object
      */
     protected $_index;
 

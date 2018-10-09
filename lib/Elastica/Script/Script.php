@@ -86,7 +86,7 @@ class Script extends AbstractScript
     }
 
     /**
-     * @param string|array|\Elastica\Script $data
+     * @param string|array|\Enalquiler\Elastica\Script $data
      *
      * @throws \Enalquiler\Elastica\Exception\InvalidException
      *

@@ -24,7 +24,7 @@ class Mapping
     /**
      * Type.
      *
-     * @var \Elastica\Type Type object
+     * @var \Enalquiler\Elastica\Type Type object
      */
     protected $_type;
 
@@ -275,7 +275,7 @@ class Mapping
     /**
      * Creates a mapping object.
      *
-     * @param array|\Elastica\Type\Mapping $mapping Mapping object or properties array
+     * @param array|\Enalquiler\Elastica\Type\Mapping $mapping Mapping object or properties array
      *
      * @throws \Enalquiler\Elastica\Exception\InvalidException If invalid type
      *

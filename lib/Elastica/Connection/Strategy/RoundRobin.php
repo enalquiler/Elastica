@@ -9,7 +9,7 @@ namespace Enalquiler\Elastica\Connection\Strategy;
 class RoundRobin extends Simple
 {
     /**
-     * @param array|\Elastica\Connection[] $connections
+     * @param array|\Enalquiler\Elastica\Connection[] $connections
      *
      * @throws \Enalquiler\Elastica\Exception\ClientException
      *

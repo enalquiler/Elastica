@@ -42,7 +42,7 @@ class Indices extends AbstractFilter
     /**
      * Adds one more index on which this filter should be applied.
      *
-     * @param string|\Elastica\Index $index
+     * @param string|\Enalquiler\Elastica\Index $index
      *
      * @return $this
      */

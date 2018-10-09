@@ -95,7 +95,7 @@ class Regexp extends AbstractFilter
     /**
      * Converts object to an array.
      *
-     * @see \Elastica\Filter\AbstractFilter::toArray()
+     * @see \Enalquiler\Elastica\Filter\AbstractFilter::toArray()
      *
      * @return array data array
      */

@@ -11,7 +11,7 @@ use Enalquiler\Elastica\Exception\ClientException;
 class Simple implements StrategyInterface
 {
     /**
-     * @param array|\Elastica\Connection[] $connections
+     * @param array|\Enalquiler\Elastica\Connection[] $connections
      *
      * @throws \Enalquiler\Elastica\Exception\ClientException
      *

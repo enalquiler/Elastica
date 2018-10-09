@@ -16,8 +16,8 @@ class HasChild extends AbstractFilter
     /**
      * Construct HasChild filter.
      *
-     * @param string|\Elastica\Query|\Elastica\Filter\AbstractFilter $query Query string or a Elastica\Query object or a filter
-     * @param string|\Elastica\Type                                  $type  Child document type
+     * @param string|\Enalquiler\Elastica\Query|\Enalquiler\Elastica\Filter\AbstractFilter $query Query string or a Elastica\Query object or a filter
+     * @param string|\Enalquiler\Elastica\Type                                  $type  Child document type
      */
     public function __construct($query, $type = null)
     {
@@ -32,7 +32,7 @@ class HasChild extends AbstractFilter
     /**
      * Sets query object.
      *
-     * @param string|\Elastica\Query|\Elastica\Query\AbstractQuery $query
+     * @param string|\Enalquiler\Elastica\Query|\Enalquiler\Elastica\Query\AbstractQuery $query
      *
      * @return $this
      */
@@ -56,7 +56,7 @@ class HasChild extends AbstractFilter
     /**
      * Set type of the child document.
      *
-     * @param string|\Elastica\Type $type Child document type
+     * @param string|\Enalquiler\Elastica\Type $type Child document type
      *
      * @return $this
      */

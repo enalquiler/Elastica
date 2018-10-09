@@ -18,14 +18,14 @@ class Script extends AbstractFilter
     /**
      * Query object.
      *
-     * @var array|\Elastica\Query\AbstractQuery
+     * @var array|\Enalquiler\Elastica\Query\AbstractQuery
      */
     protected $_query = null;
 
     /**
      * Construct script filter.
      *
-     * @param array|string|\Elastica\Script\AbstractScript $script OPTIONAL Script
+     * @param array|string|\Enalquiler\Elastica\Script\AbstractScript $script OPTIONAL Script
      */
     public function __construct($script = null)
     {

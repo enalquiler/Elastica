@@ -45,7 +45,7 @@ class Simple extends AbstractQuery
      *
      * @return array Query array
      *
-     * @see \Elastica\Query\AbstractQuery::toArray()
+     * @see \Enalquiler\Elastica\Query\AbstractQuery::toArray()
      */
     public function toArray()
     {

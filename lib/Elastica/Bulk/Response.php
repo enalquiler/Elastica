@@ -6,7 +6,7 @@ use Enalquiler\Elastica\Response as BaseResponse;
 class Response extends BaseResponse
 {
     /**
-     * @var \Elastica\Bulk\Action
+     * @var \Enalquiler\Elastica\Bulk\Action
      */
     protected $_action;
 

@@ -15,7 +15,7 @@ use Enalquiler\Elastica\Request;
 class Health
 {
     /**
-     * @var \Elastica\Client Client object.
+     * @var \Enalquiler\Elastica\Client Client object.
      */
     protected $_client;
 

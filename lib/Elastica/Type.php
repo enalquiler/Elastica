@@ -23,7 +23,7 @@ class Type implements SearchableInterface
     /**
      * Index.
      *
-     * @var \Elastica\Index Index object
+     * @var \Enalquiler\Elastica\Index Index object
      */
     protected $_index;
 
@@ -135,7 +135,7 @@ class Type implements SearchableInterface
      *
      * @link https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-update.html
      *
-     * @param \Enalquiler\Elastica\Document|\Elastica\Script\AbstractScript $data    Document with update data
+     * @param \Enalquiler\Elastica\Document|\Enalquiler\Elastica\Script\AbstractScript $data    Document with update data
      * @param array                                              $options array of query params to use for query. For possible options check es api
      *
      * @throws \Enalquiler\Elastica\Exception\InvalidException
@@ -166,7 +166,7 @@ class Type implements SearchableInterface
     /**
      * Uses _bulk to send documents to the server.
      *
-     * @param array|\Elastica\Document[] $docs Array of Elastica\Document
+     * @param array|\Enalquiler\Elastica\Document[] $docs Array of Elastica\Document
      *
      * @return \Enalquiler\Elastica\Bulk\ResponseSet
      *
@@ -184,7 +184,7 @@ class Type implements SearchableInterface
     /**
      * Uses _bulk to send documents to the server.
      *
-     * @param array|\Elastica\Document[] $docs Array of Elastica\Document
+     * @param array|\Enalquiler\Elastica\Document[] $docs Array of Elastica\Document
      *
      * @return \Enalquiler\Elastica\Bulk\ResponseSet
      *
@@ -324,7 +324,7 @@ class Type implements SearchableInterface
     /**
      * Create search object.
      *
-     * @param string|array|\Elastica\Query $query   Array with all query data inside or a Elastica\Query object
+     * @param string|array|\Enalquiler\Elastica\Query $query   Array with all query data inside or a Elastica\Query object
      * @param int|array                    $options OPTIONAL Limit or associative array of options (option=>value)
      * @param BuilderInterface             $builder
      *
@@ -341,12 +341,12 @@ class Type implements SearchableInterface
     /**
      * Do a search on this type.
      *
-     * @param string|array|\Elastica\Query $query   Array with all query data inside or a Elastica\Query object
+     * @param string|array|\Enalquiler\Elastica\Query $query   Array with all query data inside or a Elastica\Query object
      * @param int|array                    $options OPTIONAL Limit or associative array of options (option=>value)
      *
      * @return \Enalquiler\Elastica\ResultSet with all results inside
      *
-     * @see \Elastica\SearchableInterface::search
+     * @see \Enalquiler\Elastica\SearchableInterface::search
      */
     public function search($query = '', $options = null)
     {
@@ -358,11 +358,11 @@ class Type implements SearchableInterface
     /**
      * Count docs by query.
      *
-     * @param string|array|\Elastica\Query $query Array with all query data inside or a Elastica\Query object
+     * @param string|array|\Enalquiler\Elastica\Query $query Array with all query data inside or a Elastica\Query object
      *
      * @return int number of documents matching the query
      *
-     * @see \Elastica\SearchableInterface::count
+     * @see \Enalquiler\Elastica\SearchableInterface::count
      */
     public function count($query = '')
     {
@@ -407,7 +407,7 @@ class Type implements SearchableInterface
     /**
      * Uses _bulk to delete documents from the server.
      *
-     * @param array|\Elastica\Document[] $docs Array of Elastica\Document
+     * @param array|\Enalquiler\Elastica\Document[] $docs Array of Elastica\Document
      *
      * @return \Enalquiler\Elastica\Bulk\ResponseSet
      *
@@ -522,9 +522,9 @@ class Type implements SearchableInterface
     /**
      * Sets the serializer callable used in addObject.
      *
-     * @see \Elastica\Type::addObject
+     * @see \Enalquiler\Elastica\Type::addObject
      *
-     * @param array|string $serializer @see \Elastica\Type::_serializer
+     * @param array|string $serializer @see \Enalquiler\Elastica\Type::_serializer
      *
      * @return $this
      */

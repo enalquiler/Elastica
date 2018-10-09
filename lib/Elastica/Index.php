@@ -26,7 +26,7 @@ class Index implements SearchableInterface
     /**
      * Client object.
      *
-     * @var \Elastica\Client Client object
+     * @var \Enalquiler\Elastica\Client Client object
      */
     protected $_client;
 
@@ -105,7 +105,7 @@ class Index implements SearchableInterface
     /**
      * Uses _bulk to send documents to the server.
      *
-     * @param array|\Elastica\Document[] $docs Array of Elastica\Document
+     * @param array|\Enalquiler\Elastica\Document[] $docs Array of Elastica\Document
      *
      * @return \Enalquiler\Elastica\Bulk\ResponseSet
      *
@@ -123,7 +123,7 @@ class Index implements SearchableInterface
     /**
      * Uses _bulk to send documents to the server.
      *
-     * @param array|\Elastica\Document[] $docs Array of Elastica\Document
+     * @param array|\Enalquiler\Elastica\Document[] $docs Array of Elastica\Document
      *
      * @return \Enalquiler\Elastica\Bulk\ResponseSet
      *
@@ -176,7 +176,7 @@ class Index implements SearchableInterface
     /**
      * Uses _bulk to delete documents from the server.
      *
-     * @param array|\Elastica\Document[] $docs Array of Elastica\Document
+     * @param array|\Enalquiler\Elastica\Document[] $docs Array of Elastica\Document
      *
      * @return \Enalquiler\Elastica\Bulk\ResponseSet
      *
@@ -286,7 +286,7 @@ class Index implements SearchableInterface
     }
 
     /**
-     * @param string|array|\Elastica\Query $query
+     * @param string|array|\Enalquiler\Elastica\Query $query
      * @param int|array                    $options
      * @param BuilderInterface             $builder
      *
@@ -304,12 +304,12 @@ class Index implements SearchableInterface
     /**
      * Searches in this index.
      *
-     * @param string|array|\Elastica\Query $query   Array with all query data inside or a Elastica\Query object
+     * @param string|array|\Enalquiler\Elastica\Query $query   Array with all query data inside or a Elastica\Query object
      * @param int|array                    $options OPTIONAL Limit or associative array of options (option=>value)
      *
      * @return \Enalquiler\Elastica\ResultSet with all results inside
      *
-     * @see \Elastica\SearchableInterface::search
+     * @see \Enalquiler\Elastica\SearchableInterface::search
      */
     public function search($query = '', $options = null)
     {
@@ -321,11 +321,11 @@ class Index implements SearchableInterface
     /**
      * Counts results of query.
      *
-     * @param string|array|\Elastica\Query $query Array with all query data inside or a Elastica\Query object
+     * @param string|array|\Enalquiler\Elastica\Query $query Array with all query data inside or a Elastica\Query object
      *
      * @return int number of documents matching the query
      *
-     * @see \Elastica\SearchableInterface::count
+     * @see \Enalquiler\Elastica\SearchableInterface::count
      */
     public function count($query = '')
     {

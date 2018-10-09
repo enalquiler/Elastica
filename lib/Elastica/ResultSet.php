@@ -50,7 +50,7 @@ class ResultSet implements \Iterator, \Countable, \ArrayAccess
     /**
      * Results.
      *
-     * @deprecated Accessing this property in an extended class is deprecated. The property will become private in 4.0. Modify results by implementing BuilderInterface and passing a new Builder to your \Elastica\Search instances.
+     * @deprecated Accessing this property in an extended class is deprecated. The property will become private in 4.0. Modify results by implementing BuilderInterface and passing a new Builder to your \Enalquiler\Elastica\Search instances.
      *
      * @var Result[] Results
      */
@@ -110,7 +110,7 @@ class ResultSet implements \Iterator, \Countable, \ArrayAccess
     /**
      * Returns all Documents.
      *
-     * @return array Documents \Elastica\Document
+     * @return array Documents \Enalquiler\Elastica\Document
      */
     public function getDocuments()
     {

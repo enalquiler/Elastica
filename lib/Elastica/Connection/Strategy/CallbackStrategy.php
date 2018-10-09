@@ -30,7 +30,7 @@ class CallbackStrategy implements StrategyInterface
     }
 
     /**
-     * @param array|\Elastica\Connection[] $connections
+     * @param array|\Enalquiler\Elastica\Connection[] $connections
      *
      * @return \Enalquiler\Elastica\Connection
      */

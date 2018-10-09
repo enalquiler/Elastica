@@ -6,7 +6,7 @@ use Enalquiler\Elastica\Script\ScriptFields as BaseScriptFields;
 /**
  * Kept for BC reasons.
  *
- * @deprecated Use \Elastica\Script\ScriptFields instead.
+ * @deprecated Use \Enalquiler\Elastica\Script\ScriptFields instead.
  */
 class ScriptFields extends BaseScriptFields
 {

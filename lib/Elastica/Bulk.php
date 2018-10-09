@@ -14,12 +14,12 @@ class Bulk
     const DELIMITER = "\n";
 
     /**
-     * @var \Elastica\Client
+     * @var \Enalquiler\Elastica\Client
      */
     protected $_client;
 
     /**
-     * @var \Elastica\Bulk\Action[]
+     * @var \Enalquiler\Elastica\Bulk\Action[]
      */
     protected $_actions = [];
 
@@ -47,7 +47,7 @@ class Bulk
     }
 
     /**
-     * @param string|\Elastica\Index $index
+     * @param string|\Enalquiler\Elastica\Index $index
      *
      * @return $this
      */
@@ -79,7 +79,7 @@ class Bulk
     }
 
     /**
-     * @param string|\Elastica\Type $type
+     * @param string|\Enalquiler\Elastica\Type $type
      *
      * @return $this
      */
@@ -219,7 +219,7 @@ class Bulk
     }
 
     /**
-     * @param \Enalquiler\Elastica\Script\AbstractScript|\Elastica\Document|array $data
+     * @param \Enalquiler\Elastica\Script\AbstractScript|\Enalquiler\Elastica\Document|array $data
      * @param string                                                   $opType
      *
      * @return $this

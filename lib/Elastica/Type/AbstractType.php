@@ -47,21 +47,21 @@ abstract class AbstractType implements SearchableInterface
     /**
      * Client.
      *
-     * @var \Elastica\Client Client object
+     * @var \Enalquiler\Elastica\Client Client object
      */
     protected $_client;
 
     /**
      * Index.
      *
-     * @var \Elastica\Index Index object
+     * @var \Enalquiler\Elastica\Index Index object
      */
     protected $_index;
 
     /**
      * Type.
      *
-     * @var \Elastica\Type Type object
+     * @var \Enalquiler\Elastica\Type Type object
      */
     protected $_type;
 
@@ -131,7 +131,7 @@ abstract class AbstractType implements SearchableInterface
     }
 
     /**
-     * @param string|\Elastica\Query $query
+     * @param string|\Enalquiler\Elastica\Query $query
      * @param array|int              $options
      *
      * @return \Enalquiler\Elastica\Search
@@ -144,12 +144,12 @@ abstract class AbstractType implements SearchableInterface
     /**
      * Search on the type.
      *
-     * @param string|array|\Elastica\Query $query   Array with all query data inside or a Elastica\Query object
+     * @param string|array|\Enalquiler\Elastica\Query $query   Array with all query data inside or a Elastica\Query object
      * @param null                         $options
      *
      * @return \Enalquiler\Elastica\ResultSet with all results inside
      *
-     * @see \Elastica\SearchableInterface::search
+     * @see \Enalquiler\Elastica\SearchableInterface::search
      */
     public function search($query = '', $options = null)
     {
@@ -159,11 +159,11 @@ abstract class AbstractType implements SearchableInterface
     /**
      * Count docs in the type based on query.
      *
-     * @param string|array|\Elastica\Query $query Array with all query data inside or a Elastica\Query object
+     * @param string|array|\Enalquiler\Elastica\Query $query Array with all query data inside or a Elastica\Query object
      *
      * @return int number of documents matching the query
      *
-     * @see \Elastica\SearchableInterface::count
+     * @see \Enalquiler\Elastica\SearchableInterface::count
      */
     public function count($query = '')
     {
