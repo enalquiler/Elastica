@@ -1,8 +1,7 @@
 {
-    "name": "ruflin/elastica",
+    "name": "enalquiler/elastica",
     "description": "Elasticsearch Client",
     "keywords": ["search","client"],
-    "homepage": "http://elastica.io/",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -28,12 +27,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Enalquiler\\Elastica\\": "lib/Elastica/"
+            "Enalquiler\\Elastica\\": "lib/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Enalquiler\\Elastica\\Test\\": "test/lib/Elastica/Test/"
+            "Enalquiler\\Elastica\\Test\\": "test/lib/"
         }
     },
     "extra": {
