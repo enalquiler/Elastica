@@ -1,14 +1,14 @@
-FROM elasticsearch:1.7.5
+FROM elasticsearch:2.4.0
 MAINTAINER Nicolas Ruflin <spam@ruflin.com>
 
 # Dependencies
-ENV ELASTICSEARCH_VERSION 1.7.5
+ENV ELASTICSEARCH_VERSION 2.4.0
 ENV ES_IMAGE_PLUGIN_VER 1.7.1
 ENV ES_PLUGIN_BIN /usr/share/elasticsearch/bin/plugin
 
 # Install Plugins
-RUN ${ES_PLUGIN_BIN} install elasticsearch/elasticsearch-mapper-attachments/3.1.2
-#RUN ${ES_PLUGIN_BIN} install elasticsearch/delete-by-query
+RUN ${ES_PLUGIN_BIN} install mapper-attachments
+RUN ${ES_PLUGIN_BIN} install delete-by-query
 #RUN ${ES_PLUGIN_BIN} install image --url https://github.com/Jmoati/elasticsearch-image/releases/download/${ES_IMAGE_PLUGIN_VER}/elasticsearch-image-${ES_IMAGE_PLUGIN_VER}.zip
 
 # Debug interface
